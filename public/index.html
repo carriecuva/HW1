@@ -8,12 +8,27 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <title>React App</title>
+    <title>Cob Cobbler's Web Page</title>
   </head>
+  <style>
+    #lightpatternbtn, #darkpatternbtn
+    {
+      background-color: cadetblue;
+      padding: 20px 15px;
+      margin-left: 10px;
+      margin-right: 10px;
+      box-shadow: 8px 14px 4px  #cacaca ; 
+    }
+  </style>
   <body style="background-image: url(cloudbackground.jpg); background-repeat: no-repeat; background-size: cover;">
+   
     <div >
-    <h1 style="text-align: center; padding-top: 15px;"> Welcome To Cob's Cobbler Homepage </h1>
-    <p style="text-align: center;"> We are here for all your shoe needs! Click a button for whichever experience you prefer to learn more about us</p>
+    
+    <h1 style="text-align: center; padding-top: 15px;"> Welcome To Cob's Cobblers Homepage </h1>
+    <center>
+    <img src="ShoeHompage.jpeg"; alt="Example of shoe you can get at Cob's Cobblers">
+  </center> 
+    <p style="text-align: center; font-size: 140%;"> We are here for all your shoe needs! <br>Click a button for whichever experience you prefer to learn more about us:</p>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -24,8 +39,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div>
-    <a href = "darkpattern.html"> Will this link? </a>
+    <div style="display: flex; justify-content: center; ">
+      <a style="text-decoration: none;" href="lightpattern.html"> 
+      <div id="lightpatternbtn">
+        <p style="font-size: 130%; color: black;">Light Pattern</p>
+      </div>
+    </a>
+    <a style="text-decoration: none;" href="darkpattern.html">
+      <div id="darkpatternbtn">
+         <p style="font-size: 130%; color: black;">Dark Pattern</p>
+      </div>
+    </a>
   </div>
 </div>
   </body>
