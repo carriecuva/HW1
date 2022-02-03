@@ -8,12 +8,13 @@
       name="description"
       content="Web site created using create-react-app"
     />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
     <title> Dark Patterns</title>
     <body style="background-image: url(darkpatternbackground.jpg); background-repeat: no-repeat; background-size: cover;">
       <center>
     <h1 style="font-size: 300%;"> Welcome to Cob's </h1>
-    <p style="font-size: 140%;"> For 3 easy payments of $2.22 a week, you can get a <strong> BRAND NEW</strong> pair of shoes <strong> EACH WEEK</strong> </p>
+    <p style="font-size: 140%;"> For 3 easy payments of just <strong> $2.22 </strong> a week, you can get a <strong> BRAND NEW</strong> pair of shoes <strong> EACH WEEK</strong> </p>
   
   <div>
     <div style="height:100px; width: 20%; overflow:auto; font-size: 30%;">
@@ -295,12 +296,32 @@
       </div>
       <img style="float: right; margin-top: -100px; margin-right: 230px;" src="ugg.jpg" alt="Ugg Shoes" width="
     200"> 
-      <div style="display: flex; flex-direction: column; margin-left: 30px; margin-top: -60px; padding-bottom: 20px;">
+    <div style="display: flex; justify-content: center;  margin-top: 30px;">
+      <input style="margin-top: 10px;" type="checkbox" name="agree" value="I agree" id="agree" checked>
+        <label style="margin-top: 8px;" for="agree"> I Agree</label> <br>
+        <button id="continuebutton" style="margin-left: 20px; padding: 6px 6px;" type="submit">Continue</button>
+      </div>
+      <div style="display: flex; flex-direction: column; margin-left: 30px; margin-top: -140px; padding-bottom: 20px;">
         <img style="float: left;" src="tennisshoe.jpeg" width="200">
         <img style="float:left;" src="converse.jpg" width="200">
         <img style="float:left;" src="combat boots.webp" width="200">
       </div>
     </center>
   </div>
+  <script>
+    $(document).ready(function () {
+        $("#continuebutton").click(function () {
+            var check = document.getElementById("agree");
+            if(check.checked == true)
+            {
+              alert("Once created, you will be transfered to the page to sign up");
+            }
+            else 
+            {
+              alert("You need to accept the Terms and Conditions in order to move on");
+            }
+        });
+    });
+</script>
     </body>
     </html>
