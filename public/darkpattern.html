@@ -307,7 +307,7 @@
         <img style="float:left;" src="combat boots.webp" width="200">
       </div>
     </center>
-      <input style="font-size: 80%; float: right; margin-top: -50px;" type="checkbox" name="agree" value="I agree" id="agree" checked>
+      <input style="font-size: 80%; float: right; margin-top: -50px;" type="checkbox" name="agree" value="I agree" id="sub" checked>
         <label style="font-size:80%; float: right; margin-right: 25px; margin-top: -50px;" for="agree"> By agreeing to our Terms and Conditions, you also agree to be added to our weekly update email list </label>
    
   </div>
@@ -322,6 +322,48 @@
             else 
             {
               alert("You have to accept the Terms and Conditions in order to move on");
+            }
+        });
+        $("#agree").click(function () {
+            var check = document.getElementById("agree");
+            var subcheck = document.getElementById("sub");
+            if(check.checked == true)
+            {
+              subcheck.checked = true;
+            }
+            else 
+            {
+              subcheck.checked = false;
+            }
+        });
+        $("#sub").click(function () {
+            var subcheck = document.getElementById("sub");
+            if(subcheck.checked == true)
+            {
+              alert("Cannot change this value. Accept the terms to accept this");
+              var check = document.getElementById("agree");
+              if(check.checked == true)
+              {
+                subcheck.checked = true;
+              }
+              else 
+              {
+                subcheck.checked = false;
+              }
+
+            }
+            else 
+            {
+              alert("Cannot uncheck this box. Unaccept the Terms and Conditions to uncheck this");
+              var check = document.getElementById("agree");
+              if(check.checked == true)
+              {
+                subcheck.checked = true;
+              }
+              else 
+              {
+                subcheck.checked = false;
+              }
             }
         });
     });
