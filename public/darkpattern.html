@@ -10,6 +10,21 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
+<style>
+  #picturebtn
+  {
+    background-color: grey;
+      padding: 10px 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 10%;
+      font-size: 80%;
+  }
+  #continuebutton
+  {
+    margin-bottom: 10px;
+  }
+</style>
     <title> Dark Patterns</title>
     <body style="background-image: url(darkpatternbackground.jpg); background-repeat: no-repeat; background-size: cover;">
       <center>
@@ -294,21 +309,26 @@
       If you have any questions about this Privacy Policy, You can contact us: <br><br>
       By email: info@CobsCobblers.co
       </div>
-      <img style="float: right; margin-top: -100px; margin-right: 230px;" src="ugg.jpg" alt="Ugg Shoes" width="
+      <img id="ugg" style="float: right; margin-top: -100px; margin-right: 230px; visibility: hidden;" src="ugg.jpg" alt="Ugg Shoes" width="
     200"> 
     <div style="display: flex; justify-content: center;  margin-top: 30px;">
       <input style="margin-top: 10px;" type="checkbox" name="agree" value="I agree" id="agree" checked>
         <label style="margin-top: 8px;" for="agree"> I Agree</label> <br>
         <button id="continuebutton" style="margin-left: 20px; padding: 6px 6px;" type="submit">Continue</button>
       </div>
-      <div style="display: flex; flex-direction: column; margin-left: 30px; margin-top: -140px; padding-bottom: 20px;">
-        <img style="float: left;" src="tennisshoe.jpeg" width="200">
-        <img style="float:left;" src="converse.jpg" width="200">
-        <img style="float:left;" src="combat boots.webp" width="200">
+      <div id="picturebtn">
+        <p style= "color: black;">Click to see pictures of the shoes we have sent to customers</p>
+     </div>
+      <div style="display: flex; flex-direction: column; margin-left: 30px; margin-top: -240px; padding-bottom: 20px;">
+        <img id="tennisshoe" style="float: left; visibility: hidden;" src="tennisshoe.jpeg" width="200">
+        <img id="converseshoe" style="float:left;  visibility: hidden" src="converse.jpg" width="200">
+        <img id="combatboots" style="float:left; visibility: hidden;" src="combat boots.webp" width="200">
       </div>
+      
     </center>
       <input style="font-size: 80%; float: right; margin-top: -50px;" type="checkbox" name="agree" value="I agree" id="sub" checked>
         <label style="font-size:80%; float: right; margin-right: 25px; margin-top: -50px;" for="agree"> By agreeing to our Terms and Conditions, you also agree to be added to our weekly update email list </label>
+       
    
   </div>
   <script>
@@ -317,11 +337,25 @@
             var check = document.getElementById("agree");
             if(check.checked == true)
             {
-              alert("Thank you for accepting the Terms and addign yourself to our weekly update email list. Once created, you will be transfered to the page to sign up");
+              alert("Thank you for accepting the Terms and adding yourself to our weekly update email list. Once created, you will be transfered to the page to sign up");
             }
             else 
             {
               alert("You have to accept the Terms and Conditions in order to move on");
+            }
+        });
+        $("#picturebtn").click(function () {
+            var check = document.getElementById("agree");
+            if(check.checked == true)
+            {
+              $('#ugg').css('visibility', 'visible');
+              $('#tennisshoe').css('visibility', 'visible');
+              $('#converseshoe').css('visibility', 'visible');
+              $('#combatboots').css('visibility', 'visible');
+            }
+            else 
+            {
+              alert("You have to accept the Terms and Conditions in order to see the cool shoes you can get!");
             }
         });
         $("#agree").click(function () {
@@ -330,10 +364,15 @@
             if(check.checked == true)
             {
               subcheck.checked = true;
+
             }
             else 
             {
               subcheck.checked = false;
+              $('#ugg').css('visibility', 'hidden');
+              $('#tennisshoe').css('visibility', 'hidden');
+              $('#converseshoe').css('visibility', 'hidden');
+              $('#combatboots').css('visibility', 'hidden');
             }
         });
         $("#sub").click(function () {
