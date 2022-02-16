@@ -13,20 +13,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <style>
-  #picturebtn
-  {
-    background-color: lightgrey;
-      padding: 10px 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-      width: 10%;
-      font-size: 90%;
-      box-shadow: 8px 14px 4px  darkgrey ;
-  }
-  #continuebutton
-  {
-    margin-bottom: 10px;
-  }
+.cartbtn
+{
+  font-size: 140%; 
+  padding: 15px 15px;
+  box-shadow: 4px 3px 6px 5px #cacaca, 3px 7px 5px 8px #dada;
+}
 </style>
     <title> Dark Patterns</title>
     <body style="background-image: url(darkwaves.jpeg); background-repeat: no-repeat; background-size: cover; padding-bottom: 20px;">
@@ -43,21 +35,21 @@
                 <p style="color: white; font-size: 180%"> Flaky, delicious, and goes well with butter</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
-                <button style="font-size: 140%; padding: 10px 10px;"> Add To Cart</button>
+                <button class="cartbtn"> Add To Cart</button>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <p style="color: white; font-size: 250%;">  <strong> Sole</strong></p>
                 <p style="color: white; font-size: 180%"> This will be the description for the fish</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
-                <button style="font-size: 140%; padding: 10px 10px;"> Add To Cart</button>
+                <button class="cartbtn"> Add To Cart</button>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <p style="color: white; font-size: 250%;">  <strong> Sole</strong></p>
                 <p style="color: white; font-size: 180%"> This will be the description for the fish</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
-                <button style="font-size: 140%; padding: 10px 10px;"> Add To Cart</button>
+                <button class="cartbtn"> Add To Cart</button>
               </div>
             </div>
     
@@ -67,28 +59,28 @@
                 <p style="color: white; font-size: 180%"> This will be the description for the fish</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
-                <button style="font-size: 140%; padding: 10px 10px;"> Add To Cart</button>
+                <button class="cartbtn"> Add To Cart</button>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <p style="color: white; font-size: 250%;">  <strong> Sole</strong></p>
                 <p style="color: white; font-size: 180%"> This will be the description for the fish</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
-                <button style="font-size: 140%; padding: 10px 10px;"> Add To Cart</button>
+                <button class="cartbtn"> Add To Cart</button>
               </div>
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <p style="color: white; font-size: 250%;">  <strong> Sole</strong></p>
                 <p style="color: white; font-size: 180%"> This will be the description for the fish</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
-                <button style="font-size: 140%; padding: 10px 10px;"> Add To Cart</button>
+                <button class="cartbtn"> Add To Cart</button>
               </div>
             </div>
           </div>
           </center>
   <script>
     $(document).ready(function () {
-        $("#continuebutton").click(function () {
+        $(".cartbtn").click(function () {
             var check = document.getElementById("agree");
             if(check.checked == true)
             {
