@@ -13,6 +13,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
     <body>
-
+        <div style="display: flex; justify-content: center;">
+            <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies"checked >
+            <label for="checkbox"> I agree to be billed and solemly swear to adhere to law of no backsies</label><br>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <input type="checkbox" id="checkbox2" name="checkbox2" value="Agreetoterms" checked> 
+            <label for="checkbox2"> I accept the terms and conditions of purchase <a href="terms and conditions - cob's seafood emporium.pdf"> Click to Read Terms</a></label>
+        </div>
+        <center>
+        <button id="submitbtn"> Submit Order </button>
+    </center>
+    <script>
+         $("#submitbtn").click(function () {
+            var check1 = document.getElementById("checkbox1");
+            var check2 = document.getElementById("checkbox2");
+            if(check1.checked == true && check2.checked == true)
+            {
+                alert("Your order has been received! We hope you enjoy your fish and the loss of your soul");
+            }
+            else
+            {
+                alert("Both checkboxes have to be checked in order to move on");
+            }
+        });
+    </script>
     </body>
 </html>
