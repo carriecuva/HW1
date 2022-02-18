@@ -36,6 +36,8 @@
     text-align: center;
     color: black;
   }
+
+  
 </style>
     <title> Dark Patterns</title>
     <body style="background-image: url(darkwaves.jpeg); background-repeat: no-repeat; background-size: cover; padding-bottom: 25px;">
@@ -43,33 +45,34 @@
           <i style="color: white; font-size: 300%; margin-left: 50px;" class="fa fa-home"></i>
         </a>
         <a href="checkoutdark.html"> 
-          <img src="darkpatterncart.png" width="50" style="float:right; margin-right: 300px; margin-top: 50px;"> 
+          <img src="darkpatterncart.png" id="cartimg" width="50" style="float:right; margin-right: 300px; margin-top: 50px;"> 
         </a>
           <button id="numincart">
              <a id="num"> 0</a>
           </button>
+          
           <center>
           <h1 style="color: white; margin-left: 300px; margin-top: -20px;"> Welcome to Cob's Seafood Emporium</h1>
           <p style="font-size:150%; width: 70%; color: white;"> At Cob's Seafood Emporium, you can find the fish of your dreams for an affordable price. Look at the options below and add your favorites to the cart. </p>
           <div style="margin-left: 260px;">
             <div class="row" style="margin-top: 20px;">
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <p style="color: white; font-size: 250%;">  <strong> Salmon</strong></p>
-                <p style="color: white; font-size: 180%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Salmon</strong></p>
+                <p style="color: white; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
                 <img src = "salmon.jpeg" width="200">
                 <p style="color: white; font-size: 210%"> <strong>$10.00 </strong></p>
                 <button class="cartbtn" onclick="count()"> Add To Cart</button>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <p style="color: white; font-size: 250%;">  <strong> Sea Bass </strong></p>
-                <p style="color: white; font-size: 180%"> This mildy sweet fish is great for those who do not enjoy a fishy taste </p>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Sea Bass </strong></p>
+                <p style="color: white; font-size: 140%"> This mildy sweet fish is great for those who do not enjoy a fishy taste </p>
                 <img src = "chileanseabass.jpeg" width="150">
                 <p style="color: white; font-size: 210%"> <strong>$16.00 </strong></p>
                 <button class="cartbtn" onclick="count()"> Add To Cart</button>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <p style="color: white; font-size: 250%;">  <strong> Sole</strong></p>
-                <p style="color: white; font-size: 180%"> Flaky, delicious, and goes well with butter</p>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Sole</strong></p>
+                <p style="color: white; font-size: 140%"> Flaky, delicious, and goes well with butter</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$14.00 </strong></p>
                 <button class="cartbtn" onclick="count()"> Add To Cart</button>
@@ -77,26 +80,26 @@
             </div>
     
             <div class="row" style="margin-top: 25px;">
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <p style="color: white; font-size: 250%;">  <strong> Swordfish</strong></p>
-                <p style="color: white; font-size: 180%"> This mild fish makes a great steak with its large size</p>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Swordfish</strong></p>
+                <p style="color: white; font-size: 140%"> This mild fish makes a great steak with its large size</p>
                 <img src = "swordfish.jpeg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
                 <button class="cartbtn" onclick="count()"> Add To Cart</button>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <p style="color: white; font-size: 250%;">  <strong>Trout</strong></p>
-                <p style="color: white; font-size: 180%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong>Trout</strong></p>
+                <p style="color: white; font-size: 140%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
                 <img src = "trout.jpeg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$12.00 </strong></p>
-                <button class="cartbtn" onclick="count()"> Add To Cart</button>
+                <button class="cartbtn" id="" onclick="count()"> Add To Cart</button>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3">
-                <p style="color: white; font-size: 250%;">  <strong> Tilapia</strong></p>
-                <p style="color: white; font-size: 180%"> This fast growing fish will taste delicious with any side you put with it</p>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Tilapia</strong></p>
+                <p style="color: white; font-size: 140%"> This fast growing fish will taste delicious with any side you put with it</p>
                 <img src = "tilapia.jpeg" width="170">
-                <p style="color: white; font-size: 210%"> <strong>$8.00 </strong></p>
-                <button class="cartbtn" onclick="count()"> Add To Cart</button>
+                <p style="color: white; font-size: 210%"> <strong>$8.00</strong></p>
+                <button class="cartbtn"  onclick="count()"> Add To Cart</button>
               </div>
             </div>
           </div>
@@ -113,81 +116,5 @@
               document.getElementById("num").innerHTML = clicks;
             }
         </script>
-  <script>
-    $(document).ready(function () {
-        $(".cartbtn").click(function () {
-            var check = document.getElementById("agree");
-            if(check.checked == true)
-            {
-              alert("Thank you for accepting the Terms and adding yourself to our weekly update email list. Once created, you will be transfered to the page to sign up");
-            }
-            else 
-            {
-              alert("You have to accept the Terms and Conditions in order to move on");
-            }
-        });
-        $("#picturebtn").click(function () {
-            var check = document.getElementById("agree");
-            if(check.checked == true)
-            {
-              $('#ugg').css('visibility', 'visible');
-              $('#tennisshoe').css('visibility', 'visible');
-              $('#converseshoe').css('visibility', 'visible');
-              $('#combatboots').css('visibility', 'visible');
-            }
-            else 
-            {
-              alert("You have to accept the Terms and Conditions in order to see the cool shoes you can get!");
-            }
-        });
-        $("#agree").click(function () {
-            var check = document.getElementById("agree");
-            var subcheck = document.getElementById("sub");
-            if(check.checked == true)
-            {
-              subcheck.checked = true;
-
-            }
-            else 
-            {
-              subcheck.checked = false;
-              $('#ugg').css('visibility', 'hidden');
-              $('#tennisshoe').css('visibility', 'hidden');
-              $('#converseshoe').css('visibility', 'hidden');
-              $('#combatboots').css('visibility', 'hidden');
-            }
-        });
-        $("#sub").click(function () {
-            var subcheck = document.getElementById("sub");
-            if(subcheck.checked == true)
-            {
-              alert("Cannot change this value. Accept the terms to accept this");
-              var check = document.getElementById("agree");
-              if(check.checked == true)
-              {
-                subcheck.checked = true;
-              }
-              else 
-              {
-                subcheck.checked = false;
-              }
-
-            }
-            else 
-            {
-              alert("Cannot uncheck this box. Unaccept the Terms and Conditions to uncheck this");
-              var check = document.getElementById("agree");
-              if(check.checked == true)
-              {
-                subcheck.checked = true;
-              }
-              else 
-              {
-                subcheck.checked = false;
-              }
-            }
-        });
-    });
-</script>
     </body>
     </html>

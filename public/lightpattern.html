@@ -27,7 +27,7 @@
         padding: 5px 5px;
         background-color: #09d1d1;
         visibility: hidden;
-        margin-left: 1060px;
+        margin-left: 1110px;
       }
       #num
       {
@@ -35,67 +35,86 @@
         text-align: center;
         color: black;
       }
+
+      #hoverdetails
+      {
+        display: none;
+      background-color: white;
+      width: 15%;
+      margin-top: -30px;
+       margin-left: 600px;
+        
+      }
     </style>
     <title> Light Pattern </title>
     <body style="background-image: url(lightpatternbackground.jpeg); background-repeat: no-repeat; background-size: cover; padding-bottom: 15px;">
       <a href="index.html">
       <i style="color: black; font-size: 300%; margin-left: 50px;" class="fa fa-home"></i>
     </a>
+    <center>
     <a href="checkoutlight.html"> 
-    <img src="carticon.png" width="50" style="float:right; margin-right: 300px; margin-top: 50px;"> 
+    <img src="carticon.png" id="lightcart" width="50" style="float:right; margin-right: 200px;"> 
   </a>
     <button id="numincart">
-       <a id="num"> 0</a>
+       <span id="num"> 0</span>
     </button>
-      <center>
-      <h1 style=" color: black; margin-left: 300px; margin-top: -20px;"> Welcome to Cob's Seafood Emporium</h1>
+    <div id="hoverdetails">
+      <p> Salmon : $10.00 x <span id="numsalmon">0</span> = $<span id="pricesalmon">0</span></p>
+      <p>Sea Bass : $16.00 x <span id="numseabass">0</span> = $<span id="priceseabass">0</span> </p>
+      <p> Sole : $14.00 x <span id="numsole">0</span> = $<span id="pricesole">0</span></p>
+      <p> Swordfish : $15.00 x <span id="numswordfish">0</span> = $ <span id="priceswordfish">0</span></p>
+      <p>Trout: $12.00 x <span id="numtrout">0</span> = $<span id="pricetrout">0</span> </p>
+      <p> Tilapia : $8.00 x  <span id="numtilapia">0</span> =  $<span id="pricetilapia">0</span></p>
+    </div>
+      
+      <h1 style=" color: black; margin-top: 20px;"> Welcome to Cob's Seafood Emporium</h1>
       <p style="color: black; font-size:150%; width: 70%;"> At Cob's Seafood Emporium, you can find the fish of your dreams for an affordable price. Look at the options below and add your favorites to the cart. </p>
       <div style="margin-left: 260px;">
         <div class="row" style="margin-top: 20px;">
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <p style="color: black; font-size: 250%;">  <strong> Salmon</strong></p>
-            <p style=" color: black; font-size: 180%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <p style="color: black; font-size: 220%;">  <strong> Salmon</strong></p>
+            <p style=" color: black; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
             <img src = "salmon.jpeg" width="200">
-            <p style="color: black; font-size: 210%"> <strong>$10.00 </strong></p>
-            <button class="cartbtn" onclick="count()"> Add To Cart</button>
+            <p style="color: black; font-size: 210%"> <strong>$<span id="salmonprice">10.00</span> </strong></p>
+            <button class="cartbtn" id="salmonbtn" onclick="count()"> Add To Cart</button>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <p style=" color: black; font-size: 250%;">  <strong> Sea Bass</strong></p>
-            <p style="color: black; font-size: 180%"> This mildy sweet fish is great for those who do not enjoy a fishy taste</p>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <p style=" color: black; font-size: 220%;">  <strong> Sea Bass</strong></p>
+            <p style="color: black; font-size: 140%"> This mildy sweet fish is great for those who do not enjoy a fishy taste</p>
             <img src = "chileanseabass.jpeg" width="140">
-            <p style=" color: black; font-size: 210%"> <strong>$16.00 </strong></p>
-            <button class="cartbtn" onclick="count()"> Add To Cart</button>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="seabassprice">16.00</span> </strong></p>
+            <button class="cartbtn" id="seabassbtn" onclick="count()"> Add To Cart</button>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <p style=" color: black; font-size: 250%;">  <strong> Sole</strong></p>
-            <p style=" color: black; font-size: 180%"> Flaky, delicious, and goes well with butter</p>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <p style=" color: black; font-size: 220%;">  <strong> Sole</strong></p>
+            <p style=" color: black; font-size: 140%"> Flaky, delicious, and goes well with butter</p>
             <img src = "sole.jpg" width="170">
-            <p style=" color: black; font-size: 210%"> <strong>$14.00 </strong></p>
-            <button class="cartbtn" onclick="count()"> Add To Cart</button>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="soleprice">14.00</span> </strong></p>
+            <button class="cartbtn" id="solebtn" onclick="count()"> Add To Cart</button>
           </div>
         </div>
 
         <div class="row" style="margin-top: 25px;">
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <p style=" color: black; font-size: 250%;">  <strong> Swordfish</strong></p>
-            <p style=" color: black; font-size: 180%"> This mild fish makes a great steak with its large size</p>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <p style=" color: black; font-size: 220%;">  <strong> Swordfish</strong></p>
+            <p style=" color: black; font-size: 140%"> This mild fish makes a great steak with its large size</p>
             <img src = "swordfish.jpeg" width="200">
-            <p style=" color: black; font-size: 210%"> <strong>$15.00 </strong></p>
-            <button class="cartbtn" onclick="count()"> Add To Cart</button>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="swordfishprice">15.00</span> </strong></p>
+            <button class="cartbtn" id="swordfishbtn" onclick="count()"> Add To Cart</button>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <p style=" color: black;font-size: 250%;">  <strong> Trout</strong></p>
-            <p style=" color: black; font-size: 180%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <p style=" color: black;font-size: 220%;">  <strong> Trout</strong></p>
+            <p style=" color: black; font-size: 140%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
             <img src = "trout.jpeg" width="170">
-            <p style=" color: black; font-size: 210%"> <strong>$12.00 </strong></p>
-            <button class="cartbtn" onclick="count()"> Add To Cart</button>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="troutprice">12.00</span> </strong></p>
+            <button class="cartbtn" id="troutbtn" onclick="count()"> Add To Cart</button>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <p style=" color: black; font-size: 250%;">  <strong> Tilapia</strong></p>
-            <p style="color: black; font-size: 180%"> This fast growing fish will taste delicious with any side you put with it</p>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <p style=" color: black; font-size: 220%;">  <strong> Tilapia</strong></p>
+            <p style="color: black; font-size: 140%"> This fast growing fish will taste delicious with any side you put with it</p>
             <img src = "tilapia.jpeg" width="170">
-            <p style=" color: black; font-size: 210%"> <strong>$8.00 </strong></p>
-            <button class="cartbtn" onclick="count()"> Add To Cart</button>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="tilapiaprice">8.00</span> </strong></p>
+            <button class="cartbtn" id="tilapiabtn" onclick="count()"> Add To Cart</button>
           </div>
         </div>
       </div>
@@ -112,5 +131,59 @@
           document.getElementById("num").innerHTML = clicks;
         }
     </script>
+    <script>
+      $(".cartbtn").click(function () {
+        var id = $(this).attr('id');
+        if(id == "tilapiabtn")
+        {
+          var price = parseFloat(document.getElementById("tilapiaprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricetilapia").innerHTML);
+          document.getElementById('pricetilapia').innerHTML =val + price;
+          document.getElementById("numtilapia").innerHTML = parseInt(document.getElementById("numtilapia").innerHTML)+1;
+        }
+        else if(id == "troutbtn")
+        {
+          var price = parseFloat(document.getElementById("troutprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricetrout").innerHTML);
+          document.getElementById('pricetrout').innerHTML =val + price;
+          document.getElementById("numtrout").innerHTML = parseInt(document.getElementById("numtrout").innerHTML)+1;
+        }
+        else if(id == "swordfishbtn")
+        {
+          var price = parseFloat(document.getElementById("swordfishprice").innerHTML);
+          var val = parseFloat(document.getElementById("priceswordfish").innerHTML);
+          document.getElementById('priceswordfish').innerHTML =val + price;
+          document.getElementById("numswordfish").innerHTML = parseInt(document.getElementById("numswordfish").innerHTML)+1;
+        }
+        else if(id == "solebtn")
+        {
+          var price = parseFloat(document.getElementById("soleprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricesole").innerHTML);
+          document.getElementById('pricesole').innerHTML =val + price;
+          document.getElementById("numsole").innerHTML = parseInt(document.getElementById("numsole").innerHTML)+1;
+        }
+        else if(id == "seabassbtn")
+        {
+          var price = parseFloat(document.getElementById("seabassprice").innerHTML);
+          var val = parseFloat(document.getElementById("priceseabass").innerHTML);
+          document.getElementById('priceseabass').innerHTML =val + price;
+          document.getElementById("numseabass").innerHTML = parseInt(document.getElementById("numseabass").innerHTML)+1;
+        }
+        else
+        {
+          var price = parseFloat(document.getElementById("salmonprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricesalmon").innerHTML);
+          document.getElementById('pricesalmon').innerHTML =val + price;
+          document.getElementById("numsalmon").innerHTML = parseInt(document.getElementById("numsalmon").innerHTML)+1;
+        }
+     });
+     $( "#lightcart" ).hover(
+  function() {
+    $( "#hoverdetails" ).css("display", 'block');
+  }, function() {
+    $( "#hoverdetails" ).css("display", 'none');
+  }
+);
+</script>
     </body>
     </html>
