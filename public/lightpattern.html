@@ -19,14 +19,36 @@
       padding: 10px 10px;
       box-shadow: 4px 3px 6px 5px #0e8faf
       }
+      #numincart
+      {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 5px 5px;
+        background-color: #09d1d1;
+        visibility: hidden;
+        margin-left: 1010px;
+      }
+      #num
+      {
+        visibility: hidden;
+        text-align: center;
+        color: black;
+      }
     </style>
     <title> Light Pattern </title>
     <body style="background-image: url(lightpatternbackground.jpeg); background-repeat: no-repeat; background-size: cover; padding-bottom: 15px;">
       <a href="index.html">
-      <i style="color: black; font-size: 300%" class="fa fa-home"></i>
+      <i style="color: black; font-size: 300%; margin-left: 50px;" class="fa fa-home"></i>
     </a>
+    <a href="checkoutlight.html"> 
+    <img src="carticon.png" width="50" style="float:right; margin-right: 300px; margin-top: 50px;"> 
+  </a>
+    <button id="numincart">
+       <a id="num"> 0</a>
+    </button>
       <center>
-      <h1 style=" color: black; margin-top: -20px;"> Welcome to Cob's Seafood Emporium</h1>
+      <h1 style=" color: black; margin-left: 300px; margin-top: -20px;"> Welcome to Cob's Seafood Emporium</h1>
       <p style="color: black; font-size:150%; width: 70%;"> At Cob's Seafood Emporium, you can find the fish of your dreams for an affordable price. Look at the options below and add your favorites to the cart. </p>
       <div style="margin-left: 260px;">
         <div class="row" style="margin-top: 20px;">
@@ -35,21 +57,21 @@
             <p style=" color: black; font-size: 180%"> This will be the description for the fish</p>
             <img src = "salmon.jpeg" width="200">
             <p style="color: black; font-size: 210%"> <strong>$15.00 </strong></p>
-            <button class="cartbtn"> Add To Cart</button>
+            <button class="cartbtn" onclick="count()"> Add To Cart</button>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3">
             <p style=" color: black; font-size: 250%;">  <strong> Sea Bass</strong></p>
             <p style="color: black; font-size: 180%"> This will be the description for the fish</p>
             <img src = "chileanseabass.jpeg" width="140">
             <p style=" color: black; font-size: 210%"> <strong>$15.00 </strong></p>
-            <button class="cartbtn"> Add To Cart</button>
+            <button class="cartbtn" onclick="count()"> Add To Cart</button>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3">
             <p style=" color: black; font-size: 250%;">  <strong> Sole</strong></p>
             <p style=" color: black; font-size: 180%"> Flaky, delicious, and goes well with butter</p>
             <img src = "sole.jpg" width="170">
             <p style=" color: black; font-size: 210%"> <strong>$15.00 </strong></p>
-            <button class="cartbtn"> Add To Cart</button>
+            <button class="cartbtn" onclick="count()"> Add To Cart</button>
           </div>
         </div>
 
@@ -59,39 +81,36 @@
             <p style=" color: black; font-size: 180%"> This will be the description for the fish</p>
             <img src = "swordfish.jpeg" width="200">
             <p style=" color: black; font-size: 210%"> <strong>$15.00 </strong></p>
-            <button class="cartbtn"> Add To Cart</button>
+            <button class="cartbtn" onclick="count()"> Add To Cart</button>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3">
             <p style=" color: black;font-size: 250%;">  <strong> Trout</strong></p>
             <p style=" color: black; font-size: 180%"> This will be the description for the fish</p>
             <img src = "trout.jpeg" width="170">
             <p style=" color: black; font-size: 210%"> <strong>$15.00 </strong></p>
-            <button class="cartbtn"> Add To Cart</button>
+            <button class="cartbtn" onclick="count()"> Add To Cart</button>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3">
             <p style=" color: black; font-size: 250%;">  <strong> Tilapia</strong></p>
             <p style="color: black; font-size: 180%"> This will be the description for the fish</p>
             <img src = "tilapia.jpeg" width="170">
             <p style=" color: black; font-size: 210%"> <strong>$15.00 </strong></p>
-            <button class="cartbtn"> Add To Cart</button>
+            <button class="cartbtn" onclick="count()"> Add To Cart</button>
           </div>
         </div>
       </div>
       </center>
-      <script>
-        $(document).ready(function () {
-            $("#continuebutton").click(function () {
-                var check = document.getElementById("agree");
-                if(check.checked == true)
-                {
-                  alert("Once created, you will be transfered to the page to sign up");
-                }
-                else 
-                {
-                  alert("You need to accept the Terms and Conditions in order to move on");
-                }
-            });
-        });
+      <script type="text/javascript">
+        var clicks = 0;
+        function count() 
+        {
+          var counter =  document.getElementById ( "num" ) ;
+          var divCounter =  document.getElementById ( "numincart" ) ;
+          counter.style.visibility = "visible";
+          divCounter.style.visibility = "visible" ;
+          clicks+=1;
+          document.getElementById("num").innerHTML = clicks;
+        }
     </script>
     </body>
     </html>
