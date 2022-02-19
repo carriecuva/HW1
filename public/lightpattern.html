@@ -18,7 +18,10 @@
       font-size: 140%; 
       padding: 10px 10px;
       }
-      
+      .btndiv
+      {
+        box-shadow: 4px 4px 6px 5px #0e8faf !important; width: 50%;
+      }
       #numincart
       {
         border-radius: 50%;
@@ -76,7 +79,7 @@
             <p style=" color: black; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
             <img src = "salmon.jpeg" width="200">
             <p style="color: black; font-size: 210%"> <strong>$<span id="salmonprice">10.00</span> </strong></p>
-            <div style="box-shadow: 4px 3px 6px 5px #0e8faf !important; width: 55%;">
+            <div class="btndiv">
             <button  class="cartbtn" id="salmonbtn" onclick="count()"> Add To Cart</button>
           </div>
           </div>
@@ -85,14 +88,18 @@
             <p style="color: black; font-size: 140%"> This mildy sweet fish is great for those who do not enjoy a fishy taste</p>
             <img src = "chileanseabass.jpeg" width="140">
             <p style=" color: black; font-size: 210%"> <strong>$<span id="seabassprice">16.00</span> </strong></p>
+            <div class="btndiv">
             <button class="cartbtn" id="seabassbtn" onclick="count()"> Add To Cart</button>
+          </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <p style=" color: black; font-size: 220%;">  <strong> Sole</strong></p>
             <p style=" color: black; font-size: 140%"> Flaky, delicious, and goes well with butter</p>
             <img src = "sole.jpg" width="170">
             <p style=" color: black; font-size: 210%"> <strong>$<span id="soleprice">14.00</span> </strong></p>
+            <div class="btndiv">
             <button class="cartbtn" id="solebtn" onclick="count()"> Add To Cart</button>
+          </div>
           </div>
         </div>
 
@@ -102,21 +109,27 @@
             <p style=" color: black; font-size: 140%"> This mild fish makes a great steak with its large size</p>
             <img src = "swordfish.jpeg" width="200">
             <p style=" color: black; font-size: 210%"> <strong>$<span id="swordfishprice">15.00</span> </strong></p>
+            <div class="btndiv">
             <button class="cartbtn" id="swordfishbtn" onclick="count()"> Add To Cart</button>
+          </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <p style=" color: black;font-size: 220%;">  <strong> Trout</strong></p>
             <p style=" color: black; font-size: 140%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
             <img src = "trout.jpeg" width="170">
             <p style=" color: black; font-size: 210%"> <strong>$<span id="troutprice">12.00</span> </strong></p>
+            <div class="btndiv">
             <button class="cartbtn" id="troutbtn" onclick="count()"> Add To Cart</button>
+          </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <p style=" color: black; font-size: 220%;">  <strong> Tilapia</strong></p>
             <p style="color: black; font-size: 140%"> This fast growing fish will taste delicious with any side you put with it</p>
             <img src = "tilapia.jpeg" width="170">
             <p style=" color: black; font-size: 210%"> <strong>$<span id="tilapiaprice">8.00</span> </strong></p>
+            <div class="btndiv">
             <button class="cartbtn" id="tilapiabtn" onclick="count()"> Add To Cart</button>
+          </div>
           </div>
         </div>
       </div>
