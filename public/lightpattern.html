@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -17,11 +18,7 @@
       font-size: 140%; 
       padding: 10px 10px;
       }
-
-      #salmonbtn
-      {
-        box-shadow: 6px 10px 8px #0e8faf !important;
-      }
+      
       #numincart
       {
         border-radius: 50%;
@@ -52,8 +49,8 @@
     <title> Light Pattern </title>
     <body style="background-image: url(lightpatternbackground.jpeg); background-repeat: no-repeat; background-size: cover; padding-bottom: 15px;">
       <a href="index.html">
-      <i style="color: black; font-size: 300%; margin-left: 50px;" class="fa fa-home"></i>
-    </a>
+        <i style="color: black; font-size: 300%; margin-left: 50px;" class="fa fa-home"></i>
+      </a>
     <center>
     <a href="checkoutlight.html"> 
     <img src="carticon.png" id="lightcart" width="50" style="float:right; margin-right: 200px;"> 
@@ -79,7 +76,7 @@
             <p style=" color: black; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
             <img src = "salmon.jpeg" width="200">
             <p style="color: black; font-size: 210%"> <strong>$<span id="salmonprice">10.00</span> </strong></p>
-            <button class="cartbtn" id="salmonbtn" onclick="count()"> Add To Cart</button>
+            <button style="box-shadow: 4px 3px 6px 5px #0e8faf !important;" class="cartbtn" id="salmonbtn" onclick="count()"> Add To Cart</button>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <p style=" color: black; font-size: 220%;">  <strong> Sea Bass</strong></p>
