@@ -31,7 +31,7 @@
 }
 .btndiv
 {
-  box-shadow: 4px 3px 6px 5px #cacaca, 3px 7px 5px 8px #dada !important; width: 53%;
+  box-shadow: 4px 3px 6px 5px #cacaca, 3px 7px 5px 8px #dada !important; width: 20%;
 }
   #num
   {
@@ -57,63 +57,45 @@
           
           <h1 style="color: white;"> Welcome to Cob's Seafood Emporium</h1>
           <p style="font-size:150%; width: 70%; color: white;"> At Cob's Seafood Emporium, you can find the fish of your dreams for an affordable price. Look at the options below and add your favorites to the cart. Click on the cart when you are ready to check out.</p>
-          <div style="margin-left: 260px; padding-top: 10px;">
+          <div style="padding-top: 10px;">
             <div class="row" style="margin-top: 20px;">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p style="color: white; font-size: 220%;">  <strong> Salmon</strong></p>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Common Sole</strong></p>
                 <p style="color: white; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
                 <img src = "salmon.jpeg" width="200">
                 <p style="color: white; font-size: 210%"> <strong>$10.00 </strong></p>
                 <div class="btndiv">
-                <button class="cartbtn" onclick="count()"> Add To Cart</button>
+                <button class="cartbtn" id="commonsolebtn" onclick="count()"> Add To Cart</button>
               </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p style="color: white; font-size: 220%;">  <strong> Sea Bass </strong></p>
-                <p style="color: white; font-size: 140%"> This mildy sweet fish is great for those who do not enjoy a fishy taste </p>
-                <img src = "chileanseabass.jpeg" width="150">
-                <p style="color: white; font-size: 210%"> <strong>$16.00 </strong></p>
-                <div class="btndiv">
-                <button class="cartbtn" onclick="count()"> Add To Cart</button>
-              </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p style="color: white; font-size: 220%;">  <strong> Sole</strong></p>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Lemon Sole</strong></p>
                 <p style="color: white; font-size: 140%"> Flaky, delicious, and goes well with butter</p>
                 <img src = "sole.jpg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$14.00 </strong></p>
                 <div class="btndiv">
-                <button class="cartbtn" onclick="count()"> Add To Cart</button>
+                <button class="cartbtn" id="lemonsolebtn" onclick="count()"> Add To Cart</button>
               </div>
               </div>
             </div>
     
             <div class="row" style="margin-top: 25px;">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p style="color: white; font-size: 220%;">  <strong> Swordfish</strong></p>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong> Petrale Sole</strong></p>
                 <p style="color: white; font-size: 140%"> This mild fish makes a great steak with its large size</p>
                 <img src = "swordfish.jpeg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
                 <div class="btndiv">
-                <button class="cartbtn" onclick="count()"> Add To Cart</button>
+                <button class="cartbtn" id="petralesolebtn" onclick="count()"> Add To Cart</button>
               </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p style="color: white; font-size: 220%;">  <strong>Trout</strong></p>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <p style="color: white; font-size: 220%;">  <strong>Wedge Sole</strong></p>
                 <p style="color: white; font-size: 140%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
                 <img src = "trout.jpeg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$12.00 </strong></p>
                 <div class="btndiv">
-                <button class="cartbtn" id="" onclick="count()"> Add To Cart</button>
-              </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <p style="color: white; font-size: 220%;">  <strong> Tilapia</strong></p>
-                <p style="color: white; font-size: 140%"> This fast growing fish will taste delicious with any side you put with it</p>
-                <img src = "tilapia.jpeg" width="170">
-                <p style="color: white; font-size: 210%"> <strong>$8.00</strong></p>
-                <div class="btndiv">
-                <button class="cartbtn"  onclick="count()"> Add To Cart</button>
+                <button class="cartbtn" id="wedgesolebtn" onclick="count()"> Add To Cart</button>
               </div>
               </div>
             </div>
@@ -130,6 +112,54 @@
               clicks+=1;
               document.getElementById("num").innerHTML = clicks;
             }
+        </script>
+        <script>
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+        var count4 = 0;
+      sessionStorage.setItem("quantitywedgesole", count1);
+      sessionStorage.setItem("quantitypetralesole", count2);
+      sessionStorage.setItem("quantitylemonsole", count3);
+      sessionStorage.setItem("quantitycommonsole", count4);
+      $(".cartbtn").click(function () {
+        var id = $(this).attr('id');
+        
+         if(id == "wedgesolebtn")
+        {
+          //var price = parseFloat(document.getElementById("wedgesoleprice").innerHTML);
+         // var val = parseFloat(document.getElementById("pricewedgesole").innerHTML);
+         // document.getElementById('pricewedgesole').innerHTML =val + price;
+          sessionStorage.setItem("quantitywedgesole", count1+=1);
+         // sessionStorage.setItem("wedgesolePrice", document.getElementById("pricewedgesole").innerHTML);
+        }
+        else if(id == "petralesolebtn")
+        {
+          //var price = parseFloat(document.getElementById("petralesoleprice").innerHTML);
+          //var val = parseFloat(document.getElementById("pricepetralesole").innerHTML);
+         // document.getElementById('pricepetralesole').innerHTML =val + price;
+          sessionStorage.setItem("quantitypetralesole", count2+=1);
+         // sessionStorage.setItem("petralesolePrice", document.getElementById("pricepetralesole").innerHTML);
+        }
+        else if(id == "lemonsolebtn")
+        {
+         // var price = parseFloat(document.getElementById("lemonsoleprice").innerHTML);
+          //var val = parseFloat(document.getElementById("pricelemonsole").innerHTML);
+         // document.getElementById('pricelemonsole').innerHTML =val + price;
+          sessionStorage.setItem("quantitylemonsole", count3+=1);
+         // sessionStorage.setItem("lemonsolePrice", document.getElementById("pricelemonsole").innerHTML);
+          
+        }
+        
+        else
+        {
+         // var price = parseFloat(document.getElementById("commonsoleprice").innerHTML);
+         // var val = parseFloat(document.getElementById("pricecommonsole").innerHTML);
+         // document.getElementById('pricecommonsole').innerHTML =val + price;
+          sessionStorage.setItem("quantitycommonsole", count4+=1);
+          //sessionStorage.setItem("commonsolePrice", document.getElementById("pricecommonsole").innerHTML);
+        }
+     });
         </script>
     </body>
     </html>

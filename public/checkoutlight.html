@@ -132,12 +132,12 @@
       $(document).ready(function() {
         var price1 = document.getElementById('commonsolerow');
         var quan1 = document.getElementById("commonsolequan");
-       var price3 = document.getElementById('lemonsolerow');
-       var quan3 = document.getElementById('lemonsolequan');
-       var price4 = document.getElementById('petralesolerow');
-       var quan4 = document.getElementById('petralesolequan');
-       var price6 = document.getElementById('wedgesolerow');
-       var quan6 = document.getElementById('wedgesolequan');
+       var price2 = document.getElementById('lemonsolerow');
+       var quan2 = document.getElementById('lemonsolequan');
+       var price3 = document.getElementById('petralesolerow');
+       var quan3 = document.getElementById('petralesolequan');
+       var price4 = document.getElementById('wedgesolerow');
+       var quan4 = document.getElementById('wedgesolequan');
         
         if(sessionStorage.getItem("quantitycommonsole") != 0)
         {
@@ -148,20 +148,20 @@
         if(sessionStorage.getItem("quantitylemonsole") != 0)
         {
           $( "#lemonsolediv" ).css("display", 'flex');
-          price3.innerHTML = sessionStorage.getItem("lemonsolePrice");
-          quan3.innerHTML = sessionStorage.getItem("quantitylemonsole");
+          price2.innerHTML = sessionStorage.getItem("lemonsolePrice");
+          quan2.innerHTML = sessionStorage.getItem("quantitylemonsole");
         }
         if(sessionStorage.getItem("quantitypetralesole") != 0)
         {
           $( "#petralesolediv" ).css("display", 'flex');
-          price4.innerHTML = sessionStorage.getItem("petralesolePrice");
-          quan4.innerHTML = sessionStorage.getItem("quantitypetralesole");
+          price3.innerHTML = sessionStorage.getItem("petralesolePrice");
+          quan3.innerHTML = sessionStorage.getItem("quantitypetralesole");
         }
         if(sessionStorage.getItem("quantitywedgesole") != 0)
         {
           $( "#wedgesolediv" ).css("display", 'flex');
-          price6.innerHTML = sessionStorage.getItem("wedgesolePrice");
-          quan6.innerHTML = sessionStorage.getItem("quantitywedgesole");
+          price4.innerHTML = sessionStorage.getItem("wedgesolePrice");
+          quan4.innerHTML = sessionStorage.getItem("quantitywedgesole");
         }
          $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
