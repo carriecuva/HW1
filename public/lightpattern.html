@@ -75,7 +75,7 @@
       <div style="margin-left: 260px; padding-top: 10px;">
         <div class="row" style="margin-top: 20px;">
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <p style="color: black; font-size: 220%;">  <strong> Salmon</strong></p>
+            <p style="color: black; font-size: 220%;">  <strong> Lemon Sole </strong></p>
             <p style=" color: black; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
             <img src = "salmon.jpeg" width="200">
             <p style="color: black; font-size: 210%"> <strong>$<span id="salmonprice">10.00</span> </strong></p>
@@ -147,6 +147,12 @@
         }
     </script>
     <script>
+      sessionStorage.setItem("quantitytilapia", document.getElementById("numtilapia").innerHTML);
+      sessionStorage.setItem("quantitytrout", document.getElementById("numtrout").innerHTML);
+      sessionStorage.setItem("quantityswordfish", document.getElementById("numswordfish").innerHTML);
+      sessionStorage.setItem("quantitysole", document.getElementById("numsole").innerHTML);
+      sessionStorage.setItem("quantityseabass", document.getElementById("numseabass").innerHTML);
+      sessionStorage.setItem("quantitysalmon", document.getElementById("numsalmon").innerHTML);
       $(".cartbtn").click(function () {
         var id = $(this).attr('id');
         if(id == "tilapiabtn")
@@ -155,6 +161,8 @@
           var val = parseFloat(document.getElementById("pricetilapia").innerHTML);
           document.getElementById('pricetilapia').innerHTML =val + price;
           document.getElementById("numtilapia").innerHTML = parseInt(document.getElementById("numtilapia").innerHTML)+1;
+          sessionStorage.setItem("quantitytilapia", document.getElementById("numtilapia").innerHTML);
+          sessionStorage.setItem("tilapiaPrice", document.getElementById("pricetilapia").innerHTML);
         }
         else if(id == "troutbtn")
         {
@@ -162,6 +170,8 @@
           var val = parseFloat(document.getElementById("pricetrout").innerHTML);
           document.getElementById('pricetrout').innerHTML =val + price;
           document.getElementById("numtrout").innerHTML = parseInt(document.getElementById("numtrout").innerHTML)+1;
+          sessionStorage.setItem("quantitytrout", document.getElementById("numtrout").innerHTML);
+          sessionStorage.setItem("troutPrice", document.getElementById("pricetrout").innerHTML);
         }
         else if(id == "swordfishbtn")
         {
@@ -169,6 +179,8 @@
           var val = parseFloat(document.getElementById("priceswordfish").innerHTML);
           document.getElementById('priceswordfish').innerHTML =val + price;
           document.getElementById("numswordfish").innerHTML = parseInt(document.getElementById("numswordfish").innerHTML)+1;
+          sessionStorage.setItem("quantityswordfish", document.getElementById("numswordfish").innerHTML);
+          sessionStorage.setItem("swordfishPrice", document.getElementById("priceswordfish").innerHTML);
         }
         else if(id == "solebtn")
         {
@@ -176,6 +188,9 @@
           var val = parseFloat(document.getElementById("pricesole").innerHTML);
           document.getElementById('pricesole').innerHTML =val + price;
           document.getElementById("numsole").innerHTML = parseInt(document.getElementById("numsole").innerHTML)+1;
+          sessionStorage.setItem("quantitysole", document.getElementById("numsole").innerHTML);
+          sessionStorage.setItem("solePrice", document.getElementById("pricesole").innerHTML);
+          
         }
         else if(id == "seabassbtn")
         {
@@ -183,13 +198,18 @@
           var val = parseFloat(document.getElementById("priceseabass").innerHTML);
           document.getElementById('priceseabass').innerHTML =val + price;
           document.getElementById("numseabass").innerHTML = parseInt(document.getElementById("numseabass").innerHTML)+1;
+          sessionStorage.setItem("quantityseabass", document.getElementById("numseabass").innerHTML);
+          sessionStorage.setItem("seabassPrice", document.getElementById("priceseabass").innerHTML);
         }
         else
         {
           var price = parseFloat(document.getElementById("salmonprice").innerHTML);
           var val = parseFloat(document.getElementById("pricesalmon").innerHTML);
+          var quantity = parseInt(document.getElementById("numsalmon").innerHTML);
           document.getElementById('pricesalmon').innerHTML =val + price;
-          document.getElementById("numsalmon").innerHTML = parseInt(document.getElementById("numsalmon").innerHTML)+1;
+          document.getElementById("numsalmon").innerHTML = quantity+=1;
+          sessionStorage.setItem("quantitysalmon", document.getElementById("numsalmon").innerHTML);
+          sessionStorage.setItem("salmonPrice", document.getElementById("pricesalmon").innerHTML);
         }
      });
      $( "#lightcart" ).hover(

@@ -13,70 +13,117 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
     <body>
+      <h2 style="text-align: center;"> Checkout Page</h2>
+      <a href="lightpattern.html">
+        <i style="color: black; font-size: 270%; float: right; margin-right: 50px; margin-top: -45px;" class="fa fa-arrow-left"></i>
+      </a>
         <center>
-            <a href="lightpattern.html">
-                <i style="color: black; font-size: 270%; float: right; margin-right: 50px;" class="fa fa-arrow-left"></i>
-              </a>
-
-              <div class="row">
-                <div class="col-75">
-                    <form>
-              
-                      <div class="row">
-                        <div class="col-50">
-                          <h3>Billing Address</h3>
-                          <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                          <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-                          <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                          <input type="text" id="email" name="email" placeholder="john@example.com">
-                          <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                          <label for="city"><i class="fa fa-institution"></i> City</label>
-                          <input type="text" id="city" name="city" placeholder="New York">
-              
-                          <div class="row">
-                            <div class="col-50">
-                              <label for="state">State</label>
-                              <input type="text" id="state" name="state" placeholder="NY">
-                            </div>
-                            <div class="col-50">
-                              <label for="zip">Zip</label>
-                              <input type="text" id="zip" name="zip" placeholder="10001">
-                            </div>
-                          </div>
-                        </div>
-              
-                        <div class="col-50">
-                          <h3>Payment</h3>
-                          <label for="fname">Accepted Cards</label>
-                          <div class="icon-container">
-                            <i class="fa fa-cc-visa" style="color:navy;"></i>
-                            <i class="fa fa-cc-amex" style="color:blue;"></i>
-                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                            <i class="fa fa-cc-discover" style="color:orange;"></i>
-                          </div>
-                          <label for="cname">Name on Card</label>
+          <div class="row">
+            <h3> Your Cart</h3>
+            <div style="background-color: rgb(182, 181, 181); width: 99%; padding-left: 100px; padding-right: 100px;">
+              <div style="display: flex; justify-content: space-between;">
+                  <p style="font-size: 150%;">  <strong>Item</strong></p>
+                  <p style="font-size: 150%;"> <strong>Name </strong></p>
+                  <p style="font-size: 150%;"> <strong>Quantity </strong></p>
+                  <p style="font-size: 150%;"><strong> Price </strong> </p>
+              </div>
+                <div id="salmondiv" style=" justify-content: space-between; display: none;">
+                   <p style="font-size: 150%;"> <img src="salmon.jpeg" width="150">  <span style="margin-left: 210px;">Salmon </span> </p>
+                   <p style="font-size: 150%; margin-top: 25px;" ><span id="salmonquan"></span></p>
+                    <p style="font-size: 150%; margin-top: 25px; "> $<span id="salmonrow"></span> </p>
+                </div>
+                <div id="seabassdiv" style="display:none; justify-content: space-between;">
+                  <p style="font-size: 150%;"> <img src="chileanseabass.jpeg" width="150">  <span style="margin-left: 210px;">Sea Bass </span> </p>
+                  <p style="font-size: 150%; margin-top: 25px;" ><span id="seabassquan"></span></p>
+                   <p style="font-size: 150%; margin-top: 25px; "> $<span id="seabassrow"></span> </p>
+               </div>
+               <div id="solediv" style="display:none; justify-content: space-between;">
+                <p style="font-size: 150%;"> <img src="sole.jpg" width="150">  <span style="margin-left: 210px;">Sole </span> </p>
+                <p style="font-size: 150%; margin-top: 25px;" ><span id="solequan"></span></p>
+                 <p style="font-size: 150%; margin-top: 25px; "> $<span id="solerow"></span> </p>
+             </div>
+             <div id="swordfishdiv" style="display:none; justify-content: space-between;">
+              <p style="font-size: 150%;"> <img src="swordfish.jpeg" width="150">  <span style="margin-left: 210px;">Swordfish </span> </p>
+              <p style="font-size: 150%; margin-top: 25px;" ><span id="swordfishquan"></span></p>
+               <p style="font-size: 150%; margin-top: 25px; "> $<span id="swordfishrow"></span> </p>
+           </div>
+           <div id="tilapiadiv" style="display:none; justify-content: space-between;">
+            <p style="font-size: 150%;"> <img src="tilapia.jpeg" width="150">  <span style="margin-left: 210px;">Tilapia </span> </p>
+            <p style="font-size: 150%; margin-top: 25px;" ><span id="tilapiaquan"></span></p>
+             <p style="font-size: 150%; margin-top: 25px; "> $<span id="tilapiarow"></span> </p>
+         </div>
+         <div id="troutdiv" style="display:none; justify-content: space-between;">
+          <p style="font-size: 150%;"> <img src="trout.jpeg" width="150">  <span style="margin-left: 210px;">Trout </span> </p>
+          <p style="font-size: 150%; margin-top: 25px;" ><span id="troutquan"></span></p>
+           <p style="font-size: 150%; margin-top: 25px; "> $<span id="troutrow"></span> </p>
+       </div>
+          </div>
+          </div>
+       <div style="background-color: lightgrey; margin-top: 30px; padding-bottom: 20px;">
+            <form style="padding-top: 5px; display: flex; justify-content: center;"> 
+              <div>    
+                <h3 style="padding-bottom: 10px;">Billing Information</h3>
+                <div  style="padding-bottom: 10px;"> 
+                    <label style=" width: 60%;" for="fname"><i class="fa fa-user"></i> Full Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                  </div>
+                  <div  style="padding-bottom: 10px;">
+                    <label style=" width: 30%;"  for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                  </div>
+                  <div  style="padding-bottom: 10px;">
+                    <label style=" width: 30%;" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                   <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  </div>
+                  <div  style="padding-bottom: 10px;">
+                   <label style=" width: 30%;" for="city"><i class="fa fa-institution"></i> City</label>
+                    <input type="text" id="city" name="city" placeholder="New York">
+                  </div>
+                  <div  style="padding-bottom: 10px;">
+                     <label style=" width: 30%;"  for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="NY">
+                  </div>
+                  <div style="padding-bottom: 10px;">
+                     <label style=" width: 30%;" for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                  <div style="padding-left: 30px;">
+                       <h3>Payment Information</h3>
+                       <div>
+                      <label style="font-size: 120%" for="fname">Accepted Cards</label>
+                    </div>
+                    <div>
+                            <i class="fa fa-cc-visa" style="color:navy; font-size: 150%;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue; font-size: 150%;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red; font-size: 150%;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange; font-size: 150%;"></i>
+                      
+                          </div>  
+                          <div style="padding-bottom: 10px; padding-top: 10px;">
+                          <label style=" width: 30%;" for="cname">Name on Card</label>
                           <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                          <label for="ccnum">Credit card number</label>
+                        </div>
+                        <div style="padding-bottom: 10px;">
+                          <label style=" width: 30%;" for="ccnum">Credit card number</label>
                           <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                          <label for="expmonth">Exp Month</label>
+                        </div>
+                        <div style="padding-bottom: 10px;">
+                          <label style=" width: 30%;" for="expmonth">Exp Month</label>
                           <input type="text" id="expmonth" name="expmonth" placeholder="September">
-              
-                          <div class="row">
-                            <div class="col-50">
-                              <label for="expyear">Exp Year</label>
+                        </div>
+                          <div style="padding-bottom: 10px;">
+                              <label style=" width: 30%;" for="expyear">Exp Year</label>
                               <input type="text" id="expyear" name="expyear" placeholder="2018">
                             </div>
-                            <div class="col-50">
-                              <label for="cvv">CVV</label>
+                           <div style="padding-bottom: 10px;">
+                              <label style=" width: 30%;" for="cvv">CVV</label>
                               <input type="text" id="cvv" name="cvv" placeholder="352">
                             </div>
                           </div>
-                        </div>
-              
-                      </div>
                     </form>
                   </div>
+        <div style="margin-top: 20px;">
         <div>
             <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies" >
             <label for="checkbox"   style="margin-left: 10px"> I agree to be billed and solemly swear to adhere to law of no backsies</label><br>
@@ -88,8 +135,60 @@
         <div>
         <button id="submitbtn"> Submit Order </button>
     </div>
+  </div>
     </center>
+  
     <script>
+      $(document).ready(function() {
+        var price1 = document.getElementById('salmonrow');
+        var quan1 = document.getElementById("salmonquan");
+       var price2 = document.getElementById('seabassrow');
+       var quan2 = document.getElementById("seabassquan");
+       var price3 = document.getElementById('solerow');
+       var quan3 = document.getElementById('solequan');
+       var price4 = document.getElementById('swordfishrow');
+       var quan4 = document.getElementById('swordfishquan');
+      var price5 = document.getElementById('tilapiarow');
+      var quan5 = document.getElementById('tilapiaquan');
+       var price6 = document.getElementById('troutrow');
+       var quan6 = document.getElementById('troutquan');
+        
+        if(sessionStorage.getItem("quantitysalmon") != 0)
+        {
+          $( "#salmondiv" ).css("display", 'flex');
+          price1.innerHTML = sessionStorage.getItem("salmonPrice");
+          quan1.innerHTML = sessionStorage.getItem("quantitysalmon");
+        }
+        if(sessionStorage.getItem("quantityseabass") != 0)
+        {
+          $( "#seabassdiv" ).css("display", 'flex');
+          price2.innerHTML = sessionStorage.getItem("seabassPrice");
+          quan2.innerHTML = sessionStorage.getItem("quantityseabass");
+        }
+        if(sessionStorage.getItem("quantitysole") != 0)
+        {
+          $( "#solediv" ).css("display", 'flex');
+          price3.innerHTML = sessionStorage.getItem("solePrice");
+          quan3.innerHTML = sessionStorage.getItem("quantitysole");
+        }
+        if(sessionStorage.getItem("quantityswordfish") != 0)
+        {
+          $( "#swordfishdiv" ).css("display", 'flex');
+          price4.innerHTML = sessionStorage.getItem("swordfishPrice");
+          quan4.innerHTML = sessionStorage.getItem("quantityswordfish");
+        }
+        if(sessionStorage.getItem("quantitytilapia") != 0)
+        {
+          $( "#tilapiadiv" ).css("display", 'flex');
+          price5.innerHTML = sessionStorage.getItem("tilapiaPrice");
+          quan5.innerHTML = sessionStorage.getItem("quantitytilapia");
+        }
+        if(sessionStorage.getItem("quantitytrout") != 0)
+        {
+          $( "#troutdiv" ).css("display", 'flex');
+          price6.innerHTML = sessionStorage.getItem("troutPrice");
+          quan6.innerHTML = sessionStorage.getItem("quantitytrout");
+        }
          $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
             var check2 = document.getElementById("checkbox2");
@@ -102,6 +201,7 @@
                 alert("We want to make sure you understand and have read the terms! Both checkboxes have to be checked in order to move on");
             }
         });
+      });
     </script>
     </body>
 </html>
