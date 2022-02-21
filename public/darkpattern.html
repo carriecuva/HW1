@@ -63,7 +63,7 @@
                 <p style="color: white; font-size: 220%;">  <strong> Common Sole</strong></p>
                 <p style="color: white; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
                 <img src = "salmon.jpeg" width="200">
-                <p style="color: white; font-size: 210%"> <strong>$10.00 </strong></p>
+                <p style="color: white; font-size: 210%"> <strong>$<span id="commonsoleprice">10.00</span> </strong></p>
                 <div class="btndiv">
                 <button class="cartbtn" id="commonsolebtn" onclick="count()"> Add To Cart</button>
               </div>
@@ -72,7 +72,7 @@
                 <p style="color: white; font-size: 220%;">  <strong> Lemon Sole</strong></p>
                 <p style="color: white; font-size: 140%"> Flaky, delicious, and goes well with butter</p>
                 <img src = "sole.jpg" width="170">
-                <p style="color: white; font-size: 210%"> <strong>$14.00 </strong></p>
+                <p style="color: white; font-size: 210%"> <strong>$<span id="lemonsoleprice">14.00</span> </strong></p>
                 <div class="btndiv">
                 <button class="cartbtn" id="lemonsolebtn" onclick="count()"> Add To Cart</button>
               </div>
@@ -84,7 +84,7 @@
                 <p style="color: white; font-size: 220%;">  <strong> Petrale Sole</strong></p>
                 <p style="color: white; font-size: 140%"> This mild fish makes a great steak with its large size</p>
                 <img src = "swordfish.jpeg" width="170">
-                <p style="color: white; font-size: 210%"> <strong>$15.00 </strong></p>
+                <p style="color: white; font-size: 210%"> <strong>$<span id="petralesoleprice">15.00</span> </strong></p>
                 <div class="btndiv">
                 <button class="cartbtn" id="petralesolebtn" onclick="count()"> Add To Cart</button>
               </div>
@@ -93,7 +93,7 @@
                 <p style="color: white; font-size: 220%;">  <strong>Wedge Sole</strong></p>
                 <p style="color: white; font-size: 140%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
                 <img src = "trout.jpeg" width="170">
-                <p style="color: white; font-size: 210%"> <strong>$12.00 </strong></p>
+                <p style="color: white; font-size: 210%"> <strong>$<span id="wedgesoleprice">12.00</span></strong></p>
                 <div class="btndiv">
                 <button class="cartbtn" id="wedgesolebtn" onclick="count()"> Add To Cart</button>
               </div>
@@ -127,37 +127,29 @@
         
          if(id == "wedgesolebtn")
         {
-          //var price = parseFloat(document.getElementById("wedgesoleprice").innerHTML);
-         // var val = parseFloat(document.getElementById("pricewedgesole").innerHTML);
-         // document.getElementById('pricewedgesole').innerHTML =val + price;
+          var price = parseFloat(document.getElementById("wedgesoleprice").innerHTML);
           sessionStorage.setItem("quantitywedgesole", count1+=1);
-         // sessionStorage.setItem("wedgesolePrice", document.getElementById("pricewedgesole").innerHTML);
+         sessionStorage.setItem("wedgesolePrice",price*count1);
         }
         else if(id == "petralesolebtn")
         {
-          //var price = parseFloat(document.getElementById("petralesoleprice").innerHTML);
-          //var val = parseFloat(document.getElementById("pricepetralesole").innerHTML);
-         // document.getElementById('pricepetralesole').innerHTML =val + price;
+          var price = parseFloat(document.getElementById("petralesoleprice").innerHTML);
           sessionStorage.setItem("quantitypetralesole", count2+=1);
-         // sessionStorage.setItem("petralesolePrice", document.getElementById("pricepetralesole").innerHTML);
+         sessionStorage.setItem("petralesolePrice", price*count2);
         }
         else if(id == "lemonsolebtn")
         {
-         // var price = parseFloat(document.getElementById("lemonsoleprice").innerHTML);
-          //var val = parseFloat(document.getElementById("pricelemonsole").innerHTML);
-         // document.getElementById('pricelemonsole').innerHTML =val + price;
-          sessionStorage.setItem("quantitylemonsole", count3+=1);
-         // sessionStorage.setItem("lemonsolePrice", document.getElementById("pricelemonsole").innerHTML);
+         var price = parseFloat(document.getElementById("lemonsoleprice").innerHTML);
+        sessionStorage.setItem("quantitylemonsole", count3+=1);
+         sessionStorage.setItem("lemonsolePrice", price*count3);
           
         }
         
         else
         {
-         // var price = parseFloat(document.getElementById("commonsoleprice").innerHTML);
-         // var val = parseFloat(document.getElementById("pricecommonsole").innerHTML);
-         // document.getElementById('pricecommonsole').innerHTML =val + price;
+         var price = parseFloat(document.getElementById("commonsoleprice").innerHTML);
           sessionStorage.setItem("quantitycommonsole", count4+=1);
-          //sessionStorage.setItem("commonsolePrice", document.getElementById("pricecommonsole").innerHTML);
+          sessionStorage.setItem("commonsolePrice", price*count4);
         }
      });
         </script>
