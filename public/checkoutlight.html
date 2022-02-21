@@ -12,15 +12,15 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
-    <body>
+    <body style="padding-bottom: 15px;" >
       <h2 style="text-align: center;"> Checkout Page</h2>
       <a href="lightpattern.html">
         <i style="color: black; font-size: 270%; float: right; margin-right: 50px; margin-top: -45px;" class="fa fa-arrow-left"></i>
       </a>
         <center>
           <div class="row">
-            <h3> Your Cart</h3>
             <div style="background-color: rgb(182, 181, 181); width: 99%; padding-left: 100px; padding-right: 100px;">
+              <h3 style="padding-top: 10px; padding-bottom: 10px;"> Your Cart</h3>
               <div style="display: flex; justify-content: space-between;">
                   <p style="font-size: 150%;">  <strong>Item</strong></p>
                   <p style="font-size: 150%;"> <strong>Name </strong></p>
@@ -61,39 +61,39 @@
           </div>
        <div style="background-color: lightgrey; margin-top: 30px; padding-bottom: 20px;">
             <form style="padding-top: 5px; display: flex; justify-content: center;"> 
-              <div>    
+              <div class="col-lg-6 col-md-6 col-sm-6">    
                 <h3 style="padding-bottom: 10px;">Billing Information</h3>
                 <div  style="padding-bottom: 10px;"> 
-                    <label style=" width: 60%;" for="fname"><i class="fa fa-user"></i> Full Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                    <label  style=" width: 30%; font-size: 130%;" for="fname"> Full Name</label>
+                    <input style="font-size: 120%;" type="text" id="fname" name="firstname" placeholder="Randy Smith">
                   </div>
                   <div  style="padding-bottom: 10px;">
-                    <label style=" width: 30%;"  for="email"><i class="fa fa-envelope"></i> Email</label>
-                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                    <label  style=" width: 30%; font-size: 130%;"  for="email"> Email</label>
+                    <input  style="font-size: 120%;" type="text" id="email" name="email" placeholder="rsmith@example.com">
                   </div>
                   <div  style="padding-bottom: 10px;">
-                    <label style=" width: 30%;" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                   <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                    <label  style=" width: 30%; font-size: 130%;" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                   <input style="font-size: 120%;" type="text" id="adr" name="address" placeholder="1 John Carroll Blvd">
                   </div>
                   <div  style="padding-bottom: 10px;">
-                   <label style=" width: 30%;" for="city"><i class="fa fa-institution"></i> City</label>
-                    <input type="text" id="city" name="city" placeholder="New York">
+                   <label  style=" width: 30%; font-size: 130%;"  for="city"> City</label>
+                    <input style="font-size: 120%;" type="text" id="city" name="city" placeholder="University Heights">
                   </div>
                   <div  style="padding-bottom: 10px;">
-                     <label style=" width: 30%;"  for="state">State</label>
-                    <input type="text" id="state" name="state" placeholder="NY">
+                     <label  style=" width: 30%; font-size: 130%;"   for="state">State</label>
+                    <input style="font-size: 120%;" type="text" id="state" name="state" placeholder="OH">
                   </div>
                   <div style="padding-bottom: 10px;">
-                     <label style=" width: 30%;" for="zip">Zip</label>
-                      <input type="text" id="zip" name="zip" placeholder="10001">
+                     <label  style=" width: 30%; font-size: 130%;" for="zip">Zip</label>
+                      <input style="font-size: 120%;" type="text" id="zip" name="zip" placeholder="44118">
                     </div>
                   </div>
-                  <div style="padding-left: 30px;">
+                  <div class=" col-lg-6 col-md-6 col-sm-6">
                        <h3>Payment Information</h3>
                        <div>
-                      <label style="font-size: 120%" for="fname">Accepted Cards</label>
+                      <label style="font-size: 130%" for="fname">Accepted Cards</label>
                     </div>
-                    <div>
+                    <div style="margin-bottom: 15px;">
                             <i class="fa fa-cc-visa" style="color:navy; font-size: 150%;"></i>
                             <i class="fa fa-cc-amex" style="color:blue; font-size: 150%;"></i>
                             <i class="fa fa-cc-mastercard" style="color:red; font-size: 150%;"></i>
@@ -101,24 +101,24 @@
                       
                           </div>  
                           <div style="padding-bottom: 10px; padding-top: 10px;">
-                          <label style=" width: 30%;" for="cname">Name on Card</label>
-                          <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                          <label style=" width: 30%; font-size: 130%;" for="cname">Name on Card</label>
+                          <input style="font-size: 120%;" type="text" id="cname" name="cardname" placeholder="Randy Smith">
                         </div>
                         <div style="padding-bottom: 10px;">
-                          <label style=" width: 30%;" for="ccnum">Credit card number</label>
-                          <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                          <label style=" width: 30%; font-size: 130%;" for="ccnum">Credit Card Number</label>
+                          <input style="font-size: 120%;" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                         </div>
                         <div style="padding-bottom: 10px;">
-                          <label style=" width: 30%;" for="expmonth">Exp Month</label>
-                          <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                          <label style=" width: 30%; font-size: 130%;" for="expmonth">Exp Month</label>
+                          <input style="font-size: 120%;" type="text" id="expmonth" name="expmonth" placeholder="September">
                         </div>
                           <div style="padding-bottom: 10px;">
-                              <label style=" width: 30%;" for="expyear">Exp Year</label>
-                              <input type="text" id="expyear" name="expyear" placeholder="2018">
+                              <label style=" width: 30%; font-size: 130%;" for="expyear">Exp Year</label>
+                              <input style="font-size: 120%;" type="text" id="expyear" name="expyear" placeholder="2026">
                             </div>
                            <div style="padding-bottom: 10px;">
-                              <label style=" width: 30%;" for="cvv">CVV</label>
-                              <input type="text" id="cvv" name="cvv" placeholder="352">
+                              <label style=" width: 30%; font-size: 130%;" for="cvv">CVV</label>
+                              <input style="font-size: 120%;" type="text" id="cvv" name="cvv" placeholder="418">
                             </div>
                           </div>
                     </form>
@@ -126,14 +126,14 @@
         <div style="margin-top: 20px;">
         <div>
             <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies" >
-            <label for="checkbox"   style="margin-left: 10px"> I agree to be billed and solemly swear to adhere to law of no backsies</label><br>
+            <label for="checkbox"   style="margin-left: 10px; font-size: 125%;"> I agree to be billed and solemly swear to adhere to law of no backsies</label><br>
         </div>
         <div>
             <input type="checkbox" id="checkbox2" name="checkbox2" value="Agreetoterms"> 
-            <label for="checkbox2"  style="margin-left: 10px"> I accept the terms and conditions of purchase <a href="terms and conditions - cob's seafood emporium.pdf"> Click to Read Terms</a></label>
+            <label for="checkbox2"  style="margin-left: 10px;  font-size: 125%;"> I accept the terms and conditions of purchase <a href="light pattern terms and conditions - cob's seafood emporium.pdf"> Click to Read Terms</a> and understand Cob's will not be at fault for any damage caused by the fish</label>
         </div>
         <div>
-        <button id="submitbtn"> Submit Order </button>
+        <button id="submitbtn" style="font-size: 140%; margin-top: 10px;" > Place Order </button>
     </div>
   </div>
     </center>
@@ -148,8 +148,8 @@
        var quan3 = document.getElementById('solequan');
        var price4 = document.getElementById('swordfishrow');
        var quan4 = document.getElementById('swordfishquan');
-      var price5 = document.getElementById('tilapiarow');
-      var quan5 = document.getElementById('tilapiaquan');
+       var price5 = document.getElementById('tilapiarow');
+       var quan5 = document.getElementById('tilapiaquan');
        var price6 = document.getElementById('troutrow');
        var quan6 = document.getElementById('troutquan');
         
