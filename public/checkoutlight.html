@@ -27,35 +27,25 @@
                   <p style="font-size: 150%;"> <strong>Quantity </strong></p>
                   <p style="font-size: 150%;"><strong> Price </strong> </p>
               </div>
-                <div id="salmondiv" style=" justify-content: space-between; display: none;">
-                   <p style="font-size: 150%;"> <img src="salmon.jpeg" width="150">  <span style="margin-left: 210px;">Salmon </span> </p>
-                   <p style="font-size: 150%; margin-top: 25px;" ><span id="salmonquan"></span></p>
-                    <p style="font-size: 150%; margin-top: 25px; "> $<span id="salmonrow"></span> </p>
+                <div id="commonsolediv" style=" justify-content: space-between; display: none;">
+                   <p style="font-size: 150%;"> <img src="salmon.jpeg" width="150">  <span style="margin-left: 210px;">Common Sole </span> </p>
+                   <p style="font-size: 150%; margin-top: 25px;" ><span id="commonsolequan"></span></p>
+                    <p style="font-size: 150%; margin-top: 25px; "> $<span id="commonsolerow"></span> </p>
                 </div>
-                <div id="seabassdiv" style="display:none; justify-content: space-between;">
-                  <p style="font-size: 150%;"> <img src="chileanseabass.jpeg" width="150">  <span style="margin-left: 210px;">Sea Bass </span> </p>
-                  <p style="font-size: 150%; margin-top: 25px;" ><span id="seabassquan"></span></p>
-                   <p style="font-size: 150%; margin-top: 25px; "> $<span id="seabassrow"></span> </p>
-               </div>
-               <div id="solediv" style="display:none; justify-content: space-between;">
-                <p style="font-size: 150%;"> <img src="sole.jpg" width="150">  <span style="margin-left: 210px;">Sole </span> </p>
-                <p style="font-size: 150%; margin-top: 25px;" ><span id="solequan"></span></p>
-                 <p style="font-size: 150%; margin-top: 25px; "> $<span id="solerow"></span> </p>
+               <div id="lemonsolediv" style="display:none; justify-content: space-between;">
+                <p style="font-size: 150%;"> <img src="sole.jpg" width="150">  <span style="margin-left: 210px;"> Lemon Sole </span> </p>
+                <p style="font-size: 150%; margin-top: 25px;" ><span id="lemonsolequan"></span></p>
+                 <p style="font-size: 150%; margin-top: 25px; "> $<span id="lemonsolerow"></span> </p>
              </div>
-             <div id="swordfishdiv" style="display:none; justify-content: space-between;">
-              <p style="font-size: 150%;"> <img src="swordfish.jpeg" width="150">  <span style="margin-left: 210px;">Swordfish </span> </p>
-              <p style="font-size: 150%; margin-top: 25px;" ><span id="swordfishquan"></span></p>
-               <p style="font-size: 150%; margin-top: 25px; "> $<span id="swordfishrow"></span> </p>
+             <div id="petralesolediv" style="display:none; justify-content: space-between;">
+              <p style="font-size: 150%;"> <img src="swordfish.jpeg" width="150">  <span style="margin-left: 210px;">Petrale Sole </span> </p>
+              <p style="font-size: 150%; margin-top: 25px;" ><span id="petralesolequan"></span></p>
+               <p style="font-size: 150%; margin-top: 25px; "> $<span id="petralesolerow"></span> </p>
            </div>
-           <div id="tilapiadiv" style="display:none; justify-content: space-between;">
-            <p style="font-size: 150%;"> <img src="tilapia.jpeg" width="150">  <span style="margin-left: 210px;">Tilapia </span> </p>
-            <p style="font-size: 150%; margin-top: 25px;" ><span id="tilapiaquan"></span></p>
-             <p style="font-size: 150%; margin-top: 25px; "> $<span id="tilapiarow"></span> </p>
-         </div>
-         <div id="troutdiv" style="display:none; justify-content: space-between;">
-          <p style="font-size: 150%;"> <img src="trout.jpeg" width="150">  <span style="margin-left: 210px;">Trout </span> </p>
-          <p style="font-size: 150%; margin-top: 25px;" ><span id="troutquan"></span></p>
-           <p style="font-size: 150%; margin-top: 25px; "> $<span id="troutrow"></span> </p>
+         <div id="wedgesolediv" style="display:none; justify-content: space-between;">
+          <p style="font-size: 150%;"> <img src="trout.jpeg" width="150">  <span style="margin-left: 210px;">Wedge Sole </span> </p>
+          <p style="font-size: 150%; margin-top: 25px;" ><span id="wedgesolequan"></span></p>
+           <p style="font-size: 150%; margin-top: 25px; "> $<span id="wedgesolerow"></span> </p>
        </div>
           </div>
           </div>
@@ -140,54 +130,38 @@
   
     <script>
       $(document).ready(function() {
-        var price1 = document.getElementById('salmonrow');
-        var quan1 = document.getElementById("salmonquan");
-       var price2 = document.getElementById('seabassrow');
-       var quan2 = document.getElementById("seabassquan");
-       var price3 = document.getElementById('solerow');
-       var quan3 = document.getElementById('solequan');
-       var price4 = document.getElementById('swordfishrow');
-       var quan4 = document.getElementById('swordfishquan');
-       var price5 = document.getElementById('tilapiarow');
-       var quan5 = document.getElementById('tilapiaquan');
-       var price6 = document.getElementById('troutrow');
-       var quan6 = document.getElementById('troutquan');
+        var price1 = document.getElementById('commonsolerow');
+        var quan1 = document.getElementById("commonsolequan");
+       var price3 = document.getElementById('lemonsolerow');
+       var quan3 = document.getElementById('lemonsolequan');
+       var price4 = document.getElementById('petralesolerow');
+       var quan4 = document.getElementById('petralesolequan');
+       var price6 = document.getElementById('wedgesolerow');
+       var quan6 = document.getElementById('wedgesolequan');
         
-        if(sessionStorage.getItem("quantitysalmon") != 0)
+        if(sessionStorage.getItem("quantitycommonsole") != 0)
         {
-          $( "#salmondiv" ).css("display", 'flex');
-          price1.innerHTML = sessionStorage.getItem("salmonPrice");
-          quan1.innerHTML = sessionStorage.getItem("quantitysalmon");
+          $( "#commonsolediv" ).css("display", 'flex');
+          price1.innerHTML = sessionStorage.getItem("commonsolePrice");
+          quan1.innerHTML = sessionStorage.getItem("quantitycommonsole");
         }
-        if(sessionStorage.getItem("quantityseabass") != 0)
+        if(sessionStorage.getItem("quantitylemonsole") != 0)
         {
-          $( "#seabassdiv" ).css("display", 'flex');
-          price2.innerHTML = sessionStorage.getItem("seabassPrice");
-          quan2.innerHTML = sessionStorage.getItem("quantityseabass");
+          $( "#lemonsolediv" ).css("display", 'flex');
+          price3.innerHTML = sessionStorage.getItem("lemonsolePrice");
+          quan3.innerHTML = sessionStorage.getItem("quantitylemonsole");
         }
-        if(sessionStorage.getItem("quantitysole") != 0)
+        if(sessionStorage.getItem("quantitypetralesole") != 0)
         {
-          $( "#solediv" ).css("display", 'flex');
-          price3.innerHTML = sessionStorage.getItem("solePrice");
-          quan3.innerHTML = sessionStorage.getItem("quantitysole");
+          $( "#petralesolediv" ).css("display", 'flex');
+          price4.innerHTML = sessionStorage.getItem("petralesolePrice");
+          quan4.innerHTML = sessionStorage.getItem("quantitypetralesole");
         }
-        if(sessionStorage.getItem("quantityswordfish") != 0)
+        if(sessionStorage.getItem("quantitywedgesole") != 0)
         {
-          $( "#swordfishdiv" ).css("display", 'flex');
-          price4.innerHTML = sessionStorage.getItem("swordfishPrice");
-          quan4.innerHTML = sessionStorage.getItem("quantityswordfish");
-        }
-        if(sessionStorage.getItem("quantitytilapia") != 0)
-        {
-          $( "#tilapiadiv" ).css("display", 'flex');
-          price5.innerHTML = sessionStorage.getItem("tilapiaPrice");
-          quan5.innerHTML = sessionStorage.getItem("quantitytilapia");
-        }
-        if(sessionStorage.getItem("quantitytrout") != 0)
-        {
-          $( "#troutdiv" ).css("display", 'flex');
-          price6.innerHTML = sessionStorage.getItem("troutPrice");
-          quan6.innerHTML = sessionStorage.getItem("quantitytrout");
+          $( "#wedgesolediv" ).css("display", 'flex');
+          price6.innerHTML = sessionStorage.getItem("wedgesolePrice");
+          quan6.innerHTML = sessionStorage.getItem("quantitywedgesole");
         }
          $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");

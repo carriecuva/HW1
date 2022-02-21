@@ -20,7 +20,7 @@
       }
       .btndiv
       {
-        box-shadow: 4px 4px 6px 5px #0e8faf !important; width: 50%;
+        box-shadow: 4px 4px 6px 5px #0e8faf !important; width: 19%;
       }
       #numincart
       {
@@ -62,73 +62,53 @@
        <span id="num"> 0</span>
     </button>
     <div id="hoverdetails">
-      <p> Salmon : $10.00 x <span id="numsalmon">0</span> = $<span id="pricesalmon">0</span></p>
-      <p>Sea Bass : $16.00 x <span id="numseabass">0</span> = $<span id="priceseabass">0</span> </p>
-      <p> Sole : $14.00 x <span id="numsole">0</span> = $<span id="pricesole">0</span></p>
-      <p> Swordfish : $15.00 x <span id="numswordfish">0</span> = $ <span id="priceswordfish">0</span></p>
-      <p>Trout: $12.00 x <span id="numtrout">0</span> = $<span id="pricetrout">0</span> </p>
-      <p> Tilapia : $8.00 x  <span id="numtilapia">0</span> =  $<span id="pricetilapia">0</span></p>
+      <p> Common Sole : $10.00 x <span id="numcommonsole">0</span> = $<span id="pricecommonsole">0</span></p>
+      <p> Lemon Sole : $14.00 x <span id="numlemonsole">0</span> = $<span id="pricelemonsole">0</span></p>
+      <p> Petrale Sole : $15.00 x <span id="numpetralesole">0</span> = $ <span id="pricepetralesole">0</span></p>
+      <p>Wedge Sole: $12.00 x <span id="numwedgesole">0</span> = $<span id="pricewedgesole">0</span> </p>
     </div>
       
       <h1 style=" color: black; margin-top: 20px;"> Welcome to Cob's Seafood Emporium</h1>
       <p style="color: black; font-size:150%; width: 70%;"> At Cob's Seafood Emporium, you can find the fish of your dreams for an affordable price. Look at the options below and add your favorites to the cart. Click on the cart when you are ready to check out. </p>
-      <div style="margin-left: 260px; padding-top: 10px;">
+      <div style="padding-top: 10px;">
         <div class="row" style="margin-top: 20px;">
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <p style="color: black; font-size: 220%;">  <strong> Lemon Sole </strong></p>
+          <div class="col-lg-6 col-md-6 col-sm-6col-xs-12">
+            <p style="color: black; font-size: 220%;">  <strong> Common Sole </strong></p>
             <p style=" color: black; font-size: 140%"> This colorful pink/orange fish is full of flavor and closely related to Trout</p>
             <img src = "salmon.jpeg" width="200">
-            <p style="color: black; font-size: 210%"> <strong>$<span id="salmonprice">10.00</span> </strong></p>
+            <p style="color: black; font-size: 210%"> <strong>$<span id="commonsoleprice">10.00</span> </strong></p>
             <div class="btndiv">
-            <button  class="cartbtn" id="salmonbtn" onclick="count()"> Add To Cart</button>
+            <button  class="cartbtn" id="commonsolebtn" onclick="count()"> Add To Cart</button>
           </div>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <p style=" color: black; font-size: 220%;">  <strong> Sea Bass</strong></p>
-            <p style="color: black; font-size: 140%"> This mildy sweet fish is great for those who do not enjoy a fishy taste</p>
-            <img src = "chileanseabass.jpeg" width="140">
-            <p style=" color: black; font-size: 210%"> <strong>$<span id="seabassprice">16.00</span> </strong></p>
-            <div class="btndiv">
-            <button class="cartbtn" id="seabassbtn" onclick="count()"> Add To Cart</button>
-          </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <p style=" color: black; font-size: 220%;">  <strong> Sole</strong></p>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <p style=" color: black; font-size: 220%;">  <strong> Lemon Sole</strong></p>
             <p style=" color: black; font-size: 140%"> Flaky, delicious, and goes well with butter</p>
             <img src = "sole.jpg" width="170">
-            <p style=" color: black; font-size: 210%"> <strong>$<span id="soleprice">14.00</span> </strong></p>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="lemonsoleprice">14.00</span> </strong></p>
             <div class="btndiv">
-            <button class="cartbtn" id="solebtn" onclick="count()"> Add To Cart</button>
+            <button class="cartbtn" id="lemonsolebtn" onclick="count()"> Add To Cart</button>
           </div>
           </div>
         </div>
 
         <div class="row" style="margin-top: 25px;">
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <p style=" color: black; font-size: 220%;">  <strong> Swordfish</strong></p>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <p style=" color: black; font-size: 220%;">  <strong> Petrale Sole</strong></p>
             <p style=" color: black; font-size: 140%"> This mild fish makes a great steak with its large size</p>
             <img src = "swordfish.jpeg" width="200">
-            <p style=" color: black; font-size: 210%"> <strong>$<span id="swordfishprice">15.00</span> </strong></p>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="petralesoleprice">15.00</span> </strong></p>
             <div class="btndiv">
-            <button class="cartbtn" id="swordfishbtn" onclick="count()"> Add To Cart</button>
+            <button class="cartbtn" id="petralesolebtn" onclick="count()"> Add To Cart</button>
           </div>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <p style=" color: black;font-size: 220%;">  <strong> Trout</strong></p>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <p style=" color: black;font-size: 220%;">  <strong> Wedge Sole </strong></p>
             <p style=" color: black; font-size: 140%"> This fish is very tender and will taste delicious grilled, baked, or steamed.</p>
             <img src = "trout.jpeg" width="170">
-            <p style=" color: black; font-size: 210%"> <strong>$<span id="troutprice">12.00</span> </strong></p>
+            <p style=" color: black; font-size: 210%"> <strong>$<span id="wedgesoleprice">12.00</span> </strong></p>
             <div class="btndiv">
-            <button class="cartbtn" id="troutbtn" onclick="count()"> Add To Cart</button>
-          </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <p style=" color: black; font-size: 220%;">  <strong> Tilapia</strong></p>
-            <p style="color: black; font-size: 140%"> This fast growing fish will taste delicious with any side you put with it</p>
-            <img src = "tilapia.jpeg" width="170">
-            <p style=" color: black; font-size: 210%"> <strong>$<span id="tilapiaprice">8.00</span> </strong></p>
-            <div class="btndiv">
-            <button class="cartbtn" id="tilapiabtn" onclick="count()"> Add To Cart</button>
+            <button class="cartbtn" id="wedgesolebtn" onclick="count()"> Add To Cart</button>
           </div>
           </div>
         </div>
@@ -147,69 +127,51 @@
         }
     </script>
     <script>
-      sessionStorage.setItem("quantitytilapia", document.getElementById("numtilapia").innerHTML);
-      sessionStorage.setItem("quantitytrout", document.getElementById("numtrout").innerHTML);
-      sessionStorage.setItem("quantityswordfish", document.getElementById("numswordfish").innerHTML);
-      sessionStorage.setItem("quantitysole", document.getElementById("numsole").innerHTML);
-      sessionStorage.setItem("quantityseabass", document.getElementById("numseabass").innerHTML);
-      sessionStorage.setItem("quantitysalmon", document.getElementById("numsalmon").innerHTML);
+      sessionStorage.setItem("quantitywedgesole", document.getElementById("numwedgesole").innerHTML);
+      sessionStorage.setItem("quantitypetralesole", document.getElementById("numpetralesole").innerHTML);
+      sessionStorage.setItem("quantitylemonsole", document.getElementById("numlemonsole").innerHTML);
+      sessionStorage.setItem("quantitycommonsole", document.getElementById("numcommonsole").innerHTML);
       $(".cartbtn").click(function () {
         var id = $(this).attr('id');
-        if(id == "tilapiabtn")
+        
+         if(id == "wedgesolebtn")
         {
-          var price = parseFloat(document.getElementById("tilapiaprice").innerHTML);
-          var val = parseFloat(document.getElementById("pricetilapia").innerHTML);
-          document.getElementById('pricetilapia').innerHTML =val + price;
-          document.getElementById("numtilapia").innerHTML = parseInt(document.getElementById("numtilapia").innerHTML)+1;
-          sessionStorage.setItem("quantitytilapia", document.getElementById("numtilapia").innerHTML);
-          sessionStorage.setItem("tilapiaPrice", document.getElementById("pricetilapia").innerHTML);
+          var price = parseFloat(document.getElementById("wedgesoleprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricewedgesole").innerHTML);
+          document.getElementById('pricewedgesole').innerHTML =val + price;
+          document.getElementById("numwedgesole").innerHTML = parseInt(document.getElementById("numwedgesole").innerHTML)+1;
+          sessionStorage.setItem("quantitywedgesole", document.getElementById("numwedgesole").innerHTML);
+          sessionStorage.setItem("wedgesolePrice", document.getElementById("pricewedgesole").innerHTML);
         }
-        else if(id == "troutbtn")
+        else if(id == "petralesolebtn")
         {
-          var price = parseFloat(document.getElementById("troutprice").innerHTML);
-          var val = parseFloat(document.getElementById("pricetrout").innerHTML);
-          document.getElementById('pricetrout').innerHTML =val + price;
-          document.getElementById("numtrout").innerHTML = parseInt(document.getElementById("numtrout").innerHTML)+1;
-          sessionStorage.setItem("quantitytrout", document.getElementById("numtrout").innerHTML);
-          sessionStorage.setItem("troutPrice", document.getElementById("pricetrout").innerHTML);
+          var price = parseFloat(document.getElementById("petralesoleprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricepetralesole").innerHTML);
+          document.getElementById('pricepetralesole').innerHTML =val + price;
+          document.getElementById("numpetralesole").innerHTML = parseInt(document.getElementById("numpetralesole").innerHTML)+1;
+          sessionStorage.setItem("quantitypetralesole", document.getElementById("numpetralesole").innerHTML);
+          sessionStorage.setItem("petralesolePrice", document.getElementById("pricepetralesole").innerHTML);
         }
-        else if(id == "swordfishbtn")
+        else if(id == "lemonsolebtn")
         {
-          var price = parseFloat(document.getElementById("swordfishprice").innerHTML);
-          var val = parseFloat(document.getElementById("priceswordfish").innerHTML);
-          document.getElementById('priceswordfish').innerHTML =val + price;
-          document.getElementById("numswordfish").innerHTML = parseInt(document.getElementById("numswordfish").innerHTML)+1;
-          sessionStorage.setItem("quantityswordfish", document.getElementById("numswordfish").innerHTML);
-          sessionStorage.setItem("swordfishPrice", document.getElementById("priceswordfish").innerHTML);
-        }
-        else if(id == "solebtn")
-        {
-          var price = parseFloat(document.getElementById("soleprice").innerHTML);
-          var val = parseFloat(document.getElementById("pricesole").innerHTML);
-          document.getElementById('pricesole').innerHTML =val + price;
-          document.getElementById("numsole").innerHTML = parseInt(document.getElementById("numsole").innerHTML)+1;
-          sessionStorage.setItem("quantitysole", document.getElementById("numsole").innerHTML);
-          sessionStorage.setItem("solePrice", document.getElementById("pricesole").innerHTML);
+          var price = parseFloat(document.getElementById("lemonsoleprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricelemonsole").innerHTML);
+          document.getElementById('pricelemonsole').innerHTML =val + price;
+          document.getElementById("numlemonsole").innerHTML = parseInt(document.getElementById("numlemonsole").innerHTML)+1;
+          sessionStorage.setItem("quantitylemonsole", document.getElementById("numlemonsole").innerHTML);
+          sessionStorage.setItem("lemonsolePrice", document.getElementById("pricelemonsole").innerHTML);
           
         }
-        else if(id == "seabassbtn")
-        {
-          var price = parseFloat(document.getElementById("seabassprice").innerHTML);
-          var val = parseFloat(document.getElementById("priceseabass").innerHTML);
-          document.getElementById('priceseabass').innerHTML =val + price;
-          document.getElementById("numseabass").innerHTML = parseInt(document.getElementById("numseabass").innerHTML)+1;
-          sessionStorage.setItem("quantityseabass", document.getElementById("numseabass").innerHTML);
-          sessionStorage.setItem("seabassPrice", document.getElementById("priceseabass").innerHTML);
-        }
+        
         else
         {
-          var price = parseFloat(document.getElementById("salmonprice").innerHTML);
-          var val = parseFloat(document.getElementById("pricesalmon").innerHTML);
-          var quantity = parseInt(document.getElementById("numsalmon").innerHTML);
-          document.getElementById('pricesalmon').innerHTML =val + price;
-          document.getElementById("numsalmon").innerHTML = quantity+=1;
-          sessionStorage.setItem("quantitysalmon", document.getElementById("numsalmon").innerHTML);
-          sessionStorage.setItem("salmonPrice", document.getElementById("pricesalmon").innerHTML);
+          var price = parseFloat(document.getElementById("commonsoleprice").innerHTML);
+          var val = parseFloat(document.getElementById("pricecommonsole").innerHTML);
+          var quantity = parseInt(document.getElementById("numcommonsole").innerHTML);
+          document.getElementById('pricecommonsole').innerHTML =val + price;
+          document.getElementById("numcommonsole").innerHTML = quantity+=1;
+          sessionStorage.setItem("quantitycommonsole", document.getElementById("numcommonsole").innerHTML);
+          sessionStorage.setItem("commonsolePrice", document.getElementById("pricecommonsole").innerHTML);
         }
      });
      $( "#lightcart" ).hover(
