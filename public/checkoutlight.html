@@ -28,27 +28,27 @@
                   <p style="font-size: 150%;"><strong> Price </strong> </p>
               </div>
                 <div id="commonsolediv" style=" justify-content: space-between; display: none;">
-                   <p style="font-size: 140%;"> <img src="sole.jpg" width="150">  <span style="margin-left: 210px;">Common Sole </span> </p>
+                   <p style="font-size: 140%;"> <img src="sole.jpg" width="100">  <span style="margin-left: 210px;">Common Sole </span> </p>
                    <p style="font-size: 140%; margin-top: 25px;" ><span id="commonsolequan"></span></p>
                     <p style="font-size: 140%; margin-top: 25px; "> $<span id="commonsolerow"></span> </p> 
                 </div>
                <hr id="lemonsolehr" style='display: none;'>
                <div id="lemonsolediv" style="display:none; justify-content: space-between;">
-                <p style="font-size: 140%;"> <img src="lemonsole.jpeg" width="150">  <span style="margin-left: 210px;"> Lemon Sole </span> </p>
+                <p style="font-size: 140%;"> <img src="lemonsole.jpeg" width="100">  <span style="margin-left: 210px;"> Lemon Sole </span> </p>
                 <p style="font-size: 140%; margin-top: 25px;" ><span id="lemonsolequan"></span></p>
                  <p style="font-size: 140%; margin-top: 25px; "> $<span id="lemonsolerow"></span> </p>
                 
              </div>
              <hr id="petralesolehr" style="display:none;">
              <div id="petralesolediv" style="display:none; justify-content: space-between;">
-              <p style="font-size: 140%;"> <img src="petralesole.jpeg" width="150">  <span style="margin-left: 210px;">Petrale Sole </span> </p>
+              <p style="font-size: 140%;"> <img src="petralesole.jpeg" width="100">  <span style="margin-left: 210px;">Petrale Sole </span> </p>
               <p style="font-size: 140%; margin-top: 25px;" ><span id="petralesolequan"></span></p>
                <p style="font-size: 140%; margin-top: 25px; "> $<span id="petralesolerow"></span> </p>
                
            </div>
            <hr id="wedgesolehr" style="display:none;">
          <div id="wedgesolediv" style="display:none; justify-content: space-between;">
-          <p style="font-size: 150%;"> <img src="wedgesole.jpeg" width="150">  <span style="margin-left: 210px;">Wedge Sole </span> </p>
+          <p style="font-size: 150%;"> <img src="wedgesole.jpeg" width="100">  <span style="margin-left: 210px;">Wedge Sole </span> </p>
           <p style="font-size: 150%; margin-top: 25px;" ><span id="wedgesolequan"></span></p>
            <p style="font-size: 150%; margin-top: 25px; "> $<span id="wedgesolerow"></span> </p>
         
@@ -160,11 +160,13 @@
        var price4 = document.getElementById('wedgesolerow');
        var quan4 = document.getElementById('wedgesolequan');
        var shipping = parseFloat(document.getElementById('shipping').innerHTML);
+       var fishtotal = 0;
         if(sessionStorage.getItem("quantitycommonsole") != 0)
         {
           $( "#commonsolediv" ).css("display", 'flex');
           price1.innerHTML = sessionStorage.getItem("commonsolePrice");
           quan1.innerHTML = sessionStorage.getItem("quantitycommonsole");
+          fishtotal = fishtotal+parseFloat(price1.innerHTML);
         }
         if(sessionStorage.getItem("quantitylemonsole") != 0)
         {
@@ -172,6 +174,7 @@
           price2.innerHTML = sessionStorage.getItem("lemonsolePrice");
           quan2.innerHTML = sessionStorage.getItem("quantitylemonsole");
           $("#lemonsolehr").css("display", "block");
+          fishtotal = fishtotal+parseFloat(price2.innerHTML);
         }
         if(sessionStorage.getItem("quantitypetralesole") != 0)
         {
@@ -179,6 +182,7 @@
           price3.innerHTML = sessionStorage.getItem("petralesolePrice");
           quan3.innerHTML = sessionStorage.getItem("quantitypetralesole");
           $("#petralesolehr").css("display", "block");
+          fishtotal = fishtotal+parseFloat(price3.innerHTML);
         }
         if(sessionStorage.getItem("quantitywedgesole") != 0)
         {
@@ -186,13 +190,13 @@
           price4.innerHTML = sessionStorage.getItem("wedgesolePrice");
           quan4.innerHTML = sessionStorage.getItem("quantitywedgesole");
           $("#wedgesolehr").css("display", "block");
+          fishtotal = fishtotal+parseFloat(price4.innerHTML);
         }
-        var fishtotal = parseFloat(price1.innerHTML+price2.innerHTML+price3.innerHTML+price4.innerHTML);
-        var tax = parseFloat(fishtotal * 0.06);
+        var tax = parseFloat(fishtotal * 0.06).toFixed(2);
         document.getElementById('tax').innerHTML = tax;
-        var total = fishtotal + tax + shipping;
-        document.getElementById('total').innerHTML = total;
-        document.getElementById('totalprice').innerHTML = total;
+        var total = fishtotal + parseFloat(document.getElementById('tax').innerHTML) + shipping;
+        document.getElementById('total').innerHTML = total.toFixed(2);
+        document.getElementById('totalprice').innerHTML = total.toFixed(2);
          $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
             var check2 = document.getElementById("checkbox2");
