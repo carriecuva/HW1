@@ -19,6 +19,7 @@
   padding: 15px 15px;
  
 }
+
 #numincart
 {
   border-radius: 50%;
@@ -31,7 +32,7 @@
 }
 .btndiv
 {
-  box-shadow: 4px 3px 6px 5px #cacaca, 3px 7px 5px 8px #dada !important; width: 21%;
+  box-shadow: 4px 3px 6px 5px #cacaca, 3px 7px 5px 8px #dada !important; width: 30%;
 }
   #num
   {
@@ -58,8 +59,8 @@
           <h1 style="color: white;"> Welcome to Cob's Seafood Emporium</h1>
           <p style="font-size:150%; width: 70%; color: white;"> At Cob's Seafood Emporium, you can find the frozen fish of your dreams for an affordable price. Look at the options below and add your favorites to the cart. Click on the cart when you are ready to check out.</p>
           <div style="padding-top: 10px;">
-            <div class="row" style="margin-top: 20px;">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+              <div style="margin-right: 120px;">
                 <p style="color: white; font-size: 220%;">  <strong> Common Sole</strong></p>
                 <p style="color: white; font-size: 140%"> Flaky, delicious, and goes well with butter</p>
                 <img src = "sole.jpg" width="170">
@@ -68,9 +69,9 @@
                 <button class="cartbtn" id="commonsolebtn" onclick="count()"> Add To Cart</button>
               </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <p style="color: white; font-size: 220%;">  <strong> Lemon Sole</strong></p>
-                <p style="color: white; font-size: 140%"> This sole has a mild, sweet flavor</p>
+              <div>
+                <p style="color: white; font-size: 220%; ">  <strong> Lemon Sole</strong></p>
+                <p style="color: white; font-size: 140%"> This sole has a nice mild, sweet flavor</p>
                 <img src = "lemonsole.jpeg" width="140">
                 <p style="color: white; font-size: 210%"> <strong>$<span id="lemonsoleprice">14.00</span> </strong></p>
                 <div class="btndiv">
@@ -79,19 +80,19 @@
               </div>
             </div>
     
-            <div class="row" style="margin-top: 25px;">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div style = "display: flex; justify-content: center; margin-top: 20px;">
+              <div>
                 <p style="color: white; font-size: 220%;">  <strong> Petrale Sole</strong></p>
-                <p style="color: white; font-size: 140%"> This sole has a nutty, sweet flavor with small flakes on it</p>
+                <p style="color: white; font-size: 140%"> This sole has a nutty flavor with small flakes</p>
                 <img src = "petralesole.jpeg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$<span id="petralesoleprice">15.00</span> </strong></p>
                 <div class="btndiv">
                 <button class="cartbtn" id="petralesolebtn" onclick="count()"> Add To Cart</button>
               </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div style="margin-left: 120px;"> 
                 <p style="color: white; font-size: 220%;">  <strong>Wedge Sole</strong></p>
-                <p style="color: white; font-size: 140%"> This sole is a flatfish that is oval and slender.</p>
+                <p style="color: white; font-size: 140%"> This sole is a flatfish that is oval and slender</p>
                 <img src = "wedgesole.jpeg" width="170">
                 <p style="color: white; font-size: 210%"> <strong>$<span id="wedgesoleprice">17.00</span></strong></p>
                 <div class="btndiv">
