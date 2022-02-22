@@ -48,8 +48,8 @@
           <i style="color: white; font-size: 300%; margin-left: 50px;" class="fa fa-home"></i>
         </a>
         <center>
-        <a href="checkoutdark.html"> 
-          <img src="darkpatterncart.png" width="50" style="float:right; margin-right: 270px;"> 
+        <a id="gettoCheckout" href=""> 
+          <img src="darkpatterncart.png" width="50" id="checkout" style="float:right; margin-right: 270px;"> 
         </a>
           <button id="numincart">
              <span id="num"> 0</span>
@@ -151,6 +151,21 @@
           sessionStorage.setItem("quantitycommonsole", count4+=1);
           sessionStorage.setItem("commonsolePrice", price*count4);
         }
+     });
+     $("#checkout").click(function ()
+      {
+       if(sessionStorage.getItem("quantitywedgesole") == 0 &&
+      sessionStorage.getItem("quantitypetralesole") == 0&&
+      sessionStorage.getItem("quantitylemonsole") == 0 &&
+      sessionStorage.getItem("quantitycommonsole") ==0) 
+      {
+          alert("Add item to cart in order to proceed");
+      }
+      else
+      {
+        $("#gettoCheckout").attr('href', "checkoutdark.html");
+
+      }
      });
         </script>
     </body>
