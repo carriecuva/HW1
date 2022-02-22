@@ -137,7 +137,7 @@
         <div style="margin-top: 20px;">
         <div>
             <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies" >
-            <label for="checkbox"   style="margin-left: 10px; font-size: 125%;"> I agree to be billed and solemly swear to adhere to law of no backsies</label><br>
+            <label for="checkbox"   style="margin-left: 10px; font-size: 125%;"> I agree to be billed  $<span id="totalprice"> </span> and solemly swear to adhere to law of no backsies</label><br>
         </div>
         <div>
             <input type="checkbox" id="checkbox2" name="checkbox2" value="Agreetoterms"> 
@@ -192,6 +192,7 @@
         document.getElementById('tax').innerHTML = tax;
         var total = fishtotal + tax + shipping;
         document.getElementById('total').innerHTML = total;
+        document.getElementById('totalprice').innerHTML = total;
          $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
             var check2 = document.getElementById("checkbox2");
