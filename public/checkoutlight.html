@@ -27,33 +27,8 @@
                   <p style="font-size: 150%;"> <strong>Quantity </strong></p>
                   <p style="font-size: 150%;"><strong> Price </strong> </p>
               </div>
-                <div id="commonsolediv" style=" justify-content: space-between; display: none;">
-                   <p style="font-size: 140%;"> <img src="sole.jpg" width="100">  <span style="margin-left: 210px;">Common Sole </span> </p>
-                   <p style="font-size: 140%; margin-top: 25px;" ><span id="commonsolequan"></span></p>
-                    <p style="font-size: 140%; margin-top: 25px; "> $<span id="commonsolerow"></span> </p> 
-                </div>
-               <hr id="lemonsolehr" style='display: none;'>
-               <div id="lemonsolediv" style="display:none; justify-content: space-between;">
-                <p style="font-size: 140%;"> <img src="lemonsole.jpeg" width="100">  <span style="margin-left: 210px;"> Lemon Sole </span> </p>
-                <p style="font-size: 140%; margin-top: 25px;" ><span id="lemonsolequan"></span></p>
-                 <p style="font-size: 140%; margin-top: 25px; "> $<span id="lemonsolerow"></span> </p>
                 
-             </div>
-             <hr id="petralesolehr" style="display:none;">
-             <div id="petralesolediv" style="display:none; justify-content: space-between;">
-              <p style="font-size: 140%;"> <img src="petralesole.jpeg" width="100">  <span style="margin-left: 210px;">Petrale Sole </span> </p>
-              <p style="font-size: 140%; margin-top: 25px;" ><span id="petralesolequan"></span></p>
-               <p style="font-size: 140%; margin-top: 25px; "> $<span id="petralesolerow"></span> </p>
-               
-           </div>
-           <hr id="wedgesolehr" style="display:none;">
-         <div id="wedgesolediv" style="display:none; justify-content: space-between;">
-          <p style="font-size: 150%;"> <img src="wedgesole.jpeg" width="100">  <span style="margin-left: 210px;">Wedge Sole </span> </p>
-          <p style="font-size: 150%; margin-top: 25px;" ><span id="wedgesolequan"></span></p>
-           <p style="font-size: 150%; margin-top: 25px; "> $<span id="wedgesolerow"></span> </p>
-        
-       </div>
-       <hr style="border: 1px solid black;">
+        <hr style="border: 1px solid black;">
        <div style="display:flex; justify-content: space-between;">
         <p style="font-size: 115%;"> Shipping</p>
         <p style="font-size: 115%;">$<span id="shipping">15</span></p>
@@ -144,69 +119,24 @@
             <label for="checkbox2"  style="margin-left: 10px;  font-size: 125%;"> I accept the terms and conditions of purchase <a id="terms" href="light pattern terms and conditions - cob's seafood emporium.pdf"> Click to Read Terms</a> and understand Cob's will not be at fault for any damage caused by the fish if thawed</label>
         </div>
         <div>
-        <button id="submitbtn" style="font-size: 140%; margin-top: 10px;" > Place Order </button>
+          <a style="text-decoration: none; color: black;">  <button id="submitbtn" style="font-size: 140%; margin-top: 10px;" > Place Order </button> </a>
     </div>
   </div>
     </center>
   
     <script>
       $(document).ready(function() {
-       var price1 = document.getElementById('commonsolerow');
-       var quan1 = document.getElementById("commonsolequan");
-       var price2 = document.getElementById('lemonsolerow');
-       var quan2 = document.getElementById('lemonsolequan');
-       var price3 = document.getElementById('petralesolerow');
-       var quan3 = document.getElementById('petralesolequan');
-       var price4 = document.getElementById('wedgesolerow');
-       var quan4 = document.getElementById('wedgesolequan');
-       var shipping = parseFloat(document.getElementById('shipping').innerHTML);
-       var fishtotal = 0;
-        if(sessionStorage.getItem("quantitycommonsole") != 0)
-        {
-          $( "#commonsolediv" ).css("display", 'flex');
-          price1.innerHTML = sessionStorage.getItem("commonsolePrice");
-          quan1.innerHTML = sessionStorage.getItem("quantitycommonsole");
-          fishtotal = fishtotal+parseFloat(price1.innerHTML);
-        }
-        if(sessionStorage.getItem("quantitylemonsole") != 0)
-        {
-          $( "#lemonsolediv" ).css("display", 'flex');
-          price2.innerHTML = sessionStorage.getItem("lemonsolePrice");
-          quan2.innerHTML = sessionStorage.getItem("quantitylemonsole");
-          $("#lemonsolehr").css("display", "block");
-          fishtotal = fishtotal+parseFloat(price2.innerHTML);
-        }
-        if(sessionStorage.getItem("quantitypetralesole") != 0)
-        {
-          $( "#petralesolediv" ).css("display", 'flex');
-          price3.innerHTML = sessionStorage.getItem("petralesolePrice");
-          quan3.innerHTML = sessionStorage.getItem("quantitypetralesole");
-          $("#petralesolehr").css("display", "block");
-          fishtotal = fishtotal+parseFloat(price3.innerHTML);
-        }
-        if(sessionStorage.getItem("quantitywedgesole") != 0)
-        {
-          $( "#wedgesolediv" ).css("display", 'flex');
-          price4.innerHTML = sessionStorage.getItem("wedgesolePrice");
-          quan4.innerHTML = sessionStorage.getItem("quantitywedgesole");
-          $("#wedgesolehr").css("display", "block");
-          fishtotal = fishtotal+parseFloat(price4.innerHTML);
-        }
-        var tax = parseFloat(fishtotal * 0.06).toFixed(2);
-        document.getElementById('tax').innerHTML = tax;
-        var total = fishtotal + parseFloat(document.getElementById('tax').innerHTML) + shipping;
-        document.getElementById('total').innerHTML = total.toFixed(2);
-        document.getElementById('totalprice').innerHTML = total.toFixed(2);
-         $("#submitbtn").click(function () {
+        $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
             var check2 = document.getElementById("checkbox2");
             if(check1.checked && check2.checked)
             {
-                alert("Your order has been received! We hope you enjoy your fish vessel");
+                alert("Order has been placed! Redirecting to home page ...");
+                $("a").attr("href", "lightpattern.html");
             }
             else
             {
-                alert("We want to make sure you understand and have read the terms! Both checkboxes have to be checked in order to move on");
+                alert("Both checkboxes have to be checked in order to move on");
             }
         });
         $("#terms").click(function () {
