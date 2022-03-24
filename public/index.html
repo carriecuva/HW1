@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,25 +9,34 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <style>
+        #lightpatternbtn, #darkpatternbtn
+        {
+          background-color: #1F51FF;
+          padding: 20px 15px;
+          margin-left: 20px;
+          margin-right: 20px;
+          box-shadow: 8px 10px 4px  #cacaca;
+        }
+      </style>
     <title>Cob's Soulo Game Web Page</title>
   </head>
-  
-  <body style="background-image: url(realbackground.jpeg); background-repeat: no-repeat; background-size: cover;">
-   
-    <div >
-      <center>
-    <h1 style="text-align: center; font-size: 270%; padding-top: 15px;"> Welcome To Cob's Soulo Game</h1>
-    
-    <img src="star-removebg-preview.png" width ="500" alt="starrrr"> 
-    <div style="margin-top: -320px;">
-      <label style=" font-size: 130%;"> User name</label> <br>
-      <input style="font-size: 120%;" type="text"> <br> <br>
-      <label style="font-size: 130%; "> Password</label> <br>
-      <input style="font-size: 120%;" type="password"> <br>
-     <a href="chooseyouradventure.html"> <input type="submit" style="font-size: 150%; margin-top: 30px;"> </a>
-    </div>
-  </center>
-   
-</div>
+  <body  style="background-image: url(gamebackground.jpeg); background-repeat: no-repeat; background-size: cover;">
+      <div style="margin-top: 200px;">
+        <h1 style="color: white; text-align: center;font-size: 270%; padding-top: 15px;"> Choose Your Adventure</h1>
+        <div style="display: flex; margin-top: 20px; justify-content: center; ">
+            <a style="text-decoration: none;" href="lightpatternlogin.html"> 
+            <div id="lightpatternbtn">
+              <p style="font-size: 180%; color: black;">Light Pattern</p>
+            </div>
+          </a>
+          <a style="text-decoration: none;" href="darkpatternlogin.html">
+            <div id="darkpatternbtn">
+               <p style="font-size: 180%; color: black;">Dark Pattern</p>
+            </div>
+          </a>
+        </div>
+      </div>
+        
   </body>
-</html>
+  </html>
