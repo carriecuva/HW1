@@ -30,13 +30,28 @@
      </div>
      <div style="margin-top:20px;">
         <input type="checkbox" id="checkbox1" name="checkbox" value="ReadIncantation" checked >
-        <label for="checkbox" style="margin-left: 10px; "> I have read the incantation above &#42; </label><br>
+        <label for="checkbox" style="margin-left: 10px; "> I have read the incantation above  </label><br>
     </div>
     <div style="margin-top: 5px;">
         <input type="checkbox" id="checkbox2" name="checkbox2" value="DarkMode" checked> 
         <label for="checkbox2" style="margin-left: 10px" > I agree to be one step closer to dark mode! </label>
     </div>
-
+    <a> <div id="submitbtn" style="width: 10%; background-color: #3ec741; margin-top: 10px; border: 1px black solid;">
+        <p style="font-size: 140%; color: black; margin-top: 10px;"> Submit </p> </a>
     </center>
+    <script>
+        $("#submitbtn").click(function () {
+            var check1 = document.getElementById("checkbox1");
+            var check2 = document.getElementById("checkbox2");
+            if(check1.checked && check2.checked)
+            {
+                $("a").attr("href", "darkpattern.html");
+            }
+            else
+            {
+                alert("Both checkboxes have to be checked in order to get login bonus and return to home page");
+            }
+        });
+    </script>
     </body>
     </html>
