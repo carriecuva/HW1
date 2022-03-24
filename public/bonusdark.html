@@ -36,7 +36,7 @@
         <input type="checkbox" id="checkbox2" name="checkbox2" value="DarkMode" checked> 
         <label for="checkbox2" style="margin-left: 10px" > I agree to be one step closer to dark mode! </label>
     </div>
-    <a> <div id="submitbtn" style="width: 10%; background-color: #3ec741; margin-top: 10px; border: 1px black solid;">
+    <a style="text-decoration: none;"> <div id="submitbtn" style="width: 10%; background-color: #3ec741; margin-top: 10px; border: 1px black solid;">
         <p style="font-size: 140%; color: black; margin-top: 10px;"> Submit </p> </a>
     </center>
     <script>
@@ -52,6 +52,13 @@
                 alert("Both checkboxes have to be checked in order to get login bonus and return to home page");
             }
         });
+        $( "#submitbtn" ).hover(
+  function() {
+    $( this ).css("background-color", '#1b8c22');
+  }, function() {
+    $( this ).css("background-color", '#3ec741');
+  }
+);  
     </script>
     </body>
     </html>
