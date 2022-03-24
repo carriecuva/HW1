@@ -46,11 +46,25 @@
         <input type="checkbox" id="checkbox2" name="checkbox2" style="transform:scale(1.25);" value="DarkMode"> 
         <label for="checkbox2" style="margin-left: 10px; font-size: 130%;" > I agree to be one step closer to dark mode! </label>
     </div>
-    <div style="width: 10%; background-color: #14c1e3; margin-top: 10px; border: 1px black solid;">
-        <p style="font-size: 150%; padding: 5px; margin-top: 10px;"> Submit </p>
+    <a> <div id="submitbtn" style="width: 10%; background-color: #14c1e3; margin-top: 10px; border: 1px black solid;">
+        <p style="font-size: 140%; color: black; margin-top: 10px;"> Submit </p> </a>
     </div>
     <p style="margin-top: 20px;"> &#42; My checkmark here is equivalent to reciting this incantation out loud</p>
     <div>
     </center>
+    <script>
+        $("#submitbtn").click(function () {
+            var check1 = document.getElementById("checkbox1");
+            var check2 = document.getElementById("checkbox2");
+            if(check1.checked && check2.checked)
+            {
+                $("a").attr("href", "lightpattern.html");
+            }
+            else
+            {
+                alert("Both checkboxes have to be checked in order to get login bonus and return to home page");
+            }
+        });
+    </script>
     </body>
     </html>
