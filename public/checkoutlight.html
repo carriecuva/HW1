@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -13,7 +14,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
     <body style="padding-bottom: 10px;">
-      <h2 style="text-align: center;"> Checkout Page</h2>
+     <div style="display:flex; justify-content:center; margin-left: 60px;">
+      <h2 style="text-align: center;"> Recharge Page</h2> 
+      <img width="60" src="lightningbolt-removebg-preview.png">
+    </div>
         <center>
               
               <table style="margin-right:50px; margin-top:20px;">
@@ -27,15 +31,15 @@
                 </tr>
                 <tr style="margin-top: 30px;" >
                   <td style=" font-size: 130%;  text-align:center;  ">  Gold Cob Bucks &nbsp; <img width="40" src="goldcobbuck-removebg-preview.png"></td>
-                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px;" > <input id="goldquantity"style="width: 40%; text-align: center;"  min="0" value="1" type="number"></td>
-                  <td style=" font-size: 140%;   text-align:center;">$<span id="goldprice">5</span></td>
+                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px;" > <input id="goldquantity"style="width: 40%; text-align: center;" step="3" min="0" value="3" type="number"></td>
+                  <td style=" font-size: 140%;   text-align:center;">$<span id="goldprice">4</span></td>
                 </tr>
                 <tr>
                   <td style="visibility:hidden;">hi</td>
               </tr>
                 <tr>
                   <td style=" font-size: 130%;  text-align:center; "> Silver Cob Bucks &nbsp; <img width="50" src="silvergem-removebg-preview.png"></td>
-                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px; "> <input id="silverquantity" style="width: 40%;text-align: center; " min="0" value="1" type="number"></td>
+                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px; "> <input id="silverquantity" style="width: 40%;text-align: center; " step="5" min="0" value="5" type="number"></td>
                   <td style=" font-size: 140%; text-align:center;">$<span id="silverprice">3</span></td>
                 </tr>
                 <tr>
@@ -43,8 +47,8 @@
               </tr>
                 <tr style="margin-top: 30px;">
                   <td style=" font-size: 130%;  text-align:center; "> Bronze Cob Bucks &nbsp; <img width="40" src="bronzegem-removebg-preview.png"></td>
-                  <td style=" font-size: 130%;   text-align:center; padding-left: 200px; padding-right: 250px;"> <input id="bronzequantity" style="width: 40%; text-align: center;"  min="0" value="1" type="number"></td>
-                  <td style=" font-size: 140%;   text-align:center; ">$<span id="bronzeprice">1</span></td>
+                  <td style=" font-size: 130%;   text-align:center; padding-left: 200px; padding-right: 250px;"> <input id="bronzequantity" style="width: 40%; text-align: center;" step="5" min="0" value="5" type="number"></td>
+                  <td style=" font-size: 140%;   text-align:center; ">$<span id="bronzeprice">2</span></td>
                 </tr>
               </table>
            <hr style="border: 1px solid black;">
@@ -126,7 +130,8 @@
             <label style="font-size: 120%; padding-left: 5px;" for="checkbox2"> I accept the terms and conditions of purchase Click to Read Terms</a></label>
         </div>
         <div>
-       <a style="text-decoration: none; color: black;"> <button  style="font-size: 145%; margin-top: 15px;" id="submitbtn">  Place Order </button> </a> 
+          <a style="text-decoration: none; color: black;"> <div id="submitbtn" style="width: 10%; background-color: #adb0a9; margin-top: 10px; border: 1px black solid;">
+            <p style="font-size: 130%; color: black; margin-top: 10px;"> Place Order </p> </div> </a> 
     </div>
     </center>
     <script>
@@ -134,17 +139,17 @@
         document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
         document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
         $("#goldquantity").click(function() {
-       document.getElementById('goldprice').innerHTML = 5* $(this).val();
+       document.getElementById('goldprice').innerHTML = (4* $(this).val())/3;
        document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
        document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
       });
        $("#silverquantity").click(function() {
-       document.getElementById('silverprice').innerHTML = 3*$(this).val();
+       document.getElementById('silverprice').innerHTML = (3*$(this).val())/5;
        document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
        document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
       });
        $("#bronzequantity").click(function() {
-       document.getElementById('bronzeprice').innerHTML = $(this).val();
+       document.getElementById('bronzeprice').innerHTML = (2* $(this).val())/5;
        document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
        document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
       });
@@ -161,6 +166,13 @@
                 alert("Both checkboxes have to be checked in order to move on");
             }
         });
+        $( "#submitbtn" ).hover(
+  function() {
+    $( this ).css("background-color", '#7e8577');
+  }, function() {
+    $( this ).css("background-color", ' #adb0a9');
+  }
+);  
       });
     </script>
     </body>
