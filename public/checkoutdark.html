@@ -15,40 +15,46 @@
     <body style="padding-bottom: 10px;">
       <h2 style="text-align: center;"> Checkout Page</h2>
         <center>
-              <div class="row">
-                <div style="background-color: rgb(182, 181, 181); width: 99%; padding-left: 100px; padding-right: 100px;">
-                  <h3 style="padding-top: 10px; padding-bottom: 10px;"> Your Cart</h3>
-                  <div style="display: flex; justify-content: space-between;">
-                      <p style="font-size: 150%;">  <strong>Item</strong></p>
-                      <p style="font-size: 150%;"> <strong>Name </strong></p>
-                      <p style="font-size: 150%;"> <strong>Quantity </strong></p>
-                      <p style="font-size: 150%;"><strong> Price </strong> </p>
-                  </div>
-                    
+              
+              <table style="margin-right:50px; margin-top:20px;">
+                <tr>
+                  <th style=" font-size: 140%;  text-align: center;">Item</th>
+                  <th style=" font-size: 140%; text-align:center; padding-left: 200px; padding-right: 250px; ">Quantity</th>
+                  <th style=" font-size: 140%;  text-align: center; ">Price</th>
+                </tr>
+                <tr>
+                    <td style="visibility:hidden;">hi</td>
+                </tr>
+                <tr style="margin-top: 30px;" >
+                  <td style=" font-size: 130%;  text-align:center;  ">  Gold Cob Bucks &nbsp; <img width="40" src="goldcobbuck-removebg-preview.png"></td>
+                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px;" > <input id="goldquantity"style="width: 40%; text-align: center;"  min="0" value="1" type="number"></td>
+                  <td style=" font-size: 140%;   text-align:center;">$<span id="goldprice">5</span></td>
+                </tr>
+                <tr>
+                  <td style="visibility:hidden;">hi</td>
+              </tr>
+                <tr>
+                  <td style=" font-size: 130%;  text-align:center; "> Silver Cob Bucks &nbsp; <img width="50" src="silvergem-removebg-preview.png"></td>
+                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px; "> <input id="silverquantity" style="width: 40%;text-align: center; " min="0" value="1" type="number"></td>
+                  <td style=" font-size: 140%; text-align:center;">$<span id="silverprice">3</span></td>
+                </tr>
+                <tr>
+                  <td style="visibility:hidden;">hi</td>
+              </tr>
+                <tr style="margin-top: 30px;">
+                  <td style=" font-size: 130%;  text-align:center; "> Bronze Cob Bucks &nbsp; <img width="40" src="bronzegem-removebg-preview.png"></td>
+                  <td style=" font-size: 130%;   text-align:center; padding-left: 200px; padding-right: 250px;"> <input id="bronzequantity" style="width: 40%; text-align: center;"  min="0" value="1" type="number"></td>
+                  <td style=" font-size: 140%;   text-align:center; ">$<span id="bronzeprice">1</span></td>
+                </tr>
+              </table>
            <hr style="border: 1px solid black;">
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 125%;"> Shipping</p>
-        <p style="font-size: 125%;">$<span id="shipping">15</span></p>
+       <div style="display:flex; justify-content: space-around; ">
+        <p style="font-size: 125%; padding-right: 220px;"> Cob Buck Fee</p>
+        <p style="font-size: 125%; padding-right:30px;">$<span id="shipping">5</span></p>
        </div>
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 125%;"> Tax</p>
-        <p style="font-size: 125%;">$<span id="tax"></span></p>
-       </div>
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 80%;"> Packing Fee</p>
-        <p style="font-size: 80%;">$<span id="packingfee">15</span></p>
-       </div>
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 80%;" >Ice Fee</p>
-        <p style="font-size: 80%;" >$<span id="ice">10</span></p>
-       </div>
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 80%;">Deboning Fee</p>
-        <p style="font-size: 80%;" >$<span id="deboning">20</span></p>
-       </div>
-       <div style="display:flex; justify-content: space-between;">
+       <div style="display:flex; justify-content: space-around;">
         <p style="font-size: 125%;"> Total</p>
-        <p style="font-size: 125%;">$<span id="total"></span></p>
+        <p style="font-size: 125%; padding-left: 210px;">$<span id="total"></span></p>
               </div>
               </div>
            <div style="background-color: lightgrey; margin-top: 30px; padding-bottom: 20px;">
@@ -117,11 +123,11 @@
                       </div>
         <div style="margin-top:20px;">
             <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies"checked >
-            <label for="checkbox" style="margin-left: 10px"> I agree to be billed and solemly swear to adhere to law of no backsies</label><br>
+            <label for="checkbox" style="margin-left: 10px"> I agree to be billed the amount listed</label><br>
         </div>
         <div style="margin-top: 5px;">
             <input type="checkbox" id="checkbox2" name="checkbox2" value="Agreetoterms" checked> 
-            <label for="checkbox2" style="margin-left: 10px" > I accept the terms and conditions of purchase <a href="dark terms and conditions - cob's seafood emporium.pdf"> Click to Read Terms</a></label>
+            <label for="checkbox2" style="margin-left: 10px" > I accept the terms and conditions of purchase Click to Read Terms</a></label>
         </div>
         <div>
        <a style="text-decoration: none; color: black;"> <button  style="font-size: 145%; margin-top: 15px;" id="submitbtn">  Place Order </button> </a> 
@@ -129,7 +135,19 @@
     </center>
     <script>
       $(document).ready(function() {
-       
+        document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML) +parseInt(document.getElementById('shipping').innerHTML)
+       $("#goldquantity").click(function() {
+       document.getElementById('goldprice').innerHTML = 5* $(this).val();
+       document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML)+parseInt(document.getElementById('shipping').innerHTML)
+       });
+       $("#silverquantity").click(function() {
+       document.getElementById('silverprice').innerHTML = 3*$(this).val();
+       document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML)+parseInt(document.getElementById('shipping').innerHTML)
+       });
+       $("#bronzequantity").click(function() {
+       document.getElementById('bronzeprice').innerHTML = $(this).val();
+       document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML)+parseInt(document.getElementById('shipping').innerHTML)
+       });
          $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
             var check2 = document.getElementById("checkbox2");

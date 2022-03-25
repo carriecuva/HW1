@@ -12,143 +12,153 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
-    <body style="padding-bottom: 15px;" >
+    <body style="padding-bottom: 10px;">
       <h2 style="text-align: center;"> Checkout Page</h2>
-      <a href="lightpattern.html">
-        <i style="color: black; font-size: 270%; float: right; margin-right: 50px; margin-top: -45px;" class="fa fa-arrow-left"></i>
-      </a>
         <center>
-          <div class="row">
-            <div style="background-color: rgb(182, 181, 181); width: 99%; padding-left: 100px; padding-right: 100px;">
-              <h3 style="padding-top: 10px; padding-bottom: 10px;"> Your Cart</h3>
-              <div style="display: flex; justify-content: space-between;">
-                  <p style="font-size: 150%;">  <strong>Item</strong></p>
-                  <p style="font-size: 150%;"> <strong>Name </strong></p>
-                  <p style="font-size: 150%;"> <strong>Quantity </strong></p>
-                  <p style="font-size: 150%;"><strong> Price </strong> </p>
+              
+              <table style="margin-right:50px; margin-top:20px;">
+                <tr>
+                  <th style=" font-size: 140%;  text-align: center;">Item</th>
+                  <th style=" font-size: 140%; text-align:center; padding-left: 200px; padding-right: 250px; ">Quantity</th>
+                  <th style=" font-size: 140%;  text-align: center; ">Price</th>
+                </tr>
+                <tr>
+                    <td style="visibility:hidden;">hi</td>
+                </tr>
+                <tr style="margin-top: 30px;" >
+                  <td style=" font-size: 130%;  text-align:center;  ">  Gold Cob Bucks &nbsp; <img width="40" src="goldcobbuck-removebg-preview.png"></td>
+                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px;" > <input id="goldquantity"style="width: 40%; text-align: center;"  min="0" value="1" type="number"></td>
+                  <td style=" font-size: 140%;   text-align:center;">$<span id="goldprice">5</span></td>
+                </tr>
+                <tr>
+                  <td style="visibility:hidden;">hi</td>
+              </tr>
+                <tr>
+                  <td style=" font-size: 130%;  text-align:center; "> Silver Cob Bucks &nbsp; <img width="50" src="silvergem-removebg-preview.png"></td>
+                  <td style=" font-size: 130%;  text-align:center; padding-left: 200px; padding-right: 250px; "> <input id="silverquantity" style="width: 40%;text-align: center; " min="0" value="1" type="number"></td>
+                  <td style=" font-size: 140%; text-align:center;">$<span id="silverprice">3</span></td>
+                </tr>
+                <tr>
+                  <td style="visibility:hidden;">hi</td>
+              </tr>
+                <tr style="margin-top: 30px;">
+                  <td style=" font-size: 130%;  text-align:center; "> Bronze Cob Bucks &nbsp; <img width="40" src="bronzegem-removebg-preview.png"></td>
+                  <td style=" font-size: 130%;   text-align:center; padding-left: 200px; padding-right: 250px;"> <input id="bronzequantity" style="width: 40%; text-align: center;"  min="0" value="1" type="number"></td>
+                  <td style=" font-size: 140%;   text-align:center; ">$<span id="bronzeprice">1</span></td>
+                </tr>
+              </table>
+           <hr style="border: 1px solid black;">
+       <div style="display:flex; justify-content: space-around;">
+        <p style="font-size: 125%;"> Total</p>
+        <p style="font-size: 125%; padding-left: 210px;">$<span id="total"></span></p>
               </div>
-                
-        <hr style="border: 1px solid black;">
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 115%;"> Shipping</p>
-        <p style="font-size: 115%;">$<span id="shipping">15</span></p>
-       </div>
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 115%;"> Tax</p>
-        <p style="font-size: 115%;">$<span id="tax"></span></p>
-       </div>
-       <div style="display:flex; justify-content: space-between;">
-        <p style="font-size: 115%;"> Total</p>
-        <p style="font-size: 115%;">$<span id="total"></span></p>
-       </div>
-          </div>
-            
-          </div>
-         
-       <div style="background-color: lightgrey; margin-top: 30px; padding-bottom: 20px;">
-            <form style="padding-top: 5px; display: flex; justify-content: center;"> 
-              <div class="col-lg-6 col-md-6 col-sm-6">    
-                <h3 style="padding-bottom: 10px;">Billing Information</h3>
-                <div  style="padding-bottom: 10px;"> 
-                    <label  style=" width: 30%; font-size: 130%;" for="fname"> Full Name</label>
-                    <input style="font-size: 120%;" type="text" id="fname" name="firstname" placeholder="Randy Smith">
-                  </div>
-                  <div  style="padding-bottom: 10px;">
-                    <label  style=" width: 30%; font-size: 130%;"  for="email"> Email</label>
-                    <input  style="font-size: 120%;" type="text" id="email" name="email" placeholder="rsmith@example.com">
-                  </div>
-                  <div  style="padding-bottom: 10px;">
-                    <label  style=" width: 30%; font-size: 130%;" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                   <input style="font-size: 120%;" type="text" id="adr" name="address" placeholder="1 John Carroll Blvd">
-                  </div>
-                  <div  style="padding-bottom: 10px;">
-                   <label  style=" width: 30%; font-size: 130%;"  for="city"> City</label>
-                    <input style="font-size: 120%;" type="text" id="city" name="city" placeholder="University Heights">
-                  </div>
-                  <div  style="padding-bottom: 10px;">
-                     <label  style=" width: 30%; font-size: 130%;"   for="state">State</label>
-                    <input style="font-size: 120%;" type="text" id="state" name="state" placeholder="OH">
-                  </div>
-                  <div style="padding-bottom: 10px;">
-                     <label  style=" width: 30%; font-size: 130%;" for="zip">Zip</label>
-                      <input style="font-size: 120%;" type="text" id="zip" name="zip" placeholder="44118">
-                    </div>
-                  </div>
-                  <div class=" col-lg-6 col-md-6 col-sm-6">
-                       <h3>Payment Information</h3>
-                       <div>
-                      <label style="font-size: 130%" for="fname">Accepted Cards</label>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                            <i class="fa fa-cc-visa" style="color:navy; font-size: 150%;"></i>
-                            <i class="fa fa-cc-amex" style="color:blue; font-size: 150%;"></i>
-                            <i class="fa fa-cc-mastercard" style="color:red; font-size: 150%;"></i>
-                            <i class="fa fa-cc-discover" style="color:orange; font-size: 150%;"></i>
-                      
-                          </div>  
-                          <div style="padding-bottom: 10px; padding-top: 10px;">
-                          <label style=" width: 30%; font-size: 130%;" for="cname">Name on Card</label>
-                          <input style="font-size: 120%;" type="text" id="cname" name="cardname" placeholder="Randy Smith">
+              </div>
+           <div style="background-color: lightgrey; margin-top: 30px; padding-bottom: 20px;">
+                <form style="padding-top: 5px; display: flex; justify-content: center;"> 
+                  <div class="col-lg-6 col-md-6 col-sm-6">    
+                    <h3 style="padding-bottom: 10px;">Billing Information</h3>
+                    <div  style="padding-bottom: 10px;"> 
+                        <label  style=" width: 30%; font-size: 130%;" for="fname"> Full Name</label>
+                        <input style="font-size: 120%;" type="text" id="fname" name="firstname" placeholder="Randy Smith">
+                      </div>
+                      <div  style="padding-bottom: 10px;">
+                        <label  style=" width: 30%; font-size: 130%;"  for="email"> Email</label>
+                        <input  style="font-size: 120%;" type="text" id="email" name="email" placeholder="rsmith@example.com">
+                      </div>
+                      <div  style="padding-bottom: 10px;">
+                        <label  style=" width: 30%; font-size: 130%;" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                       <input style="font-size: 120%;" type="text" id="adr" name="address" placeholder="1 John Carroll Blvd">
+                      </div>
+                      <div  style="padding-bottom: 10px;">
+                       <label  style=" width: 30%; font-size: 130%;"  for="city"> City</label>
+                        <input style="font-size: 120%;" type="text" id="city" name="city" placeholder="University Heights">
+                      </div>
+                      <div  style="padding-bottom: 10px;">
+                         <label  style=" width: 30%; font-size: 130%;"   for="state">State</label>
+                        <input style="font-size: 120%;" type="text" id="state" name="state" placeholder="OH">
+                      </div>
+                      <div style="padding-bottom: 10px;">
+                         <label  style=" width: 30%; font-size: 130%;" for="zip">Zip</label>
+                          <input style="font-size: 120%;" type="text" id="zip" name="zip" placeholder="44118">
                         </div>
-                        <div style="padding-bottom: 10px;">
-                          <label style=" width: 30%; font-size: 130%;" for="ccnum">Credit Card Number</label>
-                          <input style="font-size: 120%;" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                      </div>
+                      <div class=" col-lg-6 col-md-6 col-sm-6">
+                           <h3>Payment Information</h3>
+                           <div>
+                          <label style="font-size: 130%" for="fname">Accepted Cards</label>
                         </div>
-                        <div style="padding-bottom: 10px;">
-                          <label style=" width: 30%; font-size: 130%;" for="expmonth">Exp Month</label>
-                          <input style="font-size: 120%;" type="text" id="expmonth" name="expmonth" placeholder="September">
-                        </div>
-                          <div style="padding-bottom: 10px;">
-                              <label style=" width: 30%; font-size: 130%;" for="expyear">Exp Year</label>
-                              <input style="font-size: 120%;" type="text" id="expyear" name="expyear" placeholder="2026">
+                        <div style="margin-bottom: 15px;">
+                                <i class="fa fa-cc-visa" style="color:navy; font-size: 150%;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue; font-size: 150%;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red; font-size: 150%;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange; font-size: 150%;"></i>
+                          
+                              </div>  
+                              <div style="padding-bottom: 10px; padding-top: 10px;">
+                              <label style=" width: 30%; font-size: 130%;" for="cname">Name on Card</label>
+                              <input style="font-size: 120%;" type="text" id="cname" name="cardname" placeholder="Randy Smith">
                             </div>
-                           <div style="padding-bottom: 10px;">
-                              <label style=" width: 30%; font-size: 130%;" for="cvv">CVV</label>
-                              <input style="font-size: 120%;" type="text" id="cvv" name="cvv" placeholder="418">
+                            <div style="padding-bottom: 10px;">
+                              <label style=" width: 30%; font-size: 130%;" for="ccnum">Credit Card Number</label>
+                              <input style="font-size: 120%;" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                             </div>
-                          </div>
-                    </form>
-                  </div>
-        <div style="margin-top: 20px;">
-        <div>
+                            <div style="padding-bottom: 10px;">
+                              <label style=" width: 30%; font-size: 130%;" for="expmonth">Exp Month</label>
+                              <input style="font-size: 120%;" type="text" id="expmonth" name="expmonth" placeholder="September">
+                            </div>
+                              <div style="padding-bottom: 10px;">
+                                  <label style=" width: 30%; font-size: 130%;" for="expyear">Exp Year</label>
+                                  <input style="font-size: 120%;" type="text" id="expyear" name="expyear" placeholder="2026">
+                                </div>
+                               <div style="padding-bottom: 10px;">
+                                  <label style=" width: 30%; font-size: 130%;" for="cvv">CVV</label>
+                                  <input style="font-size: 120%;" type="text" id="cvv" name="cvv" placeholder="418">
+                                </div>
+                              </div>
+                        </form>
+                      </div>
+        <div style="margin-top:20px;">
             <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies" >
-            <label for="checkbox"   style="margin-left: 10px; font-size: 125%;"> I agree to be billed  $<span id="totalprice"> </span> and solemly swear to adhere to law of no backsies</label><br>
+            <label style="font-size: 120%; padding-left: 5px;" input="checkbox"> I agree to be billed <span style="font-size:130% !important;"> $<span id="totalcheckbox"></span> </span> as listed above</label><br>
         </div>
-        <div>
+        <div style="margin-top: 5px;">
             <input type="checkbox" id="checkbox2" name="checkbox2" value="Agreetoterms"> 
-            <label for="checkbox2"  style="margin-left: 10px;  font-size: 125%;"> I accept the terms and conditions of purchase <a id="terms" href="light pattern terms and conditions - cob's seafood emporium.pdf"> Click to Read Terms</a> and understand Cob's will not be at fault for any damage caused by the fish if thawed</label>
+            <label style="font-size: 120%; padding-left: 5px;" for="checkbox2"> I accept the terms and conditions of purchase Click to Read Terms</a></label>
         </div>
         <div>
-          <a style="text-decoration: none; color: black;">  <p id="submitbtn" style="font-size: 140%; margin-top: 10px;" > Place Order </p> </a>
+       <a style="text-decoration: none; color: black;"> <button  style="font-size: 145%; margin-top: 15px;" id="submitbtn">  Place Order </button> </a> 
     </div>
-  </div>
     </center>
-  
     <script>
       $(document).ready(function() {
-        $("#submitbtn").click(function () {
+        document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
+        document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
+        $("#goldquantity").click(function() {
+       document.getElementById('goldprice').innerHTML = 5* $(this).val();
+       document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
+       document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
+      });
+       $("#silverquantity").click(function() {
+       document.getElementById('silverprice').innerHTML = 3*$(this).val();
+       document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
+       document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
+      });
+       $("#bronzequantity").click(function() {
+       document.getElementById('bronzeprice').innerHTML = $(this).val();
+       document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML);
+       document.getElementById('totalcheckbox').innerHTML = document.getElementById('total').innerHTML;
+      });
+         $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
             var check2 = document.getElementById("checkbox2");
             if(check1.checked && check2.checked)
             {
                 alert("Order has been placed! Redirecting to home page ...");
-                $("a").attr("href", "lightpattern.html");
+                $("a").attr("href", "darkpattern.html");
             }
             else
             {
                 alert("Both checkboxes have to be checked in order to move on");
-            }
-        });
-        $("#terms").click(function () {
-            var check2 = document.getElementById("checkbox2");
-            check2.checked = true;
-        });
-        $("#checkbox2").click(function () {
-            var check2 = document.getElementById("checkbox2");
-            if(check2.checked)
-            {
-              alert("You can only check this if you have clicked the link to read the terms");
-              check2.checked = false;
             }
         });
       });
