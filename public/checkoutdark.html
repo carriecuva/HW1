@@ -158,6 +158,9 @@
             var check2 = document.getElementById("checkbox2");
             if(check1.checked && check2.checked)
             {
+                sessionStorage.setItem("numofgold", $("#goldquantity").val());
+                sessionStorage.setItem("numofsilver", $("#silverquantity").val());
+                sessionStorage.setItem("numofbronze", $("#bronzequantity").val());
                 alert("Order has been placed! Redirecting to home page ...");
                 $("a").attr("href", "darkpattern.html");
             }

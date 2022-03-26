@@ -41,13 +41,49 @@
        
     </center>
     <script>
+       $(document).ready(function() {
+      var initalGold =parseInt(document.getElementById("goldnum").innerHTML);
+      var initalSilver =parseInt(document.getElementById("silvernum").innerHTML);
+      var initalBronze =parseInt(document.getElementById("bronzenum").innerHTML);
+      var numGold = parseInt(sessionStorage.getItem("numofgold"));
+      var numSilver = parseInt(sessionStorage.getItem("numofsilver"));
+      var numBronze = parseInt(sessionStorage.getItem("numofbronze"));
+      if(numGold > 0)
+      {
+        document.getElementById("goldnum").innerHTML = parseInt(document.getElementById("goldnum").innerHTML) + numGold;
+      }
+      else
+      {
+        document.getElementById("goldnum").innerHTML = initalGold;
+      }
+
+      if(numSilver >0)
+      {
+        document.getElementById("silvernum").innerHTML = parseInt(document.getElementById("silvernum").innerHTML) + numSilver;
+      }
+      else
+      {
+        document.getElementById("silvernum").innerHTML = initalSilver;
+
+      }
+
+      if(numBronze > 0)
+      {
+        document.getElementById("bronzenum").innerHTML = parseInt(document.getElementById("bronzenum").innerHTML) + numBronze;
+      }
+      else
+      {
+        document.getElementById("bronzenum").innerHTML = initalBronze;
+
+      }
     $( ".listitems" ).hover(
   function() {
     $( this ).css("background-color", 'lightgrey');
   }, function() {
     $( this ).css("background-color", 'white');
   }
-);  
+); 
+       }); 
     </script>
     </body>
     </html>
