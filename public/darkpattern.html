@@ -69,40 +69,34 @@
     </table>
     <script>
       $(document).ready(function() {
-      var initalGold =parseInt(document.getElementById("goldnum").innerHTML);
-      var initalSilver =parseInt(document.getElementById("silvernum").innerHTML);
-      var initalBronze =parseInt(document.getElementById("bronzenum").innerHTML);
+      console.log( document.getElementById("goldnum").innerHTML)
       var numGold = parseInt(sessionStorage.getItem("numofgold"));
       var numSilver = parseInt(sessionStorage.getItem("numofsilver"));
       var numBronze = parseInt(sessionStorage.getItem("numofbronze"));
-      if(numGold > 0)
+      if(numGold >= 0)
       {
-        document.getElementById("goldnum").innerHTML = parseInt(document.getElementById("goldnum").innerHTML) + numGold;
+        document.getElementById("goldnum").innerHTML = parseInt(sessionStorage.getItem("currentGoldNum")) + numGold;
+       
+        
       }
-      else
-      {
-        document.getElementById("goldnum").innerHTML = initalGold;
-      }
+      
 
-      if(numSilver >0)
+      if(numSilver >= 0)
       {
-        document.getElementById("silvernum").innerHTML = parseInt(document.getElementById("silvernum").innerHTML) + numSilver;
+        document.getElementById("silvernum").innerHTML = parseInt(sessionStorage.getItem("currentSilverNum")) + numSilver;
+       
       }
-      else
-      {
-        document.getElementById("silvernum").innerHTML = initalSilver;
+      
 
-      }
-
-      if(numBronze > 0)
+      if(numBronze >= 0)
       {
-        document.getElementById("bronzenum").innerHTML = parseInt(document.getElementById("bronzenum").innerHTML) + numBronze;
+        document.getElementById("bronzenum").innerHTML = parseInt(sessionStorage.getItem("currentBronzeNum")) + numBronze;
+        
       }
-      else
-      {
-        document.getElementById("bronzenum").innerHTML = initalBronze;
+      sessionStorage.setItem("currentGoldNum", document.getElementById("goldnum").innerHTML);
+      sessionStorage.setItem("currentBronzeNum", document.getElementById("bronzenum").innerHTML );
+      sessionStorage.setItem("currentSilverNum", document.getElementById("silvernum").innerHTML);
 
-      }
     $( ".listitems" ).hover(
       function() {
         $( this ).css("background-color", 'lightgrey');
