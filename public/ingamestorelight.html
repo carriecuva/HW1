@@ -23,8 +23,12 @@
     }
 </style>
     <body>
+      <a  href="lightpattern.html">
+        <i style="color: black; font-size: 300%; margin-left: 50px; margin-top: 20px;" class="fa fa-arrow-left"></i>
+      </a>
      <center>
          <h1> In Game Store </h1>
+         
          <p style="font-size: 130%;"> Check out these cool additions you can add to your game! </p>
          <ul style="list-style-type: none; margin-right: 30px; margin-top: 35px;">
             <li class="listitems"> <img width="60" src="goldcobbuck-removebg-preview.png"> : <span id="numberofgold"> </span></li>
@@ -40,7 +44,7 @@
                     <p style="font-size: 150%;"> Cost<br> <img width="40" src="bronzegem-removebg-preview.png">: 3</p>
                     <hr>
                     <div style="background-color: pink;">
-                        <p> Click Here to Use  </p>
+                        <p id="2x"> Click Here to Use  </p>
                     </div>
                 </div>
                 <div style="border: 1px solid black; width: 20%; margin-top: 30px;">
@@ -52,8 +56,25 @@
      </center>
     </body>
     <script>
-        document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNum");
-        document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNum");
-        document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNum");
+       var goldnum = sessionStorage.getItem("currentGoldNumLight");
+        var silvernum =sessionStorage.getItem("currentSilverNumLight");
+        var bronzenum = sessionStorage.getItem("currentBronzeNumLight");
+        document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
+        document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
+        document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+        $("#2x").click(function (){
+            if(bronzenum >=3)
+            {
+            sessionStorage.setItem("currentBronzeNumLight", parseInt(bronzenum)-3 );
+            alert("You have now unlocked Two Timer! Click the back arrow to see it in action");
+            document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
+          document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
+          document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+            }
+            else
+            {
+                alert("You do not have enough CobBucks to use this feature");
+            }
+        });
     </script>
     </html>
