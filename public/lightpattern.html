@@ -23,8 +23,16 @@
         margin-left: 20px;
         font-size: 160%;
       }
+
+      .cobbuckslistitems
+      {
+         
+        padding: 15px; 
+        width: 30%;
+        font-size: 160%;
+      }
     </style>
-    <title> Light Pattern </title>
+    <title> Dark Pattern </title>
     <body style="background-image: url(lightpatternbackground.jpeg); background-repeat: no-repeat; background-size: cover; padding-bottom: 15px;">
       <a  href="index.html">
         <i style="color: black; font-size: 300%; margin-left: 50px; margin-top: 20px;" class="fa fa-home"></i>
@@ -32,72 +40,64 @@
       <center>
      <h1 style="font-size: 400%; margin-top: -20px;"> Cob's Soulo Game </h1>
      
-       <ul style="list-style-type: none; margin-top: 35px;">
+       <ul style="list-style-type: none; margin-right: 30px; margin-top: 35px;">
          <li class="listitems">  <a style="color: black; text-decoration: none;" href="bonuslight.html"> Login Bonus</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="ingamestorelight.html">Store</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="checkoutlight.html">Recharge</a></li>
-       </ul>
-    
-       
-    </center>
+       </ul> 
+      </center>
     <table  style="float: right; margin-right: 120px;">
-      <tr>
-        <th style="font-size: 160%;" colspan="2"> CobBucks</th>
-      </tr>
-      <tr style="visibility:hidden;">
-        <td>hello</td>
-        <td>dr.</td>
-      </tr>
-      <tr>
-        <td> <img width="50" src="goldcobbuck-removebg-preview.png"></td>
-        <td style="font-size:140%;"> <span id="goldnum"> 3 </span></td>
-      </tr>
-      <tr>
-        <td> <img width="50" src="silvergem-removebg-preview.png"></td>
-        <td style="font-size:140%;"> <span id="silvernum"> 4 </span></td>
-      </tr>
-      <tr>
-        <td> <img width="50" src="bronzegem-removebg-preview.png"></td>
-        <td style="font-size:140%;"> <span id="bronzenum"> 5 </span></td>
-      </tr>
-  </table>
+        <tr>
+          <th style="font-size: 160%;"> CobBucks</th>
+        </tr>
+        <tr style="visibility:hidden;">
+          <td>hello</td>
+          <td>dr.</td>
+        </tr>
+        <tr>
+          <td> <img width="50" src="goldcobbuck-removebg-preview.png"></td>
+          <td style="font-size:140%;"> <span id="goldnum"> 3 </span></td>
+        </tr>
+        <tr>
+          <td> <img width="50" src="silvergem-removebg-preview.png"></td>
+          <td style="font-size:140%;"> <span id="silvernum"> 4 </span></td>
+        </tr>
+        <tr>
+          <td> <img width="50" src="bronzegem-removebg-preview.png"></td>
+          <td style="font-size:140%;"> <span id="bronzenum"> 5 </span></td>
+        </tr>
+    </table>
     <script>
-       $(document).ready(function() {
-        var numGold = parseInt(sessionStorage.getItem("numofgold"));
-      var numSilver = parseInt(sessionStorage.getItem("numofsilver"));
-      var numBronze = parseInt(sessionStorage.getItem("numofbronze"));
-      if(numGold >= 0)
+      console.log(sessionStorage.getItem("currentGoldNumLight"));
+     
+      if(sessionStorage.getItem("currentGoldNumLight") != null)
       {
-        document.getElementById("goldnum").innerHTML = parseInt(sessionStorage.getItem("currentGoldNum")) + numGold;
-       
-        
+    document.getElementById("goldnum").innerHTML = sessionStorage.getItem("currentGoldNumLight");
       }
-      
 
-      if(numSilver >= 0)
+    if(sessionStorage.getItem("currentSilverNumLight") != null)
       {
-        document.getElementById("silvernum").innerHTML = parseInt(sessionStorage.getItem("currentSilverNum")) + numSilver;
-       
+    document.getElementById("silvernum").innerHTML = sessionStorage.getItem("currentSilverNumLight");
       }
-      
 
-      if(numBronze >= 0)
-      {
-        document.getElementById("bronzenum").innerHTML = parseInt(sessionStorage.getItem("currentBronzeNum")) + numBronze;
-        
-      }
-      sessionStorage.setItem("currentGoldNum", document.getElementById("goldnum").innerHTML);
-      sessionStorage.setItem("currentBronzeNum", document.getElementById("bronzenum").innerHTML );
-      sessionStorage.setItem("currentSilverNum", document.getElementById("silvernum").innerHTML);
-      
+    if(sessionStorage.getItem("currentBronzeNumLight") != null) 
+    {
+      document.getElementById("bronzenum").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+    }
+
+      sessionStorage.setItem("currentGoldNumLight", document.getElementById("goldnum").innerHTML);
+      sessionStorage.setItem("currentBronzeNumLight", document.getElementById("bronzenum").innerHTML );
+      sessionStorage.setItem("currentSilverNumLight", document.getElementById("silvernum").innerHTML);
+
+
     $( ".listitems" ).hover(
-  function() {
-    $( this ).css("background-color", 'lightgrey');
-  }, function() {
-    $( this ).css("background-color", 'white');
-  }
-); 
-       }); 
-    </script>
+      function() {
+        $( this ).css("background-color", 'lightgrey');
+      }, function() {
+        $( this ).css("background-color", 'white');
+      }
+    );
+      
+  </script>
     </body>
     </html>

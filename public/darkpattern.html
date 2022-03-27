@@ -40,7 +40,7 @@
       <center>
      <h1 style="font-size: 400%; margin-top: -20px;"> Cob's Soulo Game </h1>
      
-       <ul style="list-style-type: none; margin-top: 35px;">
+       <ul style="list-style-type: none; margin-right: 30px; margin-top: 35px;">
          <li class="listitems">  <a style="color: black; text-decoration: none;" href="bonusdark.html"> Login Bonus</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="ingamestoredark.html">Store</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="checkoutdark.html">Recharge</a></li>
@@ -68,31 +68,17 @@
         </tr>
     </table>
     <script>
-      $(document).ready(function() {
-      console.log( document.getElementById("goldnum").innerHTML)
-      var numGold = parseInt(sessionStorage.getItem("numofgold"));
-      var numSilver = parseInt(sessionStorage.getItem("numofsilver"));
-      var numBronze = parseInt(sessionStorage.getItem("numofbronze"));
-      if(numGold >= 0)
+      if(sessionStorage.getItem("currentGoldNum") != null)
       {
-        document.getElementById("goldnum").innerHTML = parseInt(sessionStorage.getItem("currentGoldNum")) + numGold;
-       
-        
+    document.getElementById("goldnum").innerHTML = sessionStorage.getItem("currentGoldNum");
       }
-      
-
-      if(numSilver >= 0)
-      {
-        document.getElementById("silvernum").innerHTML = parseInt(sessionStorage.getItem("currentSilverNum")) + numSilver;
-       
-      }
-      
-
-      if(numBronze >= 0)
-      {
-        document.getElementById("bronzenum").innerHTML = parseInt(sessionStorage.getItem("currentBronzeNum")) + numBronze;
-        
-      }
+      if(sessionStorage.getItem("currentSilverNum") != null) {
+    document.getElementById("silvernum").innerHTML = sessionStorage.getItem("currentSilverNum");
+    }
+    if(sessionStorage.getItem("currentBronzeNum") != null)
+    {
+    document.getElementById("bronzenum").innerHTML = sessionStorage.getItem("currentBronzeNum");
+    }
       sessionStorage.setItem("currentGoldNum", document.getElementById("goldnum").innerHTML);
       sessionStorage.setItem("currentBronzeNum", document.getElementById("bronzenum").innerHTML );
       sessionStorage.setItem("currentSilverNum", document.getElementById("silvernum").innerHTML);
@@ -104,7 +90,7 @@
         $( this ).css("background-color", 'white');
       }
     );
-      });  
+      
   </script>
     </body>
     </html>

@@ -158,9 +158,12 @@
             var check2 = document.getElementById("checkbox2");
             if(check1.checked && check2.checked)
             {
-                sessionStorage.setItem("numofgold", $("#goldquantity").val());
-                sessionStorage.setItem("numofsilver", $("#silverquantity").val());
-                sessionStorage.setItem("numofbronze", $("#bronzequantity").val());
+             var goldnum = sessionStorage.getItem("currentGoldNum");
+             var silvernum =sessionStorage.getItem("currentSilverNum");
+             var bronzenum = sessionStorage.getItem("currentBronzeNum");
+             sessionStorage.setItem("currentGoldNum", parseInt(goldnum)+parseInt($("#goldquantity").val()));
+             sessionStorage.setItem("currentSilverNum", parseInt(silvernum)+parseInt($("#silverquantity").val()));
+             sessionStorage.setItem("currentBronzeNum", parseInt(bronzenum)+parseInt($("#bronzequantity").val()));
                 alert("Order has been placed! Redirecting to home page ...");
                 $("a").attr("href", "darkpattern.html");
             }

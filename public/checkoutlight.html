@@ -131,7 +131,7 @@
         </div>
         <div>
           <a style="text-decoration: none; color: black;"> <div id="submitbtn" style="width: 10%; background-color: #adb0a9; margin-top: 10px; border: 1px black solid;">
-            <p style="font-size: 130%; color: black; margin-top: 10px;"> Place Order </p> </div> </a> 
+            <p style="font-size: 140%; color: black; margin-top: 10px;"> Place Order </p> </div> </a> 
     </div>
     </center>
     <script>
@@ -158,11 +158,14 @@
             var check2 = document.getElementById("checkbox2");
             if(check1.checked && check2.checked)
             {
-              sessionStorage.setItem("numofgold", $("#goldquantity").val());
-                sessionStorage.setItem("numofsilver", $("#silverquantity").val());
-                sessionStorage.setItem("numofbronze", $("#bronzequantity").val());
+              var goldnum = sessionStorage.getItem("currentGoldNumLight");
+             var silvernum =sessionStorage.getItem("currentSilverNumLight");
+             var bronzenum = sessionStorage.getItem("currentBronzeNumLight");
+             sessionStorage.setItem("currentGoldNumLight", parseInt(goldnum)+parseInt($("#goldquantity").val()));
+             sessionStorage.setItem("currentSilverNumLight", parseInt(silvernum)+parseInt($("#silverquantity").val()));
+             sessionStorage.setItem("currentBronzeNumLight", parseInt(bronzenum)+parseInt($("#bronzequantity").val()));
                 alert("Order has been placed! Redirecting to home page ...");
-                $("a").attr("href", "darkpattern.html");
+                $("a").attr("href", "lightpattern.html");
             }
             else
             {
