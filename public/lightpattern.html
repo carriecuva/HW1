@@ -50,6 +50,7 @@
         <h3 style="margin-top: 35px !important;"> Cob's Clicker Of Chaos</h3>
         <p id="welcomemessage"style="font-size: 120%;"> <strong>Objective of the Game: Click the Shoe <span style="display:none;"> and Fish</span></strong> <br> For every 25 points, you earn 4 Bronze CobBucks <br> Every 16 Bronze CobBucks you earn, you get 4 Silver CobBucks </p>
         <img id="shoeimg" style="display:none;" width="170" src="converse-removebg-preview.png">  
+        <img id="fishimg" style="display:none;" width="170" src="fishyfish-removebg-preview.png">
         <div id="startbtn" style="background-color:pink; width: 20%; padding: 8px;">
           <p style="font-size:110%;"> Click Here To Begin</p>
         </div>
@@ -119,12 +120,45 @@
            $("#welcomemessage").css("display", "none");
            $("#scoreparagraph").css("display", "block");
            $("#shoeimg").css("display", "block");
+           if(sessionStorage.getItem("doubleimages") == "true")
+           {
+             $("fishimg").css("display", "block");
+           }
 
         }); 
         numBronze = 0;
-        $("#shoeimg").click(function (){
+        $("#fishimg").click(function (){
+          if(sessionStorage.getItem("doubleclick") == "true")
+          {
+         document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 2;
+          }
+          else
+          {
+            document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 1;
+          }
+         if(parseInt(document.getElementById("score").innerHTML) % 25 == 0)
+         {
+          document.getElementById("bronzenum").innerHTML = parseInt(sessionStorage.getItem("currentBronzeNumLight"))+4;
+          sessionStorage.setItem("currentBronzeNumLight", document.getElementById("bronzenum").innerHTML);
+          numBronze = numBronze+4;
+         }
+
+         if(numBronze % 16 == 0 && numBronze != 0)
+         {
+          document.getElementById("silvernum").innerHTML = parseInt(sessionStorage.getItem("currentSilverNumLight"))+4;
+          sessionStorage.setItem("currentSilverNumLight", document.getElementById("silvernum").innerHTML);
+         }
           
-         document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 1;
+        }); 
+        $("#shoeimg").click(function (){
+          if(sessionStorage.getItem("doubleclick") == "true")
+          {
+         document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 2;
+          }
+          else
+          {
+            document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 1;
+          }
          if(parseInt(document.getElementById("score").innerHTML) % 25 == 0)
          {
           document.getElementById("bronzenum").innerHTML = parseInt(sessionStorage.getItem("currentBronzeNumLight"))+4;

@@ -37,24 +37,25 @@
           </ul> 
           <div style="display: flex; justify-content:center;">
                 <div style="border: 1px solid black; width: 20%; margin-top: 30px; margin-right: 20px;">
-                    <img width="100" src="timestwo-removebg-preview.png">
+                    <img width="120" src="timestwo-removebg-preview.png">
                     <hr>
                     <p style="font-size: 150%;"> Two Timer</p>
                     <p  style="font-size: 150%;"> Allows one click to be counted as two!</p>
-                    <p style="font-size: 150%;"> Cost<br> <img width="40" src="bronzegem-removebg-preview.png">: 3</p>
+                    <p style="font-size: 150%;"> Cost<br> <img width="40" src="bronzegem-removebg-preview.png">: 10</p>
                     <hr>
-                    <div style="background-color: pink;">
-                        <p id="2x"> Click Here to Use  </p>
+                    <div style="background-color: pink; padding: 15px; font-size: 130%; margin-top: -20px;">
+                        <button id="2x"> Click here to use!</button>
                     </div>
                 </div>
                 <div style="border: 1px solid black; width: 20%; margin-top: 30px;">
-                  <img width="100" src="timestwo-removebg-preview.png">
+                  <img width="135" src="imageimage-removebg-preview.png">
+                  <hr>
                   <p style="font-size: 150%;"> Images Galore</p>
                   <p  style="font-size: 150%;"> Adds another image to click: One Time Use </p>
-                  <p style="font-size: 150%;"> Cost<br> <img width="40" src="goldcobbuck-removebg-preview.png">: 6</p>  <li class="listitems"> <img width="50" src="silvergem-removebg-preview.png"> : 3</li>
+                  <p style="font-size: 150%;"> Cost<br> <img width="40" src="silvergem-removebg-preview.png">: 15</p> 
                   <hr>
                   <div style="background-color: pink; padding: 15px; font-size: 130%; margin-top: -20px;">
-                      <p id="2images"> Click Here to Use  </p>
+                      <button id="2images"> Click here to use!</button>
                   </div>
               </div>
           </div>
@@ -68,13 +69,12 @@
         document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
         document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
         $("#2x").click(function (){
-            if(bronzenum >=3)
+            if(bronzenum >=10)
             {
-            sessionStorage.setItem("currentBronzeNumLight", parseInt(bronzenum)-3 );
+            sessionStorage.setItem("currentBronzeNumLight", parseInt(bronzenum)-10 );
             alert("You have now unlocked Two Timer! Click the back arrow to see it in action");
-            document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
-          document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
-          document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+            document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+            sessionStorage.setItem("doubleclick", "true");
             }
             else
             {
@@ -88,8 +88,9 @@
             sessionStorage.setItem("currentSilverNumLight", parseInt(silvernum)-3);
             alert("You have now unlocked Images Galore! Click the back arrow to see it in action");
             document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
-          document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
-          document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+            document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
+            document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+            sessionStorage.setItem("doubleimages", "true");
             }
             else
             {
