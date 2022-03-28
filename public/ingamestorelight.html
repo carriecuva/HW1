@@ -48,10 +48,15 @@
                     </div>
                 </div>
                 <div style="border: 1px solid black; width: 20%; margin-top: 30px;">
-                    <img width="100" src="timestwo-removebg-preview.png">
-                    <p style="font-size: 150%;"> Two Timer</p>
-                    <p  style="font-size: 150%;"> Allows one click to be counted as two!</p>
-                </div>
+                  <img width="100" src="timestwo-removebg-preview.png">
+                  <p style="font-size: 150%;"> Images Galore</p>
+                  <p  style="font-size: 150%;"> Adds another image to click: One Time Use </p>
+                  <p style="font-size: 150%;"> Cost<br> <img width="40" src="goldcobbuck-removebg-preview.png">: 6</p>  <li class="listitems"> <img width="50" src="silvergem-removebg-preview.png"> : 3</li>
+                  <hr>
+                  <div style="background-color: pink; padding: 15px; font-size: 130%; margin-top: -20px;">
+                      <p id="2images"> Click Here to Use  </p>
+                  </div>
+              </div>
           </div>
      </center>
     </body>
@@ -67,6 +72,21 @@
             {
             sessionStorage.setItem("currentBronzeNumLight", parseInt(bronzenum)-3 );
             alert("You have now unlocked Two Timer! Click the back arrow to see it in action");
+            document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
+          document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
+          document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
+            }
+            else
+            {
+                alert("You do not have enough CobBucks to use this feature");
+            }
+        });
+        $("#2images").click(function (){
+            if(goldnum >= 6 && silvernum >= 3)
+            {
+            sessionStorage.setItem("currentGoldNumLight", parseInt(goldnum)-6 );
+            sessionStorage.setItem("currentSilverNumLight", parseInt(silvernum)-3);
+            alert("You have now unlocked Images Galore! Click the back arrow to see it in action");
             document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
           document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
           document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");

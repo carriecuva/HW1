@@ -45,8 +45,20 @@
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="ingamestoredark.html">Store</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="checkoutdark.html">Recharge</a></li>
        </ul> 
-      </center>
-    <table  style="float: right; margin-right: 120px;">
+      
+     
+      <div style="border: 1px solid black; width: 40%; margin-top: 35px; padding: 15px;">
+        <p id="scoreparagraph" style="float:right; font-size: 115%; display: none;"> Score: <span id="score"> 0 </span></p>
+        <h3 style="margin-top: 35px !important;"> Cob's Clicker Of Chaos</h3>
+        <p id="welcomemessage"style="font-size: 120%;"> <strong>Objective of the Game: Click the Shoe <span style="display:none;"> and Fish</span></strong> <br> For every 25 points, you earn 2 Bronze CobBucks <br> Every 16 Bronze CobBucks you earn, you get 2 Silver CobBucks </p>
+        <img id="shoeimg" style="display:none;" width="170" src="converse-removebg-preview.png">  
+        <div id="startbtn" style="background-color:pink; width: 20%; padding: 8px;">
+          <p style="font-size:110%;"> Click Here To Begin</p>
+        </div>
+
+      </div>
+    </center>
+    <table  style="float: right; margin-right: 120px; margin-top: -200px;">
         <tr>
           <th style="font-size: 160%;"> CobBucks</th>
         </tr>
@@ -67,6 +79,9 @@
           <td style="font-size:140%;"> <span id="bronzenum"> 0 </span></td>
         </tr>
     </table>
+    <progress value="32" max="100"> 32% </progress>
+
+
     <script>
       if(sessionStorage.getItem("currentGoldNum") != null)
       {
@@ -90,7 +105,24 @@
         $( this ).css("background-color", 'white');
       }
     );
-      
+    $( "#startbtn" ).hover(
+      function() {
+        $( this ).css("background-color", '#ed85eb');
+      }, function() {
+        $( this ).css("background-color", 'pink');
+      }
+    );
+    $("#startbtn").click(function (){
+           $(this).css("display", "none");
+           $("#welcomemessage").css("display", "none");
+           $("#scoreparagraph").css("display", "block");
+           $("#shoeimg").css("display", "block");
+
+        }); 
+        $("#shoeimg").click(function (){
+         document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 1;
+          
+        }); 
   </script>
     </body>
     </html>
