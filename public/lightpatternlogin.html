@@ -32,15 +32,11 @@
   </div>
   <div style="margin-top:20px;">
     <input type="checkbox" style="transform:scale(1.15);" id="checkbox2" name="checkbox" value="privatepolicy" >
-    <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I agree to Cob's Private Policy and understand that Cob's is allowed to share my personal information with other affiliated companies.<label><br>
+    <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I agree to Cob's Private Policy and understand that Cob's is allowed to share my personal information and use cookies to track my activity. <label><br>
 </div>
+
 <div style="margin-top:20px;">
-  <input type="checkbox" style="transform:scale(1.15);" id="checkbox3" name="checkbox" value="privatepolicy" >
-  <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I agree to the use of cookies to track my activity and other necessary information. To disable flash cookies, <a href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects
-    flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects">go here </a><label><br>
-</div>
-<div style="margin-top:20px;">
-  <input type="checkbox" style="transform:scale(1.15);" id="checkbox4" name="checkbox" value="guest">
+  <input type="checkbox" style="transform:scale(1.15);" id="checkbox3" name="checkbox" value="guest">
   <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I am signing in as a guest <label><br>
 </div>
   </center>
@@ -59,9 +55,9 @@
               check1.checked = false;
             }
         });
-        $("#checkbox4").click(function () {
-            var check4 = document.getElementById("checkbox4");
-            if(check4.checked)
+        $("#checkbox3").click(function () {
+            var check3 = document.getElementById("checkbox3");
+            if(check3.checked)
             {
               alert("After checking the other checkboxes, click the submit button and enjoy the game!");
              
@@ -71,8 +67,7 @@
       var check1 = document.getElementById("checkbox1");
       var check2 = document.getElementById("checkbox2");
       var check3 = document.getElementById("checkbox3");
-      var check4 = document.getElementById("checkbox4")
-      if(check4.checked)
+      if(check3.checked)
       {
         sessionStorage.setItem("guest", "true");
       }
@@ -81,14 +76,14 @@
         sessionStorage.setItem("guest", "false");
       }
 
-      if(check1.checked && check2.checked && check3.checked) 
+      if(check1.checked && check2.checked) 
       {
           alert("Logging In!")
           $('a').attr("href", "lightpattern.html");
       }
       else
       {
-        alert('You must agree to the first three checkboxes in order to continue');
+        alert('You must agree to the first two checkboxes in order to continue');
       }
      
       
