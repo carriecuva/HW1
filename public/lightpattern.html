@@ -80,15 +80,25 @@
           <td style="font-size:140%;"> <span id="bronzenum"> 5 </span></td>
         </tr>
     </table>
-    <div style="width: 50%; margin-top: 30px; margin-left: 50px;" class="w3-border">
-      <div class="w3-grey" style="height:40px;width:86%;"> </div>
+    <div style="width: 50%; margin-top: 30px; margin-left: 200px;" class="w3-border">
+      <div id="progressbar" class="w3-grey" style="height:40px;width:86%;"> </div>
     </div>
-    <p style="font-size: 600%; text-align: center; margin-left: 800px; margin-top: -90px;"> &#8680; </p>
+    <p id="arrowfordarkmode" style="font-size: 600%; text-align: center; margin-left: 800px; margin-top: -90px;"> &#8680; </p>
     
     <img id="lockimg" style="float: right; margin-right: 390px; margin-top: -130px;" width = "115" src="lockimage-removebg-preview.png">
     <script>
       
-     
+      if(sessionStorage.getItem("valuelight") == 100)
+      {
+        $("#progressbar").css("width", "100%");
+        $("#lockimg").css("display", "none");
+      }
+      if(sessionStorage.getItem("darkmode") == "true")
+      {
+        $("#gameboard").css("background-color", "#403d40");
+        $("#gameboard").css("color", "white");
+
+      }
       if(sessionStorage.getItem("currentGoldNumLight") != null)
       {
     document.getElementById("goldnum").innerHTML = sessionStorage.getItem("currentGoldNumLight");
@@ -128,7 +138,7 @@
            $("#welcomemessage").css("display", "none");
            $("#scoreparagraph").css("display", "block");
            $("#shoeimg").css("display", "block");
-           if(sessionStorage.getItem("doubleimages") == "true")
+           if(sessionStorage.getItem("doubleimageslight") == "true")
            {
              $("#fishimg").css("display", "block");
            }
@@ -136,7 +146,7 @@
         }); 
         numBronze = 0;
         $("#fishimg").click(function (){
-          if(sessionStorage.getItem("doubleclick") == "true")
+          if(sessionStorage.getItem("doubleclicklight") == "true")
           {
          document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 2;
           }
@@ -159,7 +169,7 @@
           
         }); 
         $("#shoeimg").click(function (){
-          if(sessionStorage.getItem("doubleclick") == "true")
+          if(sessionStorage.getItem("doubleclicklight") == "true")
           {
          document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 2;
           }

@@ -59,6 +59,7 @@
             if(check1.checked && check2.checked)
             {
                 alert("The bonus has been processed! Redirecting to home page ... ");
+                sessionStorage.setItem("valuelight", 100);
                 $("a").attr("href", "lightpattern.html");
             }
             else

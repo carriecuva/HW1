@@ -27,7 +27,7 @@
         <i style="color: black; font-size: 300%; margin-left: 50px; margin-top: 20px;" class="fa fa-arrow-left"></i>
       </a>
      <center>
-         <h1> In Game Store </h1>
+         <h1 style="margin-top: -10px;"> In Game Store </h1>
          
          <p style="font-size: 130%;"> Check out these cool additions you can add to your game! </p>
          <ul style="list-style-type: none; margin-right: 30px; margin-top: 35px;">
@@ -58,23 +58,53 @@
                       <button id="2images"> Click here to use!</button>
                   </div>
               </div>
+              <div id="darkmodediv" style="display:none; border: 1px solid black; width: 20%; margin-left: 20px; margin-top: 30px;">
+                <img width="172" src="darkmode-removebg-preview.png">
+                <hr>
+                <p style="font-size: 150%;"> Dark Mode </p>
+                <p  style="font-size: 150%;"> Allows for background of the game to be dark!</p>
+                <p style="font-size: 150%;"> Cost:<br>  Nothing! It is free! </p>
+                <hr>
+                <div style="background-color: pink; padding: 15px; font-size: 130%; margin-top: -20px;">
+                    <button id="darkmode"> Click here to use!</button>
+                </div>
+            </div>
           </div>
      </center>
     </body>
     <script>
-       var goldnum = sessionStorage.getItem("currentGoldNumLight");
-        var silvernum =sessionStorage.getItem("currentSilverNumLight");
-        var bronzenum = sessionStorage.getItem("currentBronzeNumLight");
+
+      if(sessionStorage.getItem('valuelight') == 100)
+      {
+        $("#darkmodediv").css("display", "block");
+      }
+       if(sessionStorage.getItem("darkmodelight") == "true")
+       {
+         $("#darkmodediv").css("display", "none");
+       }
+       if(sessionStorage.getItem("doubleimageslight") == "true")
+       {
+         $("#imagediv").css("display", "none");
+       }
+       if(sessionStorage.getItem("doubleclicklight") == "true")
+       {
+         $("#doubleclickdiv").css("display", "none");
+       }
         document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
         document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
         document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
         $("#2x").click(function (){
+          var bronzenum = sessionStorage.getItem("currentBronzeNumLight");
             if(bronzenum >=10)
             {
-            sessionStorage.setItem("currentBronzeNumLight", parseInt(bronzenum)-10 );
+            
+            sessionStorage.setItem("currentBronzeNumLight", parseInt(bronzenum)-15 );
             alert("You have now unlocked Two Timer! Click the back arrow to see it in action");
-            document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
-            sessionStorage.setItem("doubleclick", "true");
+          
+          document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNum");
+          $("#doubleclickdiv").css("display", "none");
+          sessionStorage.setItem("doubleclicklight", "true");
+
             }
             else
             {
@@ -82,18 +112,29 @@
             }
         });
         $("#2images").click(function (){
-            if( silvernum >= 15)
+          var silvernum = sessionStorage.getItem("currentSilverNumLight");
+            if(silvernum >= 15)
             {
-            
-            sessionStorage.setItem("currentSilverNumLight", parseInt(silvernum)-15);
+           
+            sessionStorage.setItem("currentSilverNumLight", parseInt(silvernum)-10);
             alert("You have now unlocked Images Galore! Click the back arrow to see it in action");
-            document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
-            sessionStorage.setItem("doubleimages", "true");
+          document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNum");
+          $("#imagediv").css("display", "none");
+          sessionStorage.setItem("doubleimageslight", "true");
             }
             else
             {
                 alert("You do not have enough CobBucks to use this feature");
             }
+        });
+        $("#darkmode").click(function (){
+        
+            $("#darkmodediv").css("display", "none");
+            alert("You have now unlocked Dark Mode! Click the back arrow to see it in action");
+          sessionStorage.setItem('darkmode', "true");
+          
+            
+           
         });
     </script>
     </html>
