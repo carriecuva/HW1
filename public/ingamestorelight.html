@@ -82,14 +82,12 @@
             }
         });
         $("#2images").click(function (){
-            if(goldnum >= 6 && silvernum >= 3)
+            if( silvernum >= 15)
             {
-            sessionStorage.setItem("currentGoldNumLight", parseInt(goldnum)-6 );
-            sessionStorage.setItem("currentSilverNumLight", parseInt(silvernum)-3);
+            
+            sessionStorage.setItem("currentSilverNumLight", parseInt(silvernum)-15);
             alert("You have now unlocked Images Galore! Click the back arrow to see it in action");
-            document.getElementById("numberofgold").innerHTML = sessionStorage.getItem("currentGoldNumLight");
             document.getElementById("numberofsilver").innerHTML = sessionStorage.getItem("currentSilverNumLight");
-            document.getElementById("numberofbronze").innerHTML = sessionStorage.getItem("currentBronzeNumLight");
             sessionStorage.setItem("doubleimages", "true");
             }
             else
