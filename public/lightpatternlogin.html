@@ -24,18 +24,69 @@
       <input style="font-size: 120%;" type="text"> <br> <br>
       <label style="font-size: 130%; "> Password</label> <br>
       <input style="font-size: 120%;" type="password"> <br>
-     <a href="lightpattern.html"> <input type="submit" style="font-size: 150%; margin-top: 30px;"> </a>
+     <a id="submit"> <input type="submit" style="font-size: 150%; margin-top: 30px;"> </a>
     </div>
     <div style="margin-top:130px;">
-      <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies"checked >
-      <label for="checkbox" style="margin-left: 10px"> I agree to be billed the amount listed</label><br>
+      <input type="checkbox" id="checkbox1" name="checkbox" value="Agree">
+      <label for="checkbox" style="margin-left: 10px"> I accept the terms and conditions of Cob's <a id="terms" href="Privacy Policy for Cobs Cobblers.pdf"> Click to Read Terms</a> and recognize that I am transfering my soul to Cob's by agreeing</label><br>
   </div>
   <div style="margin-top:20px;">
-    <input type="checkbox" id="checkbox1" name="checkbox" value="LawOfNoBacksies"checked >
-    <label for="checkbox" style="margin-left: 10px"> I agree to be billed the amount listed</label><br>
+    <input type="checkbox" id="checkbox2" name="checkbox" value="privatepolicy" >
+    <label for="checkbox" style="margin-left: 10px"> I agree to Cob's Private Policy <label><br>
+</div>
+<div style="margin-top:20px;">
+  <input type="checkbox" id="checkbox3" name="checkbox" value="guest">
+  <label for="checkbox" style="margin-left: 10px"> I am signing in as a guest <label><br>
 </div>
   </center>
    
 </div>
+<script>
+   $("#terms").click(function () {
+            var check1 = document.getElementById("checkbox1");
+            check1.checked = true;
+        });
+        $("#checkbox1").click(function () {
+            var check1 = document.getElementById("checkbox1");
+            if(check1.checked)
+            {
+              alert("You can only check this if you have clicked the link to read the terms");
+              check1.checked = false;
+            }
+        });
+        $("#checkbox3").click(function () {
+            var check3 = document.getElementById("checkbox3");
+            if(check3.checked)
+            {
+              alert("After checking both the other checkboxes, click the submit button and enjoy the game!");
+             
+            }
+        });
+  $("#submit").click(function () {
+      var check1 = document.getElementById("checkbox1");
+      var check2 = document.getElementById("checkbox2");
+      var check3 = document.getElementById("checkbox3");
+      if(check3.checked)
+      {
+        sessionStorage.setItem("guest", "true");
+      }
+      else
+      {
+        sessionStorage.setItem("guest", "false");
+      }
+
+      if(check1.checked && check2.checked) 
+      {
+          alert("Logging In!")
+          $('a').attr("href", "lightpattern.html");
+      }
+      else
+      {
+        alert('Both the terms and conditions checkbox and the private policy checkbox need to be checked in order to continue');
+      }
+     
+      
+});
+</script>
   </body>
 </html>
