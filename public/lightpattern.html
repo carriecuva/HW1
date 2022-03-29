@@ -85,7 +85,7 @@
     <div style="width: 50%; margin-top: 30px; margin-left: 200px;" class="w3-border">
       <div id="progressbar" class="w3-grey" style="height:40px;width:86%;"> </div>
     </div>
-    <p id="arrowfordarkmode" style="font-size: 600%; text-align: center; margin-left: 800px; margin-top: -90px;"> &#8680; </p>
+   <a id="linkarrow" style="text-decoration:none;"> <p id="arrowfordarkmode" style="font-size: 600%; text-align: center; margin-left: 800px; margin-top: -90px;"> &#8680; </p> </a>
     
     <img id="lockimg" style="float: right; margin-right: 390px; margin-top: -130px;" width = "115" src="lockimage-removebg-preview.png">
     <script>
@@ -95,7 +95,7 @@
         $("#progressbar").css("width", "100%");
         $("#lockimg").css("display", "none");
       }
-      if(sessionStorage.getItem("darkmode") == "true")
+      if(sessionStorage.getItem("darkmodelight") == "true")
       {
         $("#gameboard").css("background-color", "#403d40");
         $("#gameboard").css("color", "white");
@@ -144,6 +144,13 @@
            {
              $("#fishimg").css("display", "block");
            }
+
+        }); 
+        $("#arrowfordarkmode").click(function (){
+         if(sessionStorage.getItem("valuelight") == 100)
+         {
+            $("#linkarrow").attr("href", "ingamestorelight.html");
+          }
 
         }); 
         numBronze = 0;
