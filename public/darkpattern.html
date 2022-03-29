@@ -41,6 +41,7 @@
       <center>
      <h1 style="font-size: 400%; margin-top: -20px;"> Cob's Soulo Game </h1>
      <h3 id="beginningheader"> Only <strong style="font-size: 140%;">One</strong> More Day Until You Unlock Dark Mode! Get your Login Bonus now! </h3>
+     <h3 id="testimonials"> Read <a style="text-decoration:underline;" href="testimonials.html">these testimonials</a> of those who have unlocked dark mode to see what you're missing.</h3>
      <h3 id="secondheader" style="display:none;"> Congratulations, you have unlocked Dark Mode! You will now see it in the store! </h3>
      
        <ul style="list-style-type: none; margin-right: 30px; margin-top: 35px;">
@@ -100,6 +101,7 @@
         $("#progressbar").css("width", "100%");
         $("#lockimg").css("display", "none");
         $("#beginningheader").css("display", "none");
+        $("#testimonials").css("display", "none");
         $("#secondheader").css("display", "block");
       }
       if(sessionStorage.getItem("darkmode") == "true")
