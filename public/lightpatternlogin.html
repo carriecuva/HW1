@@ -16,9 +16,9 @@
    
     <div >
       <center>
-    <h1 style="text-align: center; font-size: 270%; padding-top: 15px;"> Welcome To Cob's Soulo Game</h1>
+    <h1 style="text-align: center; font-size: 270%; margin-top: -1px;"> Welcome To Cob's Soulo Game</h1>
     
-    <img src="star-removebg-preview.png" width ="500" alt="starrrr"> 
+    <img src="star-removebg-preview.png" width ="500" style="margin-top: -20px;" alt="starrrr"> 
     <div style="margin-top: -320px;">
       <label style=" font-size: 130%;"> User name</label> <br>
       <input style="font-size: 120%;" type="text"> <br> <br>
@@ -27,16 +27,21 @@
      <a id="submit"> <input type="submit" style="font-size: 150%; margin-top: 30px;"> </a>
     </div>
     <div style="margin-top:130px;">
-      <input type="checkbox" id="checkbox1" name="checkbox" value="Agree">
-      <label for="checkbox" style="margin-left: 10px"> I accept the terms and conditions of Cob's <a id="terms" href="Privacy Policy for Cobs Cobblers.pdf"> Click to Read Terms</a> and recognize that I am transfering my soul to Cob's by agreeing</label><br>
+      <input type="checkbox" style="transform:scale(1.15);" id="checkbox1" name="checkbox" value="Agree">
+      <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I accept the terms and conditions of Cob's <a id="terms" href="Privacy Policy for Cobs Cobblers.pdf"> Click to Read Terms</a> and recognize that I am transfering my soul to Cob's by agreeing</label><br>
   </div>
   <div style="margin-top:20px;">
-    <input type="checkbox" id="checkbox2" name="checkbox" value="privatepolicy" >
-    <label for="checkbox" style="margin-left: 10px"> I agree to Cob's Private Policy <label><br>
+    <input type="checkbox" style="transform:scale(1.15);" id="checkbox2" name="checkbox" value="privatepolicy" >
+    <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I agree to Cob's Private Policy and understand that Cob's is allowed to share my personal information with other affiliated companies.<label><br>
 </div>
 <div style="margin-top:20px;">
-  <input type="checkbox" id="checkbox3" name="checkbox" value="guest">
-  <label for="checkbox" style="margin-left: 10px"> I am signing in as a guest <label><br>
+  <input type="checkbox" style="transform:scale(1.15);" id="checkbox3" name="checkbox" value="privatepolicy" >
+  <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I agree to the use of cookies to track my activity and other necessary information. To disable flash cookies, <a href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects
+    flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects">go here </a><label><br>
+</div>
+<div style="margin-top:20px;">
+  <input type="checkbox" style="transform:scale(1.15);" id="checkbox4" name="checkbox" value="guest">
+  <label for="checkbox" style="margin-left: 10px; font-size: 115%;"> I am signing in as a guest <label><br>
 </div>
   </center>
    
@@ -54,11 +59,11 @@
               check1.checked = false;
             }
         });
-        $("#checkbox3").click(function () {
-            var check3 = document.getElementById("checkbox3");
-            if(check3.checked)
+        $("#checkbox4").click(function () {
+            var check4 = document.getElementById("checkbox4");
+            if(check4.checked)
             {
-              alert("After checking both the other checkboxes, click the submit button and enjoy the game!");
+              alert("After checking the other checkboxes, click the submit button and enjoy the game!");
              
             }
         });
@@ -66,7 +71,8 @@
       var check1 = document.getElementById("checkbox1");
       var check2 = document.getElementById("checkbox2");
       var check3 = document.getElementById("checkbox3");
-      if(check3.checked)
+      var check4 = document.getElementById("checkbox4")
+      if(check4.checked)
       {
         sessionStorage.setItem("guest", "true");
       }
@@ -75,14 +81,14 @@
         sessionStorage.setItem("guest", "false");
       }
 
-      if(check1.checked && check2.checked) 
+      if(check1.checked && check2.checked && check3.checked) 
       {
           alert("Logging In!")
           $('a').attr("href", "lightpattern.html");
       }
       else
       {
-        alert('Both the terms and conditions checkbox and the private policy checkbox need to be checked in order to continue');
+        alert('You must agree to the first three checkboxes in order to continue');
       }
      
       

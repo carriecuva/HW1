@@ -43,7 +43,7 @@
      
      
        <ul style="list-style-type: none; margin-right: 30px; margin-top: 35px;">
-         <li class="listitems">  <a style="color: black; text-decoration: none;" href="bonuslight.html"> Login Bonus</a></li>
+         <li class="listitems" id="loginbonus">  <a style="color: black; text-decoration: none;" href="bonuslight.html"> Login Bonus</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="ingamestorelight.html">Store</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="checkoutlight.html">Recharge</a></li>
        </ul> 
@@ -82,14 +82,20 @@
           <td style="font-size:140%;"> <span id="bronzenum"> 5 </span></td>
         </tr>
     </table>
-    <div style="width: 50%; margin-top: 30px; margin-left: 200px;" class="w3-border">
+    <div id="progressbardiv" style="width: 50%; margin-top: 30px; margin-left: 200px;" class="w3-border">
       <div id="progressbar" class="w3-grey" style="height:40px;width:86%;"> </div>
     </div>
    <a id="linkarrow" style="text-decoration:none;"> <p id="arrowfordarkmode" style="font-size: 600%; text-align: center; margin-left: 800px; margin-top: -90px;"> &#8680; </p> </a>
     
     <img id="lockimg" style="float: right; margin-right: 390px; margin-top: -130px;" width = "115" src="lockimage-removebg-preview.png">
     <script>
-      
+      if(sessionStorage.getItem("guest") == "true")
+      {
+          $("#loginbonus").css("display", "none");
+          $("#linkarrow").css("display", "none");
+          $("#lockimg").css("display", "none");
+          $("#progressbardiv").css("display", "none");
+      }
       if(sessionStorage.getItem("valuelight") == 100)
       {
         $("#progressbar").css("width", "100%");
