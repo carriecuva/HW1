@@ -49,7 +49,13 @@
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="ingamestoredark.html">Store</a></li>
          <li class="listitems"> <a style="color: black; text-decoration: none;" href="checkoutdark.html">Recharge</a></li>
        </ul> 
-      
+       <div id="testimonialhomepage" style=" float: left; width: 25%; padding-left: 20px; padding-right: 20px; padding-top: 10px; margin-left: 25px; border: 1px black solid;">
+        <p  style="font-size: 120%; line-height: 1.5;"> "Joining Cob's Soulo Game was the best decision I ever made! The game is really fun and they keep
+          me interested with the login bonus! I just got Dark Mode a few days ago and have not stopped playing since. Highly recommend 
+          to ANYONE. "</p>
+
+       <p style="font-size: 130%;">  - Pat </p>
+    </div>
      
       <div id="gameboard" style="border: 1px solid black; width: 40%; margin-top: 35px; padding: 15px;">
         <p id="scoreparagraph" style="float:right; font-size: 115%; display: none;"> Score: <span id="score"> 0 </span></p>
@@ -104,6 +110,7 @@
         $("#testimonials").css("display", "none");
         $("#secondheader").css("display", "block");
         $("#loginbonus").css("display", "none");
+        $("#testimonialhomepage").css("display", "none");
       }
       if(sessionStorage.getItem("darkmode") == "true")
       {
