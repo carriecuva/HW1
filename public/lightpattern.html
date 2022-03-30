@@ -83,7 +83,7 @@
         </tr>
     </table>
     <div id="progressbardiv" style="width: 50%; margin-top: 30px; margin-left: 200px;" class="w3-border">
-      <div id="progressbar" class="w3-grey" style="height:40px;width:86%;"> <span id="onedaymore" style=" margin-left: 20px; font-size: 120%; ">One More Day Until Dark Mode Is Unlocked!! </span> <span id="dayachieved" style=" margin-left: 20px; display:none; font-size: 120%; ">You have unlocked Dark Mode!! Find it by clicking the arrow or store link </span></div>
+      <div id="progressbar" class="w3-grey" style="height:40px;width:86%;"> <span id="onedaymore" style=" margin-left: 20px; font-size: 120%; ">One More Day Until Dark Mode Is Unlocked!! </span> <span id="dayachieved" style=" margin-left: 20px; display:none; font-size: 120%; ">You have unlocked Dark Mode!! Find it by clicking the arrow or Store link </span></div>
     </div>
    <a id="linkarrow" style="text-decoration:none;"> <p id="arrowfordarkmode" style="font-size: 600%; text-align: center; margin-left: 800px; margin-top: -90px;"> &#8680; </p> </a>
     
@@ -102,6 +102,7 @@
         $("#lockimg").css("display", "none");
         $("#onedaymore").css("display", "none");
         $("#dayachieved").css('display', "block");
+        $("#loginbonus").css("display", "none");
       }
       if(sessionStorage.getItem("darkmodelight") == "true")
       {
