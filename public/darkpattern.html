@@ -13,210 +13,534 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
-    <style>
-      .listitems
-      {
-        display: inline; 
-        border: 1px solid black; 
-        border-radius: 30px;
-        padding: 15px; 
-        margin-right:20px;
-        margin-left: 20px;
-        font-size: 160%;
-      }
-
-      .cobbuckslistitems
-      {
-         
-        padding: 15px; 
-        width: 30%;
-        font-size: 160%;
-      }
-    </style>
+  <style>
+    
+    #divpopup 
+    {
+      position: absolute;
+      z-index: 4;
+      margin-left: 200px;
+      margin-top: 150px; 
+      background-color:lightgrey; 
+      width: 80%; 
+      padding: 50px 50px;
+    }
+  </style>
     <title> Dark Pattern </title>
-    <body style="background-image: url(lightpatternbackground.jpeg); background-repeat: no-repeat; background-size: cover; padding-bottom: 15px;">
+    <body>
       <a  href="index.html">
         <i style="color: black; font-size: 300%; margin-left: 50px; margin-top: 20px;" class="fa fa-home"></i>
       </a>
+      <a id="myfavorites" style="float:right; margin-right: 50px; margin-top: 20px; display:none;"> <div style="background-color: lightgrey; padding: 15px;">
+        <p  style="font-size: 130%;"> My Favorites</p>
+     </div> </a>
       <center>
-     <h1 style="font-size: 400%; margin-top: -20px;"> Cob's Soulo Game </h1>
-     <h3 id="beginningheader"> Only <strong style="font-size: 140%;">One</strong> More Day Until You Unlock Dark Mode! Get your Login Bonus now! </h3>
-     <h3 id="testimonials"> Read <a style="text-decoration:underline;" href="testimonials.html">these testimonials</a> of those who have unlocked Dark Mode to see what you're missing.</h3>
-     <h3 id="secondheader" style="display:none;"> Congratulations, you have unlocked Dark Mode! <br> You will now see it in the store by clicking the arrow next to the progress bar or the Store nav head! </h3>
-     
-       <ul style="list-style-type: none; margin-right: 30px; margin-top: 35px;">
-         <li id="loginbonus" class="listitems">  <a style="color: black; text-decoration: none;" href="bonusdark.html"> Login Bonus</a></li>
-         <li class="listitems"> <a style="color: black; text-decoration: none;" href="ingamestoredark.html">Store</a></li>
-         <li class="listitems"> <a style="color: black; text-decoration: none;" href="checkoutdark.html">Recharge</a></li>
-       </ul> 
-       <div id="testimonialhomepage" style=" float: left; width: 25%; padding-left: 20px; padding-right: 20px; padding-top: 10px; margin-left: 25px; border: 1px black solid;">
-        <p  style="font-size: 120%; line-height: 1.5;"> "Joining Cob's Soulo Game was the best decision I ever made! The game is really fun and they keep
-          me interested with the login bonus! I just got Dark Mode a few days ago and have not stopped playing since. Highly recommend 
-          to ANYONE. "</p>
-
-       <p style="font-size: 130%;">  - Pat </p>
-    </div>
-     
-      <div id="gameboard" style="border: 1px solid black; width: 40%; margin-top: 35px; padding: 15px;">
-        <p id="scoreparagraph" style="float:right; font-size: 115%; display: none;"> Score: <span id="score"> 0 </span></p>
-        <h3 style="margin-top: 35px !important;"> Cob's Clicker Of Chaos</h3>
-        <p id="welcomemessage"style="font-size: 120%;"> <strong>Objective of the Game: Click the Shoe <span id="andfish" style="display:none;"> and Fish</span></strong> <br> For every 35 points, you earn 2 Bronze CobBucks <br> Every 16 Bronze CobBucks you earn, you get 2 Silver CobBucks </p>
-        <div style="display:flex; justify-content: space-between;">
-        <img id="shoeimg" style=" display:none;" width="170" src="converse-removebg-preview.png">  
-        <img id="fishimg" style="display:none;" width="200" src="fishyfish-removebg-preview.png">
-      </div>
-        <div id="startbtn" style="background-color:#134ceb; width: 20%; padding: 8px;">
-          <p style="font-size:110%; color: white;"> Click Here To Begin</p>
+        <div style="display:flex; justify-content: center;">
+          
+     <h1 style="font-size: 400%; margin-top: 25px; margin-left: 200px;"> Cob's Soul Music</h1>
+     <img src="guitar.jpg" width="100" style="margin-left: 50px;"> 
+     </div>
+     <h3> Take a trip through all the decades of Rock and Roll music  </h3>
+       <div style="display:flex; justify-content: center;">
+          <p style="font-size: 120%;" > Decade: </p>
+          <select id="decadeselect" style="margin-left: 10px;">
+            <option  selected="selected" value="1950s">
+              1950s
+            </option>
+            <option value="1960s">
+              1960s
+            </option>
+            <option value="1970s">
+              1970s
+            </option>
+            <option value="1980s">
+              1980s
+            </option>
+            <option value="1990s">
+              1990s
+            </option>
+            <option value="2000s">
+              2000s
+            </option>
+            <option value="2010s">
+              2010s
+            </option>
+          </select>
+       </div>
+      
+        <div id="divpopup">
+          <p id="signin" style="font-size: 180%; margin-top: -30px;"> Sign In!</p>
+          <label id="userlabel" style=" font-size: 130%;"> User name</label> <br>
+          <input style="font-size: 120%;" type="text"> <br> <br>
+          <label id="passwordlabel" style="font-size: 130%; "> Password</label> <br>
+          <input style="font-size: 120%;" type="password"> <br> <br>
+          <label class="email" style=" width: 30%; font-size: 130%; display:none;"> Enter Email</label>
+          <input  style="font-size: 120%; display:none;" type="text" class="email" name="email">
+          <input id="submit" type="submit"  style="font-size: 150%; margin-top: 20px; margin-bottom: 15px !important;"> <br>
+          <input style="font-size: 80%; display:none;" class="checkbox" type="checkbox" name="agree" value="I agree"  checked>
+          <label style="font-size:80%; display:none; " class="checkbox" for="agree"> By signing up, I agree to the terms and to be added to our weekly update email list </label> 
+         <p id="needaccount" style="margin-top: 20px;"> Don't have an account? <strong id="signup">Sign Up Now </strong></p> 
         </div>
-
+       
+       <p style="font-size: 120%; margin-top: 15px;" id="genre"> </p>
+       <div class="row">
+       <div class="col-lg-4" id="div1" style="margin-top: 20px;">
+          <p id="song1"> 
+            Peggy Sue
+          </p>
+          <img id="song1img" src="peggysue.jpeg" width="300" > 
+          <img id="play1" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+          <img id="favorite1" src="add_to_favorites-removebg-preview.png" width="80" style="position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
+          <p id="song1artist"> Buddy Holly </p>
+       </div>
+       <div class="col-lg-4" id="div2" style="margin-top: 20px;">
+        <p id="song2"> 
+          Great Balls Of Fire
+        </p>
+        <img id="song2img" src="greatballsoffire.jpg" width="300" > 
+        <img id="play2" src="playbutton-removebg-preview.png" width="100" style="  margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+        <img id="favorite2" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
+        <p id="song2artist"> Jerry Lee Lewis </p>
       </div>
-    </center>
-    <table  style="float: right; margin-right: 120px; margin-top: -220px;">
-        <tr>
-          <th style="font-size: 160%;"> CobBucks</th>
-        </tr>
-        <tr style="visibility:hidden;">
-          <td>hello</td>
-          <td>dr.</td>
-        </tr>
-        <tr>
-          <td> <img width="50" src="goldcobbuck-removebg-preview.png"></td>
-          <td style="font-size:140%;"> <span id="goldnum"> 0 </span></td>
-        </tr>
-        <tr>
-          <td> <img width="50" src="silvergem-removebg-preview.png"></td>
-          <td style="font-size:140%;"> <span id="silvernum"> 0 </span></td>
-        </tr>
-        <tr>
-          <td> <img width="50" src="bronzegem-removebg-preview.png"></td>
-          <td style="font-size:140%;"> <span id="bronzenum"> 0 </span></td>
-        </tr>
-    </table>
-  
-    <div style="width: 50%; margin-top: 30px; margin-left: 200px;" class="w3-border">
-      <div id="progressbar" class="w3-grey" style="height:40px;width:86%;"> </div>
+      <div class="col-lg-4" id="div3" style="margin-top: 20px;">
+        <p id="song3"> 
+          Johnny B. Goode
+        </p>
+        <img id="song3img" src="chuckberry.jpeg" width="300" >
+        <img id="play3" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">  
+        <img id="favorite3" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
+        <p id="song3artist"> Chuck Berry </p>
+      </div>
     </div>
-    <a id="linkarrow" style="text-decoration:none;"> <p id="arrowfordarkmode" style="font-size: 600%; text-align: center; margin-left: 800px; margin-top: -90px;"> &#8680; </p> </a>
-    
-    <img id="lockimg" style="float: right; margin-right: 390px; margin-top: -130px;" width = "115" src="lockimage-removebg-preview.png">
- 
+      <div class="col-lg-4" id="div4" style="margin-top: 30px;">
+        <p id="song4"> 
+          Tutti Frutti
+        </p>
+        <img id="song4img" src="littlerichard.jpeg" width="300"> 
+        <img id="play4" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+        <img id="favorite4" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
+        <p id="song4artist"> Little Richard </p>
+     </div>
+     <div class="col-lg-4" id="div5" style="margin-top: 30px;">
+      <p id="song5">
+        Burning Love
+      </p>
+      <img id="song5img" src="elvis.jpg" width="300" style> 
+      <img id="play5" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">
+      <img id="favorite5" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; ">  
+      <p id="song5artist"> Elvis Presley</p>
+    </div>
+    <div class="col-lg-4" id="div6" style="margin-top: 30px;">
+      <p id="song6"> 
+        Blueberry Hill
+      </p>
+      <img id="song6img" src="fatsdomino.jpg" width="300"> 
+      <img id="play6" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+      <img id="favorite6" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
+      <p id="song6artist"> Fats Domino </p>
+    </div>
+       
+     
+    </center>
+   
 
     <script>
-      if(sessionStorage.getItem("value") == 100)
-      {
-        $("#progressbar").css("width", "100%");
-        $("#lockimg").css("display", "none");
-        $("#beginningheader").css("display", "none");
-        $("#testimonials").css("display", "none");
-        $("#secondheader").css("display", "block");
-        $("#loginbonus").css("display", "none");
-        $("#testimonialhomepage").css("display", "none");
-      }
-      if(sessionStorage.getItem("darkmode") == "true")
-      {
-        $("#gameboard").css("background-color", "darkgrey");
-        $("#gameboard").css("color", "white");
+      
+     if(sessionStorage.getItem("signedinpopup") == "false")
+     {
+       $("#divpopup").css("display", "none");
+       $("#myfavorites").css("display", "block");
+     }
+     $("#signup").hover(
+       function() {
+         $(this).css("text-decoration", "underline");
 
-      }
-      if(sessionStorage.getItem("doubleimages") == "true")
-      {
-          $("#andfish").css("display", "inline");
-      }
-      if(sessionStorage.getItem("currentGoldNum") != null)
-      {
-    document.getElementById("goldnum").innerHTML = sessionStorage.getItem("currentGoldNum");
-      }
-      if(sessionStorage.getItem("currentSilverNum") != null) {
-    document.getElementById("silvernum").innerHTML = sessionStorage.getItem("currentSilverNum");
-    }
-    if(sessionStorage.getItem("currentBronzeNum") != null)
-    {
-    document.getElementById("bronzenum").innerHTML = sessionStorage.getItem("currentBronzeNum");
-    }
-      sessionStorage.setItem("currentGoldNum", document.getElementById("goldnum").innerHTML);
-      sessionStorage.setItem("currentBronzeNum", document.getElementById("bronzenum").innerHTML );
-      sessionStorage.setItem("currentSilverNum", document.getElementById("silvernum").innerHTML);
+       }, function()
+       {
+        $(this).css("text-decoration", "none");
+       }
 
-    $( ".listitems" ).hover(
+     );
+     $("#signup").click(function () {
+           $("#needaccount").css("display", "none");
+          $("#userlabel").text("Enter User Name");
+          $("#signin").text("Create an Account");
+          $("#passwordlabel").text("Enter Password"); 
+          $(".email").css("display", "block");
+          $(".checkbox").css("display", "inline-block")
+      });
+     $("#submit").click(function () {
+            $("#divpopup").css("display", "none");
+            sessionStorage.setItem("signedinpopup", "false");
+            $("#myfavorites").css("display", "block");
+            
+      });
+      $("#favorite1").click(function () {
+         var imagesrc = $(this).attr("src");
+         if(imagesrc == "add_to_favorites-removebg-preview.png") 
+         {
+          $(this).attr("src", "favorites_filled_in-removebg-preview.png");
+         }
+         else 
+         {
+           $(this).attr("src", "add_to_favorites-removebg-preview.png");
+         }
+      });
+
+      $("#favorite2").click(function () {
+         var imagesrc = $(this).attr("src");
+         if(imagesrc == "add_to_favorites-removebg-preview.png") 
+         {
+          $(this).attr("src", "favorites_filled_in-removebg-preview.png");
+         }
+         else 
+         {
+           $(this).attr("src", "add_to_favorites-removebg-preview.png");
+         }
+      });
+
+      $("#favorite3").click(function () {
+         var imagesrc = $(this).attr("src");
+         if(imagesrc == "add_to_favorites-removebg-preview.png") 
+         {
+          $(this).attr("src", "favorites_filled_in-removebg-preview.png");
+         }
+         else 
+         {
+           $(this).attr("src", "add_to_favorites-removebg-preview.png");
+         }
+      });
+      $("#favorite4").click(function () {
+         var imagesrc = $(this).attr("src");
+         if(imagesrc == "add_to_favorites-removebg-preview.png") 
+         {
+          $(this).attr("src", "favorites_filled_in-removebg-preview.png");
+         }
+         else 
+         {
+           $(this).attr("src", "add_to_favorites-removebg-preview.png");
+         }
+      });
+      $("#favorite5").click(function () {
+         var imagesrc = $(this).attr("src");
+         if(imagesrc == "add_to_favorites-removebg-preview.png") 
+         {
+          $(this).attr("src", "favorites_filled_in-removebg-preview.png");
+         }
+         else 
+         {
+           $(this).attr("src", "add_to_favorites-removebg-preview.png");
+         }
+      });
+      $("#favorite6").click(function () {
+         var imagesrc = $(this).attr("src");
+         if(imagesrc == "add_to_favorites-removebg-preview.png") 
+         {
+          $(this).attr("src", "favorites_filled_in-removebg-preview.png");
+         }
+         else 
+         {
+           $(this).attr("src", "add_to_favorites-removebg-preview.png");
+         }
+      });
+        $( "#div1" ).hover(
       function() {
-        $( this ).css("background-color", 'lightgrey');
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+        $( "#song1img" ).css("opacity", '0.5');
+        $("#play1").css("display", "block")
+        $("#favorite1").css("display", "block")
+        $("#song1artist").css("display", "none")
+        }
+        
       }, function() {
-        $( this ).css("background-color", 'white');
+       
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+        $("#song1img").css("opacity", '1');
+        $("#play1").css("display", "none")
+        $("#favorite1").css("display", "none")
+        $("#song1artist").css("display", "block")
+        }
+        
       }
     );
-    $( "#startbtn" ).hover(
+    $( "#div2" ).hover(
       function() {
-        $( this ).css("background-color", '#2f4d9e');
+        
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+        $("#song2img").css("opacity", '0.5');
+        $("#play2").css("display", "block")
+        $("#favorite2").css("display", "block")
+        $("#song2artist").css("display", "none")
+        }
+        
       }, function() {
-        $( this ).css("background-color", '#134ceb');
+      
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song2img").css("opacity", '1');
+        $("#play2").css("display", "none")
+        $("#favorite2").css("display", "none")
+        $("#song2artist").css("display", "block")
+        }
+        
       }
     );
-    $("#startbtn").click(function (){
-           $(this).css("display", "none");
-           $("#welcomemessage").css("display", "none");
-           $("#scoreparagraph").css("display", "block");
-           $("#shoeimg").css("display", "block");
-           if(sessionStorage.getItem("doubleimages") == "true")
-           {
-             $("#fishimg").css("display", "block");
+    $( "#div3" ).hover(
+      function() {
+        
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song3img" ).css("opacity", '0.5');
+        $("#play3").css("display", "block")
+        $("#favorite3").css("display", "block")
+        $("#song3artist").css("display", "none")
+        }
+       
+      }, function() {
+       
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song3img").css("opacity", '1');
+        $("#play3").css("display", "none")
+        $("#favorite3").css("display", "none")
+        $("#song3artist").css("display", "block")
+        }
+        
+      }
+    );
+    $( "#div4" ).hover(
+      function() {
+       
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song4img" ).css("opacity", '0.5');
+        $("#play4").css("display", "block")
+        $("#song4artist").css("display", "none")
+        $("#favorite4").css("display", "block")
+        }
+       
+      }, function() {
+        
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song4img").css("opacity", '1');
+        $("#play4").css("display", "none")
+        $("#song4artist").css("display", "block")
+        $("#favorite4").css("display", "none")
+        }
+       
+      }
+    );
+    $( "#div5" ).hover(
+      function() {
+        
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song5img").css("opacity", '0.5');
+        $("#play5").css("display", "block")
+        $("#song5artist").css("display", "none")
+        $("#favorite5").css("display", "block")
+        }
+        
+      }, function() {
+        
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song5img").css("opacity", '1');
+        $("#play5").css("display", "none")
+        $("#song5artist").css("display", "block")
+        $("#favorite5").css("display", "none")
+        }
+       
+      }
+    );
+    $( "#div6" ).hover(
+      function() {
+       
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+        $("#song6img" ).css("opacity", '0.5');
+        $("#play6").css("display", "block")
+        $("#favorite6").css("display", "block")
+        $("#song6artist").css("display", "none")
+        }
+        
+      }, function() {
+       
+        if(sessionStorage.getItem("signedinpopup") == "false") 
+        {
+          $("#song6img" ).css("opacity", '1');
+        $("#play6").css("display", "none")
+        $("#song6artist").css("display", "block")
+        $("#favorite6").css("display", "none")
+        }
+     
+      }
+    );
+       $("#decadeselect").change(function() {
+        var Rock_Decade = $("#decadeselect").val();
+        switch(Rock_Decade) 
+        {
+          case "1950s":
+              $("#song1").text("Peggy Sue")
+              $("#song2").text("Great Balls Of Fire")
+              $("#song3").text("Johnny B. Goode")
+              $("#song4").text("Tutti Frutti")
+              $("#song5").text("Burning Love")
+              $("#song6").text("Blueberry Hill")
+              $("#song1img").attr("src", "peggysue.jpeg")
+              $("#song2img").attr("src", "greatballsoffire.jpg")
+              $("#song3img").attr("src", "chuckberry.jpeg")
+              $("#song4img").attr("src", "littlerichard.jpeg")
+              $("#song5img").attr("src", "elvis.jpg")
+              $("#song6img").attr("src", "fatsdomino.jpg")
+              $("#song1artist").text("Buddy Holly")
+              $("#song2artist").text("Jerry Lee Lewis")
+              $("#song3artist").text("Chuck Berry")
+              $("#song4artist").text("Little Richard")
+              $("#song5artist").text("Elvis Presley")
+              $("#song6artist").text("Fats Domino")
+              $("#genre").text("The Beginning Of Rock and Roll")
+            break;
+            case "1960s":
+              
+              $("#song1").text("I'm Into Something Good")
+              $("#song2").text("I Wanna Hold Your Hand")
+              $("#song3").text("Light My Fire")
+              $("#song4").text("Casey Jones")
+              $("#song5").text("For What It's Worth")
+              $("#song6").text("Sounds of Silence")
+              $("#song1img").attr("src", "hermanhermit's.jpeg")
+              $("#song2img").attr("src", "beatles.jpeg")
+              $("#song3img").attr("src", "the doors.jpg")
+              $("#song4img").attr("src", "gratefuldead.jpeg")
+              $("#song5img").attr("src", "buffalo.jpeg")
+              $("#song6img").attr("src", "soundsofsilence.png")
+              $("#song1artist").text("Herman's Hermits")
+              $("#song2artist").text("The Beatles")
+              $("#song3artist").text("The Doors")
+              $("#song4artist").text("The Grateful Dead")
+              $("#song5artist").text("Buffalo Sprinfield")
+              $("#song6artist").text("Simon & Garfunkel")
+              $("#genre").text("British Invasion, Psychedelic Rock, & Folk Rock")
+            break;
+            case "1970s":
+              
+              $("#song1").text("Over The Hills And Far Away")
+              $("#song2").text("Dream On")
+              $("#song3").text("Money")
+              $("#song4").text("Follow You Follow Me")
+              $("#song5").text("Don't Stop Me Now")
+              $("#song6").text("Space Oddity")
+              $("#song1img").attr("src", "ledzeppelin.jpeg")
+              $("#song2img").attr("src", "dreamon.jpeg")
+              $("#song3img").attr("src", "pinkfloyd.png")
+              $("#song4img").attr("src", "genesis.jpeg")
+              $("#song5img").attr("src", "queen.png")
+              $("#song6img").attr("src", "space oddity.jpeg")
+              $("#song1artist").text("Led Zeppelin")
+              $("#song2artist").text("Aerosmith")
+              $("#song3artist").text("Pink Floyd")
+              $("#song4artist").text("Genesis")
+              $("#song5artist").text("Queen")
+              $("#song6artist").text("David Bowie")
+              $("#genre").text("Hard Rock, Progressive Rock, & Glam Rock")
+            break;
+            case "1980s":
              
-           }
-
-        }); 
-        $("#arrowfordarkmode").click(function (){
-         if(sessionStorage.getItem("value") == 100)
-         {
-            $("#linkarrow").attr("href", "ingamestoredark.html");
-          }
-
-        }); 
-        numBronze = 0;
-        $("#fishimg").click(function (){
-          if(sessionStorage.getItem("doubleclick") == "true")
-          {
-         document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 2;
-          }
-          else
-          {
-            document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 1;
-          }
-         if(parseInt(document.getElementById("score").innerHTML) % 35 == 0)
-         {
-          document.getElementById("bronzenum").innerHTML = parseInt(sessionStorage.getItem("currentBronzeNumLight"))+2;
-          sessionStorage.setItem("currentBronzeNumLight", document.getElementById("bronzenum").innerHTML);
-          numBronze = numBronze+2;
-         }
-
-         if(numBronze % 16 == 0 && numBronze != 0)
-         {
-          document.getElementById("silvernum").innerHTML = parseInt(sessionStorage.getItem("currentSilverNumLight"))+2;
-          sessionStorage.setItem("currentSilverNumLight", document.getElementById("silvernum").innerHTML);
-         }
-          
-        }); 
-        $("#shoeimg").click(function (){
-          if(sessionStorage.getItem("doubleclick") == "true")
-          {
-         document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 2;
-          }
-          else
-          {
-            document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+ 1;
-          }
-         if(parseInt(document.getElementById("score").innerHTML) % 25 == 0)
-         {
-          document.getElementById("bronzenum").innerHTML = parseInt(sessionStorage.getItem("currentBronzeNumLight"))+2;
-          sessionStorage.setItem("currentBronzeNumLight", document.getElementById("bronzenum").innerHTML);
-          numBronze = numBronze+2;
-         }
-
-         if(numBronze % 16 == 0 && numBronze != 0)
-         {
-          document.getElementById("silvernum").innerHTML = parseInt(sessionStorage.getItem("currentSilverNumLight"))+2;
-          sessionStorage.setItem("currentSilverNumLight", document.getElementById("silvernum").innerHTML);
-         }
-          
-        }); 
+              $("#song1").text("Hungry Like The Wolf")
+              $("#song2").text("Friday I'm In Love")
+              $("#song3").text("Shake It Up")
+              $("#song4").text("Kickstart My Heart")
+              $("#song5").text("Wanted Dead Or Alive")
+              $("#song6").text("Pour Some Sugar On Me")
+              $("#song1img").attr("src", "duranduran.jpeg")
+              $("#song2img").attr("src", "the cure.jpg")
+              $("#song3img").attr("src", "shakeitup.png")
+              $("#song4img").attr("src", "kickstart.jpeg")
+              $("#song5img").attr("src", "bonjovi.jpeg")
+              $("#song6img").attr("src", "hysteria.jpeg")
+              $("#song1artist").text("Duran Duran")
+              $("#song2artist").text("The Cure")
+              $("#song3artist").text("The Cars")
+              $("#song4artist").text("Mötley Crüe")
+              $("#song5artist").text("Bon Jovi")
+              $("#song6artist").text("Def Leppard")
+              $("#firstgenre").text("")
+              $("#genre").text("New Wave & Hair Metal Bands")
+            break;
+            case "1990s":
+              
+              $("#song1").text("Smells Like Teen Spirit")
+              $("#song2").text("Rooster")
+              $("#song3").text("Fell On Black Days")
+              $("#song4").text("Californication")
+              $("#song5").text("1979")
+              $("#song6").text("When I Come Around")
+              $("#song1img").attr("src", "nevermind.jpeg")
+              $("#song2img").attr("src", "rooster.jpg")
+              $("#song3img").attr("src", "Superunknown.jpeg")
+              $("#song4img").attr("src", "californication.jpeg")
+              $("#song5img").attr("src", "smashingpumpkins.jpeg")
+              $("#song6img").attr("src", "dookie.jpeg")
+              $("#song1artist").text("Nirvana")
+              $("#song2artist").text("Alice In Chains")
+              $("#song3artist").text("Soundgarden")
+              $("#song4artist").text("Red Hot Chili Peppers")
+              $("#song5artist").text("Smashing Pumpkins")
+              $("#song6artist").text("Green Day")
+              $("#genre").text("Grunge and Alternative Rock")
+            break;
+            case "2000s":
+              $("#DecadeName").text("2000s")
+              $("#song1").text("Welcome To The Black Parade")
+              $("#song2").text("Everlong")
+              $("#song3").text("Move Along")
+              $("#song4").text("Teenagers")
+              $("#song5").text("Walk")
+              $("song6").text("Ain't No Rest For The Wicked")
+              $("#song1img").attr("src", "Blackparadecover.jpeg")
+              $("#song2img").attr("src", "foofighters.jpeg")
+              $("#song3img").attr("src", "movealong.jpeg")
+              $("#song4img").attr("src", "Blackparadecover.jpeg")
+              $("#song5img").attr("src", "foofighterswalk.jpg")
+              $("#song6img").attr("src", "cagetheelephant.jpeg")
+              $("#song1artist").text("My Chemical Romance")
+              $("#song2artist").text("Foo Fighters")
+              $("#song3artist").text("All American Rejects")
+              $("#song4artist").text("My Chemical Romance")
+              $("#song5artist").text("Foo Fighters")
+              $("#song6artist").text("Cage The Elephant")
+              $("#genre").text("Emo Rock")
+              break;
+            case "2010s":
+             
+              $("#song1").text("Radioactive")
+              $("#song2").text("My Songs Know What You Did In The Dark")
+              $("#song3").text("Heathens")
+              $("#song4").text("Bones")
+              $("#song5").text("Uma Thurman")
+              $("#song6").text("Don't Threaten Me With A Good Time")
+              $("#song1img").attr("src", "nightvisions.jpg")
+              $("#song2img").attr("src", "falloutboy.jpg")
+              $("#song3img").attr("src", "twentyonepilots.jpeg")
+              $("#song4img").attr("src", "bones.webp")
+              $("#song5img").attr("src", "falloutboyamericanbeauty.png")
+              $("#song6img").attr("src", "Death_of_a_Bachelor.jpeg")
+              $("#song1artist").text("Imagine Dragons")
+              $("#song2artist").text("Fall Out Boy")
+              $("#song3artist").text("Twenty One Pilots")
+              $("#song4artist").text("Imagine Dragons")
+              $("#song5artist").text("Fall Out Boy")
+              $("#song6artist").text("Panic! At The Disco")
+              $("#genre").text("Alternative/Indie Rock")
+              break;
+        
+        }
+       });
   </script>
     </body>
     </html>
