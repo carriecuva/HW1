@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,8 +14,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
   <style>
-    
-    #divpopup 
+     td 
+    {
+        padding: 15px;
+    }
+    #divpopup
     {
       position: absolute;
       z-index: 4;
@@ -25,19 +28,30 @@
       width: 80%; 
       padding: 50px 50px;
     }
+    #favoritedetails 
+    {
+      position: absolute;
+      z-index: 4;
+      margin-left: 315px;
+      margin-top: 30px; 
+      background-color:lightgrey; 
+      width: 50%; 
+      padding: 25px 25px;
+    }
   </style>
     <title> Light Pattern </title>
     <body>
       <a  href="index.html">
         <i style="color: black; font-size: 300%; margin-left: 50px; margin-top: 20px;" class="fa fa-home"></i>
       </a>
-      <a id="myfavorites" style="float:right; margin-right: 50px; margin-top: 20px; display:none;"> <div style="background-color: lightgrey; padding: 15px;">
-        <p  style="font-size: 130%;"> My Favorites</p>
-     </div> </a>
+  <div  id="myfavorites"style="background-color: lightgrey; padding: 15px; float:right; margin-right: 50px; margin-top: 20px; display:none;">
+        <p  style="font-size: 130%;"> Click To See Your Favorites</p>
+     </div>
+    
       <center>
         <div style="display:flex; justify-content: center;">
           
-     <h1 style="font-size: 400%; margin-top: 25px; margin-left: 200px;"> Cob's Soul Music</h1>
+     <h1 style="font-size: 400%; margin-top: 25px; margin-left: 330px;"> Cob's Soul Music</h1>
      <img src="guitar.jpg" width="100" style="margin-left: 50px;"> 
      </div>
      <h3> Take a trip through all the decades of Rock and Roll music  </h3>
@@ -81,7 +95,225 @@
           <label style="font-size:80%; display:none; " class="checkbox" for="agree"> By signing up, I agree to the terms and to be added to our weekly update email list </label> 
          <p id="needaccount" style="margin-top: 20px;"> Don't have an account? <strong id="signup">Sign Up Now </strong></p> 
         </div>
-       
+        <div id="favoritedetails" style="display:none;">
+          <img id="clickoff" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
+          <h3 style="margin-top: 20px;"> My Favorites</h3>
+          <table>
+            <tr id="buddyholly" style="display:none;">
+              <td> <img src="peggysue.jpeg" width="100"> </td>
+              <td> Peggy Sue</td>
+              <td> Buddy Holly </td>
+            </tr>
+            <tr id="jerrylee" style="display:none;" >
+              <td> <img src="greatballsoffire.jpg" width="100"> </td>
+              <td> Great Balls of Fire</td>
+              <td> Jerry Lee Lewis </td>
+            </tr>
+            <tr id="chuckberry" style="display:none;">
+              <td> <img src="chuckberry.jpeg" width="100"> </td>
+              <td> Johnny B. Goode</td>
+              <td> Chuck Berry </td>
+            </tr>
+            <tr id="littlerichard" style="display:none;">
+              <td> <img src="littlerichard.jpeg" width="100"> </td>
+              <td> Tutti Frutti</td>
+              <td> Little Richard </td>
+            </tr>
+            <tr id="elvis" style="display:none;">
+              <td> <img src="elvis.jpg" width="100"> </td>
+              <td> Burning Love</td>
+              <td> Elvis Presley </td>
+            </tr>
+            <tr id="fatsdomino" style="display:none;">
+              <td> <img src="fatsdomino.jpg" width="100"> </td>
+              <td> Blueberry Hill</td>
+              <td> Fats Domino </td>
+            </tr>
+            <tr id="herman" style="display:none;">
+              <td> <img src="hermanhermit's.jpeg" width="100"> </td>
+              <td> I'm Into Something Good</td>
+              <td> Herman's Hermits </td>
+            </tr>
+            <tr id="beatles" style="display:none;">
+              <td> <img src="beatles.jpeg" width="100"> </td>
+              <td> I Wanna Hold Your Hand</td>
+              <td> The Beatles </td>
+            </tr>
+            <tr id="doors" style="display:none;">
+              <td> <img src="the doors.jpg" width="100"> </td>
+              <td> Light My Fire</td>
+              <td> The Doors</td>
+            </tr>
+            <tr id="gratefuldead" style="display:none;">
+              <td> <img src="gratefuldead.jpeg" width="100"> </td>
+              <td> Casey Jones</td>
+              <td> The Grateful Dead</td>
+            </tr>
+            <tr id="buffalo" style="display:none;">
+              <td> <img src="buffalo.jpeg" width ="100"> </td>
+              <td>For What It's Worth</td>
+              <td> Buffalo Springfield</td>
+            </tr>
+            <tr id="soundsofsilence" style="display:none;">
+              <td> <img src="soundsofsilence.png" width="100"> </td>
+              <td> Sounds of Silence</td>
+              <td> Simon & Garfunkel</td>
+            </tr>
+            <tr id="led" style="display:none;">
+              <td> <img src="ledzeppelin.jpeg" width="100"> </td>
+              <td> Over the Hills and Far Away </td>
+              <td> Led Zeppelin </td>
+            </tr>
+            <tr id="aerosmith" style="display:none;">
+              <td> <img src="dreamon.jpeg" width="100"> </td>
+              <td> Dream On</td>
+              <td> Aerosmith</td>
+            </tr>
+            <tr id="pinkfloyd" style="display:none;">
+              <td> <img src="pinkfloyd.png" width="100"> </td>
+              <td> Money</td>
+              <td> Pink Floyd</td>
+            </tr>
+            <tr id="genesis" style="display:none;">
+              <td> <img src="genesis.jpeg" width="100"> </td>
+              <td> Follow You Follow Me</td>
+              <td> Genesis</td>
+            </tr>
+            <tr id="queen" style="display:none;">
+              <td> <img src="queen.png" width ="100"> </td>
+              <td>Don't Stop Me Now</td>
+              <td> Queen</td>
+            </tr>
+            <tr id="davidbowie" style="display:none;">
+              <td> <img src="space oddity.jpeg" width="100"> </td>
+              <td> Space Oddity</td>
+              <td> David Bowie</td>
+            </tr>
+            <tr id="duran" style="display:none;">
+              <td> <img src="duranduran.jpeg" width="100"> </td>
+              <td> Hungry Like The Wolf </td>
+              <td> Duran Duran </td>
+            </tr>
+            <tr id="thecure" style="display:none;">
+              <td> <img src="the cure.jpg" width="100"> </td>
+              <td> Friday I'm In Love</td>
+              <td> The Cure </td>
+            </tr>
+            <tr id="cars" style="display:none;">
+              <td> <img src="shakeitup.png" width="100"> </td>
+              <td> Shake It Up</td>
+              <td> The Cars</td>
+            </tr>
+            <tr id="motley" style="display:none;">
+              <td> <img src="kickstart.jpeg" width="100"> </td>
+              <td> Kickstart My Heart</td>
+              <td> Mötley Crüe</td>
+            </tr>
+            <tr id="bonjovi" style="display:none;">
+              <td> <img src="bonjovi.jpeg" width="100"> </td>
+              <td> Wanted Dead Or Alive</td>
+              <td> Bon Jovi</td>
+            </tr>
+            <tr id="def" style="display:none;">
+              <td> <img src="hysteria.jpeg" width ="100"> </td>
+              <td>Pour Some Sugar On Me</td>
+              <td> Def Leppard</td>
+            </tr>
+            <tr id="nirvana" style="display:none;">
+              <td> <img src="nevermind.jpeg" width="100"> </td>
+              <td> Smells Like Teen Spirit</td>
+              <td> Nirvana</td>
+            </tr>
+            <tr id="alice" style="display:none;">
+              <td> <img src="rooster.jpg" width="100"> </td>
+              <td> Rooster </td>
+              <td> Alice in Chains </td>
+            </tr>
+            <tr id="soundgarden" style="display:none;">
+              <td> <img src="Superunknown.jpeg" width="100"> </td>
+              <td> Fell On Black Days</td>
+              <td> Soundgarden </td>
+            </tr>
+            <tr id="redhot" style="display:none;">
+              <td> <img src="californication.jpeg" width="100"> </td>
+              <td> Californication</td>
+              <td> Red Hot Chili Peppers</td>
+            </tr>
+          
+            <tr id="smashing" style="display:none;">
+              <td> <img src="smashingpumpkins.jpeg" width="100"> </td>
+              <td> 1979</td>
+              <td>Smashing Pumpkins</td>
+            </tr>
+            <tr id="greenday" style="display:none;">
+              <td> <img src="dookie.jpeg" width ="100"> </td>
+              <td>When I Come Around</td>
+              <td> Green Day</td>
+            </tr>
+            <tr id="mychemical" style="display:none;">
+              <td> <img src="Blackparadecover.jpeg" width="100"> </td>
+              <td> Welcome to the Black Parade</td>
+              <td>My Chemical Romance</td>
+            </tr>
+            <tr id="foofighters" style="display:none;">
+              <td> <img src="rooster.jpg" width="100"> </td>
+              <td> Everlong</td>
+              <td> Foo Fighters </td>
+            </tr>
+            <tr id="movealong" style="display:none;">
+              <td> <img src="movealong.jpeg" width="100"> </td>
+              <td> Move Along</td>
+              <td> All American Rejects</td>
+            </tr>
+            <tr id="teenagers" style="display:none;">
+              <td> <img src="Blackparadecover.jpeg" width="100"> </td>
+              <td> Teenagers</td>
+              <td> My Chemical Romance</td>
+            </tr>
+          
+            <tr id="walk" style="display:none;">
+              <td> <img src="foofighterswalk.jpg" width="100"> </td>
+              <td> Walk</td>
+              <td>Foo Fighters</td>
+            </tr>
+            <tr id="cage" style="display:none;">
+              <td> <img src="cagetheelephant.jpeg" width ="100"> </td>
+              <td> Ain't No Rest For The Wicked</td>
+              <td> Cage The Elephant</td>
+            </tr>
+            <tr id="radioactive" style="display:none;">
+              <td> <img src="nightvisions.jpg" width="100"> </td>
+              <td> Radioactive</td>
+              <td>Imagine Dragons</td>
+            </tr>
+            <tr id="fallout" style="display:none;">
+              <td> <img src="falloutboy.jpg" width="100"> </td>
+              <td> My Songs Know What You Did In The Dark</td>
+              <td> Fall Out Boy </td>
+            </tr>
+            <tr id="twentyone" style="display:none;">
+              <td> <img src="twentyonepilots.jpeg" width="100"> </td>
+              <td> Heathens</td>
+              <td> Twenty One Pilots</td>
+            </tr>
+            <tr id="bones" style="display:none;">
+              <td> <img src="bones.webp" width="100"> </td>
+              <td> Bones</td>
+              <td> Imagine Dragons</td>
+            </tr>
+          
+            <tr id="uma" style="display:none;">
+              <td> <img src="falloutboyamericanbeauty.png" width="100"> </td>
+              <td> Uma Thurman</td>
+              <td>Fall Out Boy</td>
+            </tr>
+            <tr id="panic" style="display:none;">
+              <td> <img src="Death_of_a_Bachelor.jpeg" width ="100"> </td>
+              <td> Don't Threaten Me With A Good Time</td>
+              <td> Panic! At The Disco</td>
+            </tr>
+          </table>
+        </div>
        <p style="font-size: 120%; margin-top: 15px;" id="genre"> </p>
        <div class="row">
        <div class="col-lg-4" id="div1" style="margin-top: 20px;">
@@ -175,14 +407,79 @@
             $("#myfavorites").css("display", "block");
             
       });
+      $("#clickoff").click(function () {
+           $("#favoritedetails").css("display", "none");
+            
+      });
+      $("#myfavorites").click(function () {
+            $("#favoritedetails").css("display", "block");
+            
+            
+      });
       $("#favorite1").click(function () {
          var imagesrc = $(this).attr("src");
          if(imagesrc == "add_to_favorites-removebg-preview.png") 
          {
+           if($("#decadeselect").val() == "1950s") 
+           {
+              $("#buddyholly").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#herman").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#led").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#duran").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#nirvana").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#mychemical").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#radioactive").css("display", "block");
+           }
           $(this).attr("src", "favorites_filled_in-removebg-preview.png");
          }
          else 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#buddyholly").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#herman").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#led").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#duran").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#nirvana").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#mychemical").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#radioactive").css("display", "none");
+           }
            $(this).attr("src", "add_to_favorites-removebg-preview.png");
          }
       });
@@ -191,10 +488,66 @@
          var imagesrc = $(this).attr("src");
          if(imagesrc == "add_to_favorites-removebg-preview.png") 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#jerrylee").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#beatles").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#aerosmith").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#thecure").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#alice").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#foofighters").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#fallout").css("display", "block");
+           }
           $(this).attr("src", "favorites_filled_in-removebg-preview.png");
          }
          else 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#jerrylee").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#beatles").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#aerosmith").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#thecure").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#alice").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#foofighters").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#fallout").css("display", "none");
+           }
            $(this).attr("src", "add_to_favorites-removebg-preview.png");
          }
       });
@@ -203,10 +556,66 @@
          var imagesrc = $(this).attr("src");
          if(imagesrc == "add_to_favorites-removebg-preview.png") 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#chuckberry").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#doors").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#pinkfloyd").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#cars").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#soundgarden").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#movealong").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#twentyone").css("display", "block");
+           }
           $(this).attr("src", "favorites_filled_in-removebg-preview.png");
          }
          else 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#chuckberry").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#doors").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#pinkfloyd").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#cars").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#soundgarden").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#movealong").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#twentyone").css("display", "none");
+           }
            $(this).attr("src", "add_to_favorites-removebg-preview.png");
          }
       });
@@ -214,10 +623,66 @@
          var imagesrc = $(this).attr("src");
          if(imagesrc == "add_to_favorites-removebg-preview.png") 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#littlerichard").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#gratefuldead").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#genesis").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#motley").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#redhot").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#teenagers").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#bones").css("display", "block");
+           }
           $(this).attr("src", "favorites_filled_in-removebg-preview.png");
          }
          else 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#littlerichard").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#gratefuldead").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#genesis").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#motley").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#redhot").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#teenagers").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#bones").css("display", "none");
+           }
            $(this).attr("src", "add_to_favorites-removebg-preview.png");
          }
       });
@@ -225,10 +690,66 @@
          var imagesrc = $(this).attr("src");
          if(imagesrc == "add_to_favorites-removebg-preview.png") 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#elvis").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#buffalo").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#queen").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#bonjovi").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#smashing").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#walk").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#uma").css("display", "block");
+           }
           $(this).attr("src", "favorites_filled_in-removebg-preview.png");
          }
          else 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#elvis").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#buffalo").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#queen").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#bonjovi").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#smashing").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#walk").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#uma").css("display", "none");
+           }
            $(this).attr("src", "add_to_favorites-removebg-preview.png");
          }
       });
@@ -236,10 +757,66 @@
          var imagesrc = $(this).attr("src");
          if(imagesrc == "add_to_favorites-removebg-preview.png") 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#fatsdomino").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#soundsofsilence").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#davidbowie").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#def").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#greenday").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#cage").css("display", "block");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#panic").css("display", "block");
+           }
           $(this).attr("src", "favorites_filled_in-removebg-preview.png");
          }
          else 
          {
+          if($("#decadeselect").val() == "1950s") 
+           {
+              $("#fatsdomino").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#soundsofsilence").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#davidbowie").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#def").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#greenday").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#cage").css("display", "none");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#panic").css("display", "none");
+           }
            $(this).attr("src", "add_to_favorites-removebg-preview.png");
          }
       });
@@ -385,6 +962,54 @@
         switch(Rock_Decade) 
         {
           case "1950s":
+            if($("#buddyholly").css("display") == "none")
+            {
+              $("#favorite1").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite1").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#jerrylee").css("display") == "none")
+            {
+              $("#favorite2").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite2").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#chuckberry").css("display") == "none")
+            {
+              $("#favorite3").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite3").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#littlerichard").css("display") == "none")
+            {
+              $("#favorite4").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite4").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#elvis").css("display") == "none")
+            {
+              $("#favorite5").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite5").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#fatsdomino").css("display") == "none")
+            {
+              $("#favorite6").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite6").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
               $("#song1").text("Peggy Sue")
               $("#song2").text("Great Balls Of Fire")
               $("#song3").text("Johnny B. Goode")
@@ -406,7 +1031,54 @@
               $("#genre").text("The Beginning Of Rock and Roll")
             break;
             case "1960s":
-              
+            if($("#herman").css("display") == "none")
+            {
+              $("#favorite1").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite1").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#beatles").css("display") == "none")
+            {
+              $("#favorite2").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite2").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#doors").css("display") == "none")
+            {
+              $("#favorite3").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite3").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#gratefuldead").css("display") == "none")
+            {
+              $("#favorite4").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite4").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#buffalo").css("display") == "none")
+            {
+              $("#favorite5").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite5").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#soundsofsilence").css("display") == "none")
+            {
+              $("#favorite6").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite6").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
               $("#song1").text("I'm Into Something Good")
               $("#song2").text("I Wanna Hold Your Hand")
               $("#song3").text("Light My Fire")
@@ -428,7 +1100,54 @@
               $("#genre").text("British Invasion, Psychedelic Rock, & Folk Rock")
             break;
             case "1970s":
-              
+            if($("#led").css("display") == "none")
+            {
+              $("#favorite1").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite1").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#aerosmith").css("display") == "none")
+            {
+              $("#favorite2").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite2").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#pinkfloyd").css("display") == "none")
+            {
+              $("#favorite3").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite3").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#genesis").css("display") == "none")
+            {
+              $("#favorite4").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite4").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#queen").css("display") == "none")
+            {
+              $("#favorite5").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite5").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#davidbowie").css("display") == "none")
+            {
+              $("#favorite6").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite6").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
               $("#song1").text("Over The Hills And Far Away")
               $("#song2").text("Dream On")
               $("#song3").text("Money")
@@ -450,7 +1169,54 @@
               $("#genre").text("Hard Rock, Progressive Rock, & Glam Rock")
             break;
             case "1980s":
-             
+            if($("#duran").css("display") == "none")
+            {
+              $("#favorite1").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite1").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#thecure").css("display") == "none")
+            {
+              $("#favorite2").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite2").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#cars").css("display") == "none")
+            {
+              $("#favorite3").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite3").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#motley").css("display") == "none")
+            {
+              $("#favorite4").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite4").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#bonjovi").css("display") == "none")
+            {
+              $("#favorite5").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite5").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#def").css("display") == "none")
+            {
+              $("#favorite6").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite6").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
               $("#song1").text("Hungry Like The Wolf")
               $("#song2").text("Friday I'm In Love")
               $("#song3").text("Shake It Up")
@@ -473,7 +1239,54 @@
               $("#genre").text("New Wave & Hair Metal Bands")
             break;
             case "1990s":
-              
+            if($("#nirvana").css("display") == "none")
+            {
+              $("#favorite1").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite1").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#alice").css("display") == "none")
+            {
+              $("#favorite2").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite2").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#soundgarden").css("display") == "none")
+            {
+              $("#favorite3").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite3").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#redhot").css("display") == "none")
+            {
+              $("#favorite4").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite4").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#smashing").css("display") == "none")
+            {
+              $("#favorite5").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite5").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#greenday").css("display") == "none")
+            {
+              $("#favorite6").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite6").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
               $("#song1").text("Smells Like Teen Spirit")
               $("#song2").text("Rooster")
               $("#song3").text("Fell On Black Days")
@@ -495,13 +1308,61 @@
               $("#genre").text("Grunge and Alternative Rock")
             break;
             case "2000s":
+            if($("#mychemical").css("display") == "none")
+            {
+              $("#favorite1").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite1").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#foofighters").css("display") == "none")
+            {
+              $("#favorite2").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite2").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#movealong").css("display") == "none")
+            {
+              $("#favorite3").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite3").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#teenagers").css("display") == "none")
+            {
+              $("#favorite4").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite4").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#walk").css("display") == "none")
+            {
+              $("#favorite5").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite5").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#cage").css("display") == "none")
+            {
+              $("#favorite6").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite6").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
               $("#DecadeName").text("2000s")
               $("#song1").text("Welcome To The Black Parade")
               $("#song2").text("Everlong")
               $("#song3").text("Move Along")
               $("#song4").text("Teenagers")
               $("#song5").text("Walk")
-              $("song6").text("Ain't No Rest For The Wicked")
+              $("#song6").text("Ain't No Rest For The Wicked")
               $("#song1img").attr("src", "Blackparadecover.jpeg")
               $("#song2img").attr("src", "foofighters.jpeg")
               $("#song3img").attr("src", "movealong.jpeg")
@@ -517,7 +1378,54 @@
               $("#genre").text("Emo Rock")
               break;
             case "2010s":
-             
+            if($("#radioactive").css("display") == "none")
+            {
+              $("#favorite1").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite1").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#fallout").css("display") == "none")
+            {
+              $("#favorite2").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite2").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#twentyone").css("display") == "none")
+            {
+              $("#favorite3").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite3").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#bones").css("display") == "none")
+            {
+              $("#favorite4").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite4").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#uma").css("display") == "none")
+            {
+              $("#favorite5").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite5").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
+            if($("#panic").css("display") == "none")
+            {
+              $("#favorite6").attr("src", "add_to_favorites-removebg-preview.png");
+            }
+            else
+            {
+              $("#favorite6").attr("src", "favorites_filled_in-removebg-preview.png");
+            }
               $("#song1").text("Radioactive")
               $("#song2").text("My Songs Know What You Did In The Dark")
               $("#song3").text("Heathens")
