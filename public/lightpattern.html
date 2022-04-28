@@ -23,7 +23,7 @@
       position: absolute;
       z-index: 4;
       margin-left: 200px;
-      margin-top: 150px; 
+      margin-top: -260px;
       background-color:lightgrey; 
       width: 80%; 
       padding: 50px 50px;
@@ -44,8 +44,8 @@
       <a  href="index.html">
         <i style="color: black; font-size: 300%; margin-left: 50px; margin-top: 20px;" class="fa fa-home"></i>
       </a>
-  <div  id="myfavorites"style="background-color: lightgrey; padding: 15px; float:right; margin-right: 50px; margin-top: 20px; display:none;">
-        <p  style="font-size: 130%;"> Click To See Your Favorites</p>
+  <div  id="myfavorites" style="background-color: lightgrey; padding: 15px; float:right; margin-right: 50px; margin-top: 20px;">
+        <p id="favoritestext" style="font-size: 130%;"> Sign In To Add To Favorites</p>
      </div>
     
       <center>
@@ -99,7 +99,8 @@
         </div> </a>
     
    </div>
-        <div id="divpopup">
+        <div id="divpopup" style="display:none;" >
+          <img class="clickoff" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
           <p id="signin" style="font-size: 180%; margin-top: -30px;"> Sign In!</p>
           <label id="userlabel" style=" font-size: 130%;"> User name</label> <br>
           <input style="font-size: 120%;" type="text"> <br> <br>
@@ -113,7 +114,7 @@
          <p id="needaccount" style="margin-top: 20px;"> Don't have an account? <strong id="signup">Sign Up Now </strong></p> 
         </div>
         <div id="favoritedetails" style="display:none;">
-          <img id="clickoff" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
+          <img class="clickoff" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
           <h3 style="margin-top: 20px;"> My Favorites</h3>
           <table>
             <tr id="buddyholly" style="display:none;">
@@ -395,10 +396,11 @@
 
     <script>
       
-     if(sessionStorage.getItem("signedinpopup") == "false")
+     if(sessionStorage.getItem("signedinpopuplight") == "false")
      {
        $("#divpopup").css("display", "none");
        $("#myfavorites").css("display", "block");
+       $("#favoritestext").text("Click To See Your Favorites")
      }
      $("#signup").hover(
        function() {
@@ -420,17 +422,33 @@
       });
      $("#submit").click(function () {
             $("#divpopup").css("display", "none");
-            sessionStorage.setItem("signedinpopup", "false");
-            $("#myfavorites").css("display", "block");
+            sessionStorage.setItem("signinpopuplight", "false");
+            $("#favoritestext").text("Click To See Your Favorites")
             
       });
-      $("#clickoff").click(function () {
-           $("#favoritedetails").css("display", "none");
+      $(".clickoff").click(function () {
+
+           if(sessionStorage.getItem("signinpopuplight") == "false")
+            {
+            $("#favoritedetails").css("display", "none");
+            }
+            else
+            {
+              
+              $("#divpopup").css("display", "none");
+            }
             
       });
       $("#myfavorites").click(function () {
+        console.log(sessionStorage.getItem("signinpopuplight"))
+            if(sessionStorage.getItem("signinpopuplight") == "false")
+            {
             $("#favoritedetails").css("display", "block");
-            
+            }
+            else
+            {
+              $("#divpopup").css("display", "block");
+            }
             
       });
       $("#favorite1").click(function () {
@@ -839,90 +857,97 @@
       });
         $( "#div1" ).hover(
       function() {
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-        $( "#song1img" ).css("opacity", '0.5');
         $("#play1").css("display", "block")
-        $("#favorite1").css("display", "block")
         $("#song1artist").css("display", "none")
+        $( "#song1img" ).css("opacity", '0.5');
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+        $("#favorite1").css("display", "block")
+       
         }
         
       }, function() {
-       
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
+        $("#song1artist").css("display", "block")
         $("#song1img").css("opacity", '1');
         $("#play1").css("display", "none")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+       
         $("#favorite1").css("display", "none")
-        $("#song1artist").css("display", "block")
+       
         }
         
       }
     );
     $( "#div2" ).hover(
       function() {
-        
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
         $("#song2img").css("opacity", '0.5');
         $("#play2").css("display", "block")
-        $("#favorite2").css("display", "block")
         $("#song2artist").css("display", "none")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+        
+        $("#favorite2").css("display", "block")
+       
         }
         
       }, function() {
-      
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song2img").css("opacity", '1');
+        $("#song2img").css("opacity", '1');
         $("#play2").css("display", "none")
-        $("#favorite2").css("display", "none")
         $("#song2artist").css("display", "block")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+         
+        $("#favorite2").css("display", "none")
+        
         }
         
       }
     );
     $( "#div3" ).hover(
       function() {
-        
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song3img" ).css("opacity", '0.5');
+        $("#song3img" ).css("opacity", '0.5');
         $("#play3").css("display", "block")
-        $("#favorite3").css("display", "block")
         $("#song3artist").css("display", "none")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+          
+        $("#favorite3").css("display", "block")
+       
         }
        
       }, function() {
-       
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song3img").css("opacity", '1');
+        $("#song3img").css("opacity", '1');
         $("#play3").css("display", "none")
-        $("#favorite3").css("display", "none")
         $("#song3artist").css("display", "block")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+         
+        $("#favorite3").css("display", "none")
+        
         }
         
       }
     );
     $( "#div4" ).hover(
       function() {
-       
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song4img" ).css("opacity", '0.5');
+        $("#song4img" ).css("opacity", '0.5');
         $("#play4").css("display", "block")
         $("#song4artist").css("display", "none")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+          
+        
         $("#favorite4").css("display", "block")
         }
        
       }, function() {
-        
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song4img").css("opacity", '1');
+        $("#song4img").css("opacity", '1');
         $("#play4").css("display", "none")
         $("#song4artist").css("display", "block")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+         
         $("#favorite4").css("display", "none")
         }
        
@@ -930,22 +955,22 @@
     );
     $( "#div5" ).hover(
       function() {
-        
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song5img").css("opacity", '0.5');
+        $("#song5img").css("opacity", '0.5');
         $("#play5").css("display", "block")
         $("#song5artist").css("display", "none")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+          
         $("#favorite5").css("display", "block")
         }
         
       }, function() {
-        
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song5img").css("opacity", '1');
+        $("#song5img").css("opacity", '1');
         $("#play5").css("display", "none")
         $("#song5artist").css("display", "block")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+          
         $("#favorite5").css("display", "none")
         }
        
@@ -953,22 +978,23 @@
     );
     $( "#div6" ).hover(
       function() {
-       
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
         $("#song6img" ).css("opacity", '0.5');
         $("#play6").css("display", "block")
-        $("#favorite6").css("display", "block")
         $("#song6artist").css("display", "none")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+        
+        $("#favorite6").css("display", "block")
+        
         }
         
       }, function() {
-       
-        if(sessionStorage.getItem("signedinpopup") == "false") 
-        {
-          $("#song6img" ).css("opacity", '1');
+        $("#song6img" ).css("opacity", '1');
         $("#play6").css("display", "none")
         $("#song6artist").css("display", "block")
+        if(sessionStorage.getItem("signinpopuplight") == "false") 
+        {
+         
         $("#favorite6").css("display", "none")
         }
      
