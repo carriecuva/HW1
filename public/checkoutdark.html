@@ -19,27 +19,25 @@
       <img  style="margin-left: 15px;" width="60" src="musicnotes.png">
     </div>
         <center>
-              <div>
-              <table style="margin-right:50px; margin-top:20px;">
-                
-                <tr style="margin-top: 30px;">
-                  <td style=" font-size: 130%;  text-align:center; "> </td>
-                  <td style=" font-size: 140%;   text-align:center; ">$<span id="songprice">1.75</span></td>
-                </tr>
-              </table>
+              
+                  <div style="display:flex; justify-content: space-around;">
+                  <p style=" margin-right: 200px; font-size: 130%;  "> Song Price </p>
+                  <p style=" font-size: 140%;  ">$<span id="songprice">1.75</span></p>
+             
+               </div>
               
            <hr style="border: 1px solid black;">
        <div style="display:flex; justify-content: space-around; ">
         <p style="font-size: 90%; padding-right: 220px;"> Music Fee</p>
-        <p style="font-size: 110%; padding-right:30px;">$<span id="shipping">5</span></p>
+        <p style="font-size: 110%; padding-right:30px;">$3.50</p>
        </div>
        <div style="display:flex; justify-content: space-around; ">
         <p style="font-size: 90%; padding-right: 220px;"> Artist Fee</p>
-        <p style="font-size: 110%; padding-right:30px;">$<span id="shipping">8</span></p>
+        <p style="font-size: 110%; padding-right:30px;">$4</p>
        </div>
        <div style="display:flex; justify-content: space-around;">
         <p style="font-size: 125%;"> Total</p>
-        <p style="font-size: 125%; padding-left: 210px;">$<span id="total"></span></p>
+        <p style="font-size: 125%; padding-left: 210px;">$9.25</p>
               </div>
               </div>
            <div style="background-color: lightgrey; margin-top: 30px; padding-bottom: 20px;">
@@ -118,7 +116,6 @@
     <script>
       $(document).ready(function() {
         
-       //document.getElementById('total').innerHTML = parseInt(document.getElementById('goldprice').innerHTML)+parseInt(document.getElementById('silverprice').innerHTML)+parseInt(document.getElementById('bronzeprice').innerHTML)+parseInt(document.getElementById('shipping').innerHTML)
        
          $("#submitbtn").click(function () {
             var check1 = document.getElementById("checkbox1");
@@ -130,7 +127,7 @@
                 if(count >= 0)
                 {
                 sessionStorage.setItem("songsbought", count = count+1);
-                if(sessionStorage.getItem("songsbought") >= 3){
+                if(sessionStorage.getItem("songsbought") >= 2){
                  sessionStorage.setItem("unlockspecialsongs", "true");
                 }
                 }
