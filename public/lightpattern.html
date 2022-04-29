@@ -81,7 +81,7 @@
             </option>
           </select>
        </div>
-       <div class="row" style="margin-left: 180px;">
+       <div class="row" style="margin-left: 120px;">
         <div id="brakepads" class="col-lg-4" style="border: 1px solid black; width: 25%; margin-top: 10px; ">
           <img id="xbrake" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
           <p style="font-size: 115%;"> Jim's Brake Pads</p>
@@ -342,7 +342,7 @@
             Peggy Sue
           </p>
           <img id="song1img" src="peggysue.jpeg" width="300" > 
-          <img id="play1" src="playbutton-removebg-preview.png" onclick="play()" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+          <img id="play1" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
           <img id="favorite1" src="add_to_favorites-removebg-preview.png" width="80" style="position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
           <p id="song1artist"> Buddy Holly </p>
        </div>
@@ -351,7 +351,7 @@
           Great Balls Of Fire
         </p>
         <img id="song2img" src="greatballsoffire.jpg" width="300" > 
-        <img id="play2" src="playbutton-removebg-preview.png" width="100" onclick="play()" style="  margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+        <img id="play2" src="playbutton-removebg-preview.png" width="100"  style="  margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
         <img id="favorite2" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
         <p id="song2artist"> Jerry Lee Lewis </p>
       </div>
@@ -360,17 +360,18 @@
           Johnny B. Goode
         </p>
         <img id="song3img" src="chuckberry.jpeg" width="300" >
-        <img id="play3" src="playbutton-removebg-preview.png" width="100" onclick="play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">  
+        <img id="play3" src="playbutton-removebg-preview.png" width="100"  style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">  
         <img id="favorite3" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
         <p id="song3artist"> Chuck Berry </p>
       </div>
     </div>
+    <div class="row">
       <div class="col-lg-4" id="div4" style="margin-top: 30px;">
         <p id="song4"> 
           Tutti Frutti
         </p>
         <img id="song4img" src="littlerichard.jpeg" width="300"> 
-        <img id="play4" src="playbutton-removebg-preview.png" width="100" onclick="audio.play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+        <img id="play4" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
         <img id="favorite4" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
         <p id="song4artist"> Little Richard </p>
      </div>
@@ -379,7 +380,7 @@
         Burning Love
       </p>
       <img id="song5img" src="elvis.jpg" width="300" style> 
-      <img id="play5" src="playbutton-removebg-preview.png" width="100" onclick="play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">
+      <img id="play5" src="playbutton-removebg-preview.png" width="100"  style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">
       <img id="favorite5" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; ">  
       <p id="song5artist"> Elvis Presley</p>
     </div>
@@ -388,23 +389,27 @@
         Blueberry Hill
       </p>
       <img id="song6img" src="fatsdomino.jpg" width="300"> 
-      <img id="play6" src="playbutton-removebg-preview.png" width="100" onclick="play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+      <img id="play6" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
       <img id="favorite6" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
       <p id="song6artist"> Fats Domino </p>
     </div>
-       
-     
+  </div>
+    <div style="display: flex; justify-content: center; margin-top: 40px; padding-top: 40px; padding-bottom: 30px; background-color: antiquewhite;">
+      <p style="font-size: 120%; margin-right: 40px;"> Current Song: </p>
+      <img id="currentalbum" src="" width="110" style="margin-top: -10px;">
+      <p id="currentsong" style="margin-right: 40px; font-size: 120%; margin-left: 40px;"> </p>
+    <div class="progressbarCont audio-slider">
+      <div class="progressbar audio-range" id="songIdForProgessBar"></div>
+  </div>
+  <audio id="audio" class="audio-src" controls>
+      <source src="New Recording.m4a" class="audio-player-ja" />
+  </audio>
+</div>
     </center>
    
 
     <script>
       
-
-    function play(){
-    var audio = new Audio("New Recording.m4a");
-    audio.play();
-}
-
      if(sessionStorage.getItem("signedinpopuplight") == "false")
      {
        $("#divpopup").css("display", "none");
@@ -556,7 +561,258 @@
            $(this).attr("src", "add_to_favorites-removebg-preview.png");
          }
       });
-
+      $("#play1").click(function () {
+       var audio = document.getElementById("audio");
+       audio.pause();
+       audio.currentTime = 0;
+           if($("#decadeselect").val() == "1950s") 
+           {
+             $("#currentsong").text("Peggy Sue")
+             $("#currentalbum").attr("src", "peggysue.jpeg");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#currentsong").text("I'm Into Something Good");
+            $("#currentalbum").attr("src", "hermanhermit's.jpeg");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#currentsong").text("Over The Hills And Far Away");
+            $("#currentalbum").attr("src", "ledzeppelin.jpeg");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#currentsong").text("Hungry Like The Wolf");
+            $("#currentalbum").attr("src", "duranduran.jpeg");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#currentsong").text("Smells Like Teen Spirit");
+            $("#currentalbum").attr("src", "nevermind.jpeg");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#currentsong").text("Welcome To The Black Parade");
+            $("#currentalbum").attr("src", "Blackparadecover.jpeg");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#currentsong").text("Radioactive");
+            $("#currentalbum").attr("src", "nightvisions.jpg");
+           }
+         
+        
+      });
+      $("#play2").click(function () {
+       var audio = document.getElementById("audio");
+       audio.pause();
+       audio.currentTime = 0;
+           if($("#decadeselect").val() == "1950s") 
+           {
+             $("#currentsong").text("Great Balls Of Fire")
+             $("#currentalbum").attr("src", "greatballsoffire.jpg");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#currentsong").text("I Wanna Hold Your Hand");
+            $("#currentalbum").attr("src", "beatles.jpeg");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#currentsong").text("Dream On");
+            $("#currentalbum").attr("src", "dreamon.jpeg");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#currentsong").text("Friday I'm In Love");
+            $("#currentalbum").attr("src", "the cure.jpg");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#currentsong").text("Rooster");
+            $("#currentalbum").attr("src", "rooster.jpg");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#currentsong").text("Everlong");
+            $("#currentalbum").attr("src", "foofighters.jpeg");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#currentsong").text("My Songs Know What You Did In The Dark");
+            $("#currentalbum").attr("src", "falloutboy.jpg");
+           }
+         
+        
+      });
+      $("#play3").click(function () {
+       var audio = document.getElementById("audio");
+       audio.pause();
+       audio.currentTime = 0;
+           if($("#decadeselect").val() == "1950s") 
+           {
+             $("#currentsong").text("Johnny B. Goode")
+             $("#currentalbum").attr("src", "chuckberry.jpeg");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#currentsong").text("Light My Fire");
+            $("#currentalbum").attr("src", "the doors.jpg");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#currentsong").text("Money");
+            $("#currentalbum").attr("src", "pinkfloyd.png");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#currentsong").text("Shake It Up");
+            $("#currentalbum").attr("src", "shakeitup.png");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#currentsong").text("Fell On Black Days");
+            $("#currentalbum").attr("src", "Superunknown.jpeg");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#currentsong").text("Move Along");
+            $("#currentalbum").attr("src", "movealong.jpeg");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#currentsong").text("Heathens");
+            $("#currentalbum").attr("src", "twentyonepilots.jpeg");
+           }
+         
+        
+      });
+      $("#play4").click(function () {
+       var audio = document.getElementById("audio");
+       audio.pause();
+       audio.currentTime = 0;
+           if($("#decadeselect").val() == "1950s") 
+           {
+             $("#currentsong").text("Tutti Frutti")
+             $("#currentalbum").attr("src", "littlerichard.jpeg");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#currentsong").text("Casey Jones");
+            $("#currentalbum").attr("src", "gratefuldead.jpeg");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#currentsong").text("Follow You Follow Me");
+            $("#currentalbum").attr("src", "genesis.jpeg");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#currentsong").text("Kickstart My Heart");
+            $("#currentalbum").attr("src", "kickstart.jpeg");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#currentsong").text("Californication");
+            $("#currentalbum").attr("src", "californication.jpeg");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#currentsong").text("Teenagers");
+            $("#currentalbum").attr("src", "Blackparadecover.jpeg");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#currentsong").text("Bones");
+            $("#currentalbum").attr("src", "bones.webp");
+           }
+         
+        
+      });
+      $("#play5").click(function () {
+       var audio = document.getElementById("audio");
+       audio.pause();
+       audio.currentTime = 0;
+           if($("#decadeselect").val() == "1950s") 
+           {
+             $("#currentsong").text("Burning Love")
+             $("#currentalbum").attr("src", "elvis.jpg");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#currentsong").text("For What It's Worth");
+            $("#currentalbum").attr("src", "buffalo.jpeg");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#currentsong").text("Don't Stop Me Now");
+            $("#currentalbum").attr("src", "queen.png");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#currentsong").text("Wanted Dead or Alive");
+            $("#currentalbum").attr("src", "bonjovi.jpeg");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#currentsong").text("1979");
+            $("#currentalbum").attr("src", "smashingpumpkins.jpeg");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#currentsong").text("Walk");
+            $("#currentalbum").attr("src", "foofighterswalk.jpg");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#currentsong").text("Uma Thurman");
+            $("#currentalbum").attr("src", "falloutboyamericanbeauty.png");
+           }
+         
+        
+      });
+      $("#play6").click(function () {
+       var audio = document.getElementById("audio");
+       audio.pause();
+       audio.currentTime = 0;
+           if($("#decadeselect").val() == "1950s") 
+           {
+             $("#currentsong").text("Blueberry Hill")
+             $("#currentalbum").attr("src", "fatsdomino.jpg");
+           }
+           else if($("#decadeselect").val() == "1960s")
+           {
+            $("#currentsong").text("Sounds Of Silence");
+            $("#currentalbum").attr("src", "soundsofsilence.png");
+           }
+           else if($("#decadeselect").val() == "1970s")
+           {
+            $("#currentsong").text("Space Oddity");
+            $("#currentalbum").attr("src", "space oddity.jpeg");
+           }
+           else if($("#decadeselect").val() == "1980s")
+           {
+            $("#currentsong").text("Pour Some Sugar On Me");
+            $("#currentalbum").attr("src", "hysteria.jpeg");
+           }
+           else if($("#decadeselect").val() == "1990s")
+           {
+            $("#currentsong").text("When I Come Around");
+            $("#currentalbum").attr("src", "dookie.jpeg");
+           }
+           else if($("#decadeselect").val() == "2000s")
+           {
+            $("#currentsong").text("Ain't No Rest For The Wicked");
+            $("#currentalbum").attr("src", "cagetheelephant.jpeg");
+           }
+           else if($("#decadeselect").val() == "2010s")
+           {
+            $("#currentsong").text("Don't Threaten Me With A Good Time");
+            $("#currentalbum").attr("src", "Death_of_a_Bachelor.jpeg");
+           }
+         
+        
+      });
       $("#favorite2").click(function () {
          var imagesrc = $(this).attr("src");
          if(imagesrc == "add_to_favorites-removebg-preview.png") 
