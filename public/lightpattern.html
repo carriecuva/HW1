@@ -82,21 +82,24 @@
           </select>
        </div>
        <div class="row" style="margin-left: 180px;">
-        <div class="col-lg-4" style="border: 1px solid black; width: 25%; margin-top: 10px; ">
+        <div id="brakepads" class="col-lg-4" style="border: 1px solid black; width: 25%; margin-top: 10px; ">
+          <img id="xbrake" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
           <p style="font-size: 115%;"> Jim's Brake Pads</p>
           <img src="brakepadslight.png" width="200"> 
           <p style="font-size: 115%;"> They work every time,<br> 50% of the time</p>
         </div>
-        <div class="col-lg-4" style="border: 1px black solid; width: 25%; margin-left: 100px; margin-top: 10px;">
+        <div id="cereal" class="col-lg-4" style="border: 1px black solid; width: 25%; margin-left: 100px; margin-top: 10px;">
+          <img id="xcereal" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
           <p style="font-size: 130%;">   Cereal Flakes </p>
          <img src="cerealflakes.jpeg" width="200">
          <p style="font-size: 130%;"> Abestos Free  </p>
       </div>
-       <a href="http://www.dolekemp96.org/agenda/issues/internet.htm"> <div class="col-lg-4" style="border: 1px solid black; width: 25%; margin-left: 100px; margin-top: 10px;">
-        <p style="font-size: 115%;"> Zombie Bob Dole 2024</p>
+       <div class="col-lg-4" id="zombie" style="border: 1px solid black; width: 25%; margin-left: 100px; margin-top: 10px;">
+       <img id="xzombie" src="xgraphic-removebg-preview.png" width="30" style="float: right;">
+       <a href="http://www.dolekemp96.org/agenda/issues/internet.htm"> <p style="font-size: 115%;"> Zombie Bob Dole 2024</p>
         <img src="zombieimg.png" width="150"> 
-        <p style="font-size: 115%;"> Click to Learn More</p>
-        </div> </a>
+        <p style="font-size: 115%;"> Click to Learn More</p> </a>
+        </div> 
     
    </div>
         <div id="divpopup" style="display:none;" >
@@ -439,6 +442,19 @@
             }
             
       });
+
+      $("#xcereal").click(function () {
+          $("#cereal").css("display", "none")
+ 
+});
+      $("#xzombie").click(function () {
+          $("#zombie").css("display", "none")
+ 
+});
+      $("#xbrake").click(function () {
+          $("#brakepads").css("display", "none")
+ 
+});
       $("#myfavorites").click(function () {
         console.log(sessionStorage.getItem("signinpopuplight"))
             if(sessionStorage.getItem("signinpopuplight") == "false")
