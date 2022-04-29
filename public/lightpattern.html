@@ -342,7 +342,7 @@
             Peggy Sue
           </p>
           <img id="song1img" src="peggysue.jpeg" width="300" > 
-          <img id="play1" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+          <img id="play1" src="playbutton-removebg-preview.png" onclick="audio.play()" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
           <img id="favorite1" src="add_to_favorites-removebg-preview.png" width="80" style="position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
           <p id="song1artist"> Buddy Holly </p>
        </div>
@@ -351,7 +351,7 @@
           Great Balls Of Fire
         </p>
         <img id="song2img" src="greatballsoffire.jpg" width="300" > 
-        <img id="play2" src="playbutton-removebg-preview.png" width="100" style="  margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+        <img id="play2" src="playbutton-removebg-preview.png" width="100" onclick="audio.play()" style="  margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
         <img id="favorite2" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
         <p id="song2artist"> Jerry Lee Lewis </p>
       </div>
@@ -360,7 +360,7 @@
           Johnny B. Goode
         </p>
         <img id="song3img" src="chuckberry.jpeg" width="300" >
-        <img id="play3" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">  
+        <img id="play3" src="playbutton-removebg-preview.png" width="100" onclick="audio.play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">  
         <img id="favorite3" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
         <p id="song3artist"> Chuck Berry </p>
       </div>
@@ -370,7 +370,7 @@
           Tutti Frutti
         </p>
         <img id="song4img" src="littlerichard.jpeg" width="300"> 
-        <img id="play4" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+        <img id="play4" src="playbutton-removebg-preview.png" width="100" onclick="audio.play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
         <img id="favorite4" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
         <p id="song4artist"> Little Richard </p>
      </div>
@@ -379,7 +379,7 @@
         Burning Love
       </p>
       <img id="song5img" src="elvis.jpg" width="300" style> 
-      <img id="play5" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">
+      <img id="play5" src="playbutton-removebg-preview.png" width="100" onclick="audio.play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;">
       <img id="favorite5" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; ">  
       <p id="song5artist"> Elvis Presley</p>
     </div>
@@ -388,7 +388,7 @@
         Blueberry Hill
       </p>
       <img id="song6img" src="fatsdomino.jpg" width="300"> 
-      <img id="play6" src="playbutton-removebg-preview.png" width="100" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
+      <img id="play6" src="playbutton-removebg-preview.png" width="100" onclick="audio.play()" style=" margin-left: 100px; position: absolute; margin-top: -200px; display:none;"> 
       <img id="favorite6" src="add_to_favorites-removebg-preview.png" width="80" style=" position: absolute; display: none; margin-top: -180px; margin-left: 250px; "> 
       <p id="song6artist"> Fats Domino </p>
     </div>
@@ -398,7 +398,12 @@
    
 
     <script>
-      
+      var audio = new Audio("New Recording.m4a");
+
+    audio.oncanplaythrough = function(){
+    audio.play();
+}
+
      if(sessionStorage.getItem("signedinpopuplight") == "false")
      {
        $("#divpopup").css("display", "none");
