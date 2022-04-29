@@ -102,7 +102,7 @@
           <label class="email" style=" width: 30%; font-size: 130%; display:none;"> Enter Email</label>
           <input  style="font-size: 120%; display:none;" type="text" class="email" name="email">
           <input id="submit" type="submit"  style="font-size: 150%; margin-top: 20px; margin-bottom: 15px !important;"> <br>
-          <input style="font-size: 80%; display:none;" class="checkbox" type="checkbox" name="agree" value="I agree"  checked>
+          <input style="font-size: 80%; display:none;" class="checkbox" type="checkbox" name="agree" value="I agree" id="agree" checked>
           <label style="font-size:80%; display:none; " class="checkbox" for="agree"> By signing up, I agree to the terms and to be added to our weekly update email list </label> 
          <p id="needaccount" style="margin-top: 20px;"> Don't have an account? <strong id="signup">Sign Up Now </strong></p> 
         </div>
@@ -494,11 +494,18 @@
           $(".email").css("display", "block");
           $(".checkbox").css("display", "inline-block")
       });
-     $("#submit").click(function () {
+      $("#submit").click(function () {
+            var checkbox = document.getElementById("agree");
+            if(checkbox.checked == true)
+            {
             $("#divpopup").css("display", "none");
-            sessionStorage.setItem("signedinpopup", "false");
-            $("#myfavorites").css("display", "block");
-            
+            sessionStorage.setItem("signinpopuplight", "false");
+            $("#favoritestext").text("Click To See Your Favorites")
+            }
+            else 
+            {
+               alert("checkbox has to be checked in order to proceed")
+            }
       });
       $("#clickoff").click(function () {
            $("#favoritedetails").css("display", "none");
